@@ -1,6 +1,31 @@
 @charset "utf-8";
 // @import ".."; //연결 import 방법 => 파일 namming : _test.scss
+@import "_common.scss";
 
 h1 {
 	color: #f00; //test
+}
+
+.wrap {
+	display: flex;
+	width: 100vw;
+	height: 100vh;
+
+	.link-list {
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 10vw;
+		height: 100vh;
+	}
+
+	.content-wrap {
+		width: 90vw;
+		height: 100vh;
+		padding-left: 10vw;
+
+		section {
+			height: 100vh;
+		}
+	}
 }

@@ -1,3 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol,
+li {
+  text-decoration: none;
+  list-style: none;
+  list-style-type: none;
+}
+
 h1 {
   color: #f00;
+}
+
+.wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.wrap .link-list {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 10vw;
+  height: 100vh;
+}
+
+.wrap .content-wrap {
+  width: 90vw;
+  height: 100vh;
+  padding-left: 10vw;
+}
+
+.wrap .content-wrap section {
+  height: 100vh;
 }
