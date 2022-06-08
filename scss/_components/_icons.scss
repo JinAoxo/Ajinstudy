@@ -1,0 +1,46 @@
+//
+// Icons
+// 
+
+.ico {
+	@include ir;
+}
+
+// 레이아웃
+@include ico2x('xs-chevron-right', 16px, 16px);
+@include ico2x('xs-chevron-right-white', 16px, 16px);
+@include ico2x('xs-chevron-down-gray', 16px, 16px);
+@include ico2x('xs-chevron-up-gray', 16px, 16px);
+@include ico2x('xs-download', 16px, 16px);
+@include ico2x('xs-email', 16px, 16px);
+@include ico2x('xs-warning', 16px, 16px);
+@include ico2x('xs-calendar', 16px, 16px);
+@include ico2x('xs-plus', 16px, 16px);
+@include ico2x('xs-plus', 16px, 16px);
+@include ico2x('xs-android-white', 16px, 16px);
+@include ico2x('xs-apple-white', 16px, 16px);
+@include ico2x('xs-chevron-gray-next', 16px, 16px);
+@include ico2x('xs-bus-white', 16px, 16px);
+@include ico2x('xs-incms-logo', 16px, 16px);
+@include ico2x('xs-inuixframework-logo', 16px, 16px);
+@include ico2x('xs-walking', 16px, 16px);
+
+@include ico2x('sm-allmenu', 24px, 24px);
+@include ico2x('sm-close', 24px, 24px);
+@include ico2x('sm-close-white', 24px, 24px);
+@include ico2x('sm-copy-white', 24px, 24px);
+
+@include ico2x('md-git-gray', 32px, 32px);
+@include ico2x('md-kakaotalk-gray', 32px, 32px);
+@include ico2x('md-pms-gray', 32px, 32px);
+@include ico2x('md-chevron-left-gray', 32px, 32px);
+@include ico2x('md-chevron-right-gray', 32px, 32px);
+@include ico2x('md-figma', 32px, 32px);
+
+@include ico2x('lg-kakao', 40px, 40px);
+@include ico2x('lg-email', 40px, 40px);
+@include ico2x('lg-totop', 40px, 40px);
+
+// 콘텐츠
+@include ico2x('externallink-brand-md', 16px, 16px);
+@include ico2x('md-close-gray', 28px, 28px);

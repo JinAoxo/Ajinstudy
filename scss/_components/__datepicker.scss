@@ -1,0 +1,233 @@
+$datepicker-border-color: #e6e6e6;
+$datepicker-width: 276px;
+
+.datepicker {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+
+	.form-datepicker {
+		padding-right: 45px;
+	}
+
+	.btn {
+		position: absolute;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		padding: 0 12px;
+	}
+
+	@if ($responsive) {
+		@include media-breakpoint-down(sm) {
+			display: block;
+
+			.form-datepicker {
+				width: 100% !important;
+			}
+		}
+	}
+}
+
+#inseq-datepicker {
+	position: absolute;
+	width: $datepicker-width;
+	padding: 24px 16px 16px;
+
+	&:after {
+		display: block;
+		height: 16px;
+	}
+
+	// border: 1px solid $datepicker-border-color;
+	font-size: 14px;
+	background-color: #fff;
+	box-shadow: 0px 8px 15px rgba(66, 73, 80, 0.15);
+	border-radius: 4px;
+	z-index: 1000;
+
+	caption {
+		height: 0;
+		font-size: 0;
+		line-height: 0;
+		overflow: hidden;
+	}
+
+	table {
+		table-layout: auto;
+		margin-top: 0;
+		width: 100%;
+		text-align: center;
+		border: 0px solid $default;
+		color: $default;
+
+		th {
+			height: auto;
+			background: none;
+			border: 0;
+			margin: 0;
+			padding: 0 0 8px;
+			color: $default;
+			text-align: center;
+			line-height: 16px;
+			font-weight: 500;
+		}
+
+		td {
+			margin: 0;
+			height: auto;
+			text-align: center;
+			border: 0;
+			line-height: 1;
+		}
+	}
+
+	#tableCalendar,
+	#tableYear,
+	#tableMonth {
+		text-align: center;
+
+		@if ($responsive) {
+			@include media-breakpoint-up(lg) {
+				a {
+					&:hover {
+						color: $primary;
+						border-color: transparent;
+						background-color: rgba($primary, .2);
+					}
+				}
+			}
+		}
+	}
+
+	#tableCalendar {
+		table {
+			width: 32px;
+		}
+
+		td {
+			padding: 4px 0;
+			height: 32px;
+			color: #767676;
+		}
+
+		a {
+			width: 32px;
+			height: 32px;
+			line-height: 32px;
+			border-radius: 50%;
+
+			display: block;
+			margin: auto;
+			color: $default;
+			text-decoration: none;
+
+			transition-duration: .3s;
+			transition-property: background-color;
+			will-change: background-color;
+
+			&.today {
+				color: #fff !important;
+				background-color: $bg-primary;
+			}
+		}
+	}
+
+	#tableCalendarTitle,
+	#tableYearTitle,
+	#tableMonthTitle {
+		height: 24px;
+		font-weight: bold;
+		font-size: 16px;
+		margin-bottom: 16px;
+	}
+
+	#tableCalendar {
+
+		th,
+		td {
+			&:first-child {
+				color: #FF4D6D;
+
+				a {
+					color: inherit;
+				}
+			}
+
+			&:last-child {
+				// color: #0072cf;
+
+				a {
+					color: inherit;
+				}
+			}
+		}
+	}
+
+	#tableYear,
+	#tableMonth {
+		margin-top: -6px;
+
+		td {
+			padding: 6px 4px !important;
+		}
+
+		a {
+			display: block;
+			border: 1px solid $border-dark;
+			line-height: 38px;
+			border-radius: 4px;
+		}
+	}
+
+	.prev,
+	.next {
+		display: block;
+		width: 16px;
+		height: 16px;
+		line-height: 16px;
+		border: 0;
+		padding: 0;
+		background: url(#{$url-img}/ico-xs-chevron-left-lightgray@2x.png) no-repeat center center;
+		background-size: 16px auto;
+		text-indent: -9999px;
+		text-align: left;
+		overflow: hidden;
+	}
+
+	.prev {
+		float: left;
+		margin-left: 40px;
+		background-position: right center;
+	}
+
+	.next {
+		float: right;
+		margin-right: 40px;
+		background-image: url(#{$url-img}/ico-xs-chevron-right-lightgray@2x.png);
+		background-position: left center;
+	}
+
+	.btn-cal-close {
+		position: absolute;
+		top: 0;
+		right: 0;
+
+		a {
+			display: block;
+			width: 40px;
+			height: 40px;
+			color: transparent;
+			background: url(#{$url-img}/ico-xs-close-lightgray@2x.png) no-repeat center center;
+			background-size: 16px auto;
+		}
+	}
+}
+
+// 	@include media-breakpoint-down(sm) {
+// 		// right: $mobile-spacing !important;
+// 		// left: auto !important;
+
+// 		left: 50% !important;
+// 		margin-left: -$datepicker-width * 0.5 !important;
+// 	}

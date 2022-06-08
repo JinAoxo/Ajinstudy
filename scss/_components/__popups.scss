@@ -1,0 +1,172 @@
+/* 모달 팝업 */
+.modal-open {
+	overflow: hidden;
+}
+
+.modal-popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1100;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&.hide {
+		opacity: 0;
+		visibility: hidden;
+
+		.popup-inner {
+			transform: translateY(-100px);
+		}
+	}
+
+	&.show {
+		opacity: 1;
+		visibility: visible;
+		transition-duration: 0.3s;
+
+		.popup-inner {
+			transform: translateY(0);
+		}
+	}
+
+	.dimed {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba(72, 78, 87, 0.5);
+
+		+.popup-inner {
+			border: 0;
+		}
+	}
+
+	.popup-inner {
+		position: relative;
+		z-index: 1100;
+		background-color: #fff;
+		transition-duration: 0.3s;
+		transition-property: transform;
+		// border: 1px solid $primary;
+		outline: 0;
+	}
+
+	.popup-title {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		font-size: 16px;
+		font-weight: bold;
+	}
+
+	.popup-body {
+		position: relative;
+		padding: 30px;
+		max-height: calc(100vh - 240px);
+		overflow-y: auto;
+	}
+
+	.btn-close-popup {
+		width: 48px;
+		height: 48px;
+		position: absolute;
+		right: 16px;
+		top: 4px;
+		// padding: 0 $spacing;
+	}
+
+	&.modal-full {
+		.popup-inner {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&.modal-sm {
+		.popup-inner {
+			width: 446px;
+			border-radius: 24px;
+			padding: 24px;
+		}
+
+		.popup-header {
+			padding-top: 8px;
+			padding-bottom: 24px;
+		}
+
+		.popup-body {
+			padding: 0;
+		}
+
+		.popup-footer {
+			padding-top: 24px;
+		}
+	}
+
+	&.modal-md {
+		align-items: flex-start;
+
+		.popup-header {
+			border-bottom: 1px solid $border-base;
+		}
+
+		.popup-title {
+			height: 55px;
+		}
+
+		.popup-inner {
+			width: 608px;
+			border-radius: 0 0 24px 24px;
+
+			// &:focus {
+			// 	box-shadow: 0 0 0 2px rgba($primary, 0.5);
+			// }
+		}
+
+		.popup-body {
+			padding: 24px;
+		}
+
+		.popup-footer {
+			margin: 0 24px;
+			padding: 24px 24px 32px;
+			border-top: 1px solid $border-base;
+
+			.btn+.btn {
+				margin-left: 4px;
+			}
+		}
+	}
+
+	@include media-breakpoint-down(md) {
+		&.modal-md {
+			.popup-inner {
+				width: 100%;
+				height: 100%;
+				border-radius: 0;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.popup-header,
+			.popup-footer {
+				flex: 0 0 auto;
+			}
+
+			.popup-body {
+				flex: 1 1 auto;
+				max-height: none;
+			}
+		}
+
+		&.modal-sm {
+			padding: $mobile-spacing;
+		}
+	}
+}

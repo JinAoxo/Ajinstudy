@@ -1,0 +1,25 @@
+.container {
+	@include clearfix;
+	max-width: $container-width-base;
+	margin: auto;
+
+	@include media-breakpoint-up(lg) {
+		padding: 0 $spacing;
+	}
+
+	@include media-breakpoint-down(md) {
+		padding: 0 $mobile-spacing;
+	}
+}
+
+.container-sm {
+	@include clearfix;
+	max-width: $container-width-sm;
+	margin: auto;
+}
+
+.container-lg {
+	@include clearfix;
+	max-width: $container-width-lg;
+	margin: auto;
+}

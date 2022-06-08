@@ -1,0 +1,58 @@
+h1 {
+	color: #f00; //test
+}
+
+.wrap {
+	display: flex;
+	width: 100vw;
+	height: 100vh;
+
+	.link-list {
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 10vw;
+		height: 100vh;
+	}
+
+	.content-wrap {
+		width: 90vw;
+		height: 100vh;
+		padding-left: 10vw;
+
+		section {
+			height: 100vh;
+		}
+	}
+}
+
+//study-list
+.study-list {
+	.item-wrap {
+		display: grid;
+	}
+}
+
+
+//test
+.bg-patten {
+	width: 100px;
+	height: 100px;
+	background: linear-gradient(45deg, rgba(0, 0, 0, 0.02) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.02) 75%, rgba(0, 0, 0, 0.02) 0),
+		linear-gradient(45deg, rgba(0, 0, 0, 0.02) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.02) 75%, rgba(0, 0, 0, 0.02) 0),
+		white;
+	background-repeat: repeat, repeat;
+	background-position: 0px 0, 13px 13px;
+	background-size: 26px 26px, 26px 26px;
+}
+
+// 임시
+a {
+	text-decoration: none;
+	color: black;
+
+	&.link {
+		font-weight: bold;
+		color: royalblue;
+	}
+}

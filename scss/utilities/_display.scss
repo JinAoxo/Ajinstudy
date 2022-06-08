@@ -1,0 +1,27 @@
+/* 반응형에 대한 display 속성 class 정의 */
+
+@if ($responsive) {
+	.d-up-lg {
+		@include media-breakpoint-down(md) {
+			display: none !important;
+		}
+	}
+
+	.d-up-md {
+		@include media-breakpoint-down(sm) {
+			display: none !important;
+		}
+	}
+
+	.d-down-md {
+		@include media-breakpoint-up(lg) {
+			display: none !important;
+		}
+	}
+
+	.d-down-sm {
+		@include media-breakpoint-up(md) {
+			display: none !important;
+		}
+	}
+}

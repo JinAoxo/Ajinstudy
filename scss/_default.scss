@@ -1,0 +1,133 @@
+/* default - 전체 활성화 시켜도 됨 : 설정 생각 안했던 부분 주석 처리로 변경 : reset css 역할 */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+	@include media-breakpoint-down(md) {
+		outline: 0;
+	}
+}
+
+html {
+	height: 100%;
+
+	@include media-breakpoint-down(md) {
+		-webkit-text-size-adjust: none;
+		overflow-y: auto;
+	}
+}
+
+// body {
+// color: $default;
+
+// font-size: $font-size-base;
+// font-family: $font-family-base;
+// letter-spacing: $letter-spacing;
+// line-height: 1.5;
+
+// 영역 밖으로 넘치는 단어 개행
+// word-wrap: break-word;
+// word-break: keep-all; // 단어 단위 및 하이픈 개행
+
+// @include media-breakpoint-up(lg) {
+// 	transform-origin: 50% 0%;
+// }
+
+// @include media-breakpoint-down(md) {
+// 	// word-break: break-all; // 글자 단위 개행
+// }
+// }
+
+// header,
+// section,
+// article,
+// aside,
+// footer,
+// nav {
+// 	display: block;
+// }
+
+// fieldset {
+// 	display: block;
+// 	margin: 0;
+// 	border: 0;
+// 	padding: 0;
+// }
+
+// pre {
+// 	white-space: pre-wrap;
+// }
+
+// img {
+// 	max-width: 100%;
+// 	border: 0;
+// }
+
+ul,
+li,
+ol {
+	list-style: none;
+	// 엣지 리스트 버그 해결
+	// list-style-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);
+}
+
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6,
+// dd {
+// 	margin: 0;
+// }
+
+// a,
+// select,
+// button,
+// input,
+// textarea {
+// 	font-family: inherit;
+// }
+
+// a {
+// 	color: inherit;
+// 	text-decoration: none;
+// }
+
+// button,
+// input[type=submit] {
+// 	margin: 0;
+// 	padding: 0;
+// 	border: 0;
+// 	color: inherit;
+// 	cursor: pointer;
+// 	background: transparent;
+// }
+
+// button::-moz-focus-inner,
+// input::-moz-focus-inner {
+// 	border: 0;
+// 	padding: 0;
+// }
+
+.sr-only {
+	position: absolute;
+	left: -9999px;
+	width: 1px;
+	height: 1px;
+	margin: 0 !important;
+	font-size: 0;
+	line-height: 0;
+	overflow: hidden;
+}
+
+// caption.sr-only {
+// 	position: static;
+// 	width: auto;
+// 	height: 0;
+// }
+
+// strong {
+// 	font-weight: 500;
+// }

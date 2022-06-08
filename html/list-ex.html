@@ -19,19 +19,45 @@
 					<ol>
 						<li><a href="#con1">1. guide page</a></li>
 						<li><a href="#con2">2. study page</a></li>
+						<li><a href="#con3">3. 한줄팁 page</a></li>
 					</ol>
 				</li>
 			</ul>
 		</aside>
+
 		<article class="content-wrap">
 			<h2>전체메뉴</h2>
 			<section id="con1">
 				<div class="">연습</div>
+				<div class="bg-patten"></div>
 			</section>
+
 			<section id="con2">
 				<h3>링크 list</h3>
-				<div class="">
-					썸네일 이미지 + 제목 + 날짜 + 내용 + 검색용어# 로 정리
+				<div class="study-list">
+					<s>썸네일 이미지 + 제목 + 날짜 + 내용 + 검색용어# 로 정리</s>
+					<ul class="item-wrap">
+						<li>- 제목 : 내용 <a href="#;" class="link"><img src="" alt="썸네일"></a> : 2022-06-09 /#검색용어</li>
+						<li>- 제목 : 내용 <a href="#;" class="link"><img src="" alt="썸네일"></a> : 2022-06-09 /#검색용어</li>
+						<li>- 제목 : 내용 <a href="#;" class="link"><img src="" alt="썸네일"></a> : 2022-06-09 /#검색용어</li>
+					</ul>
+				</div>
+			</section>
+
+			<!-- 한줄팁* -->
+			<section id="con3">
+				<h3>한줄팁 list</h3>
+				<div class="tip-wrap">
+					<!-- <s>썸네일 이미지 + 제목 + 날짜 + 내용 + 검색용어# 로 정리</s> -->
+					<ol class="listA" id="tip-table">
+						<li>1. table > table의 경우 접근성 문제에서 오류가 발생할 가능성이 있기 때문에 쓰지 않는 편이 좋다(But. 그냥 쓰는 경우가 많다)</li>
+						<li>2. table 속성의 경우 table이 가지고 있는 속성을 잘 생각하고 쓰는것이 도움이 된다. <b>=> table은 데이터(DB)를 불러오는 경우 쓴다.</b></li>
+						<li>3. [css] display : table; 주의점 : display: table 은 display: table-cell과 꼭 함께 쓰는것이 좋습니다. 테이블로 정의 해줬기 때문에 Cell도 필요하기 때문입니다.</li>
+					</ol>
+
+					<ol class="listA" id="tip-vscode">
+						<li>1. vscode 사용시 한줄에 표기되는 html code 수를 조절 하고 싶다면 설정에 들어가서 line length를 입력하고 수정하면 됩니다.</li>
+					</ol>
 				</div>
 			</section>
 		</article>

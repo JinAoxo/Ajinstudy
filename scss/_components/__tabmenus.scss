@@ -1,0 +1,157 @@
+/* 탭메뉴 */
+
+.tab-list {
+	display: flex;
+	text-align: center;
+	flex-wrap: wrap;
+	word-break: keep-all;
+	word-wrap: break-word;
+
+	li {
+		a {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			.ico {
+				margin-top: -2px;
+			}
+
+			span {
+				@include text-ellipsis(2, 20px);
+			}
+		}
+	}
+}
+
+.tab-content {
+	display: none;
+}
+
+.tab-menu1 {
+	position: relative;
+	font-weight: bold;
+	color: $lightgray;
+
+	.tab-list {
+		margin: -6px -12px;
+		flex-wrap: nowrap;
+
+		li {
+			margin: 6px 12px;
+
+			&.on {
+				a {
+					color: $white;
+					background-color: $bg-primary;
+				}
+			}
+
+			a {
+				min-width: 96px;
+				height: 48px;
+				padding: 0 8px;
+				border-radius: 16px;
+			}
+		}
+	}
+
+	@include media-breakpoint-down(md) {
+		margin: 0 -1 * ($mobile-spacing + 2px);
+		overflow-x: auto;
+
+		.tab-list {
+			margin: 0;
+
+			&:before,
+			&:after {
+				content: '';
+				flex: 0 0 auto;
+				width: $mobile-spacing;
+			}
+
+			li {
+				margin: 0 2px;
+
+				a {
+					min-width: 80px;
+					height: 40px;
+					border-radius: 14px;
+				}
+			}
+		}
+	}
+
+	@include media-breakpoint-down(sm) {
+		.tab-list {
+			li {
+				a {
+					min-width: 40px;
+					height: 32px;
+					border-radius: 10px;
+
+					span {
+						font-size: 13px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.tab-menu2 {
+	position: relative;
+	font-weight: 500;
+	color: $lightgray;
+
+	.tab-list {
+		font-size: 15px;
+		border-radius: 20px;
+		background-color: $bg-lightgray;
+
+		input {
+			position: absolute;
+			width: 1px;
+			height: 1px;
+			opacity: 0;
+		}
+
+		.item,
+		li {
+			flex: 1 1 33.33333%;
+			width: 33.33333%;
+			float: left;
+
+			:checked+.text,
+			&.on a {
+				color: $white;
+				background-color: $bg-primary;
+			}
+
+			.text,
+			a {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				cursor: pointer;
+
+				padding: 0 4px;
+				border-radius: 20px;
+				height: 40px;
+			}
+		}
+	}
+
+	@include media-breakpoint-up(lg) {
+		display: flex;
+		justify-content: center;
+
+		.tab-list {
+
+			.item,
+			li {
+				min-width: 136px;
+			}
+		}
+	}
+}
