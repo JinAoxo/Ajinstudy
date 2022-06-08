@@ -2481,11 +2481,7 @@ ol {
 }
 
 /* custom */
-h1 {
-  color: #f00;
-}
-
-.wrap {
+.container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2493,27 +2489,120 @@ h1 {
   height: 100vh;
 }
 
-.wrap .link-list {
+.container .link-list {
   position: fixed;
   left: 0;
   top: 0;
   width: 10vw;
   height: 100vh;
+  padding: 10px;
+  background-color: #e9e9e9;
 }
 
-.wrap .content-wrap {
-  width: 90vw;
+.container .content-wrap {
+  width: 100vw;
   height: 100vh;
-  padding-left: 10vw;
+  padding: 20px 50px;
+  padding-left: 15vw;
 }
 
-.wrap .content-wrap section {
+.container .content-wrap section {
+  padding-top: 20px;
   height: 100vh;
+}
+
+.link-list ol li {
+  padding: 5px;
+  font-weight: 900;
+}
+
+.link-list ol li:hover {
+  background: #333;
+}
+
+.link-list ol li:hover a {
+  color: #fff;
+}
+
+.link-list ol li.on {
+  background: #333;
+}
+
+.link-list ol li.on a {
+  color: #fff;
 }
 
 .study-list .item-wrap {
   display: -ms-grid;
   display: grid;
+  -ms-grid-rows: (300px)[2];
+      grid-template-rows: repeat(2, 300px);
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+  justify-items: center;
+  height: 620px;
+  overflow-y: scroll;
+}
+
+.study-list .item-wrap li {
+  padding: 10px;
+  background: rgba(200, 200, 200, 0.25);
+  border-radius: 15px;
+}
+
+.study-list .item-wrap .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.study-list .item-wrap .item img {
+  display: block;
+  width: 100%;
+  padding-top: 80px;
+  background: #333;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.tip-wrap .tip {
+  margin: 30px;
+  padding: 10px;
+  background: #f3f3f3;
+}
+
+.btn-filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 500px;
+  margin: 10px 0;
+  padding: 10px;
+  background: #999;
+  border-radius: 15px;
+}
+
+.btn-filter label {
+  font-size: x-large;
+  font-weight: 600;
+  color: #fff;
+}
+
+.btn-filter input {
+  width: 200px;
+  height: 30px;
+  border: none;
+  border-radius: 0;
+  margin-left: 10px;
 }
 
 .bg-patten {
