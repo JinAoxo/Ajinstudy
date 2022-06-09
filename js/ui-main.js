@@ -15,3 +15,10 @@ $('.link-list ol>li').click(function (e) {
 	$('.link-list ol>li').removeClass('on');
 	$(e.currentTarget).addClass('on');
 });
+
+
+//html in html 👍ㅇ0ㅇ!
+$(document).ready(function () {
+	$("#con1").load("guide.html");
+	// $("#con2").load("guide.html");
+});
