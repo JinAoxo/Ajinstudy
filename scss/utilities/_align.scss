@@ -1,0 +1,116 @@
+/* 정렬 - align 에 대한 기본 class 설정 */
+/* 1. float / 2. vertical / 3. flex 사용정렬*/
+
+//1. float 정의
+.clearfix {
+	position: relative;
+	@include clearfix;
+}
+
+.float-left {
+	float: left !important;
+}
+
+.float-right {
+	float: right !important;
+}
+
+.float-none {
+	float: none !important;
+}
+
+.text-left {
+	text-align: left !important;
+}
+
+.text-right {
+	text-align: right !important;
+}
+
+.text-center {
+	text-align: center !important;
+}
+
+//반응형
+@include media-breakpoint-up(lg) {
+	.text-lg-left {
+		text-align: left !important;
+	}
+
+	.text-lg-right {
+		text-align: right !important;
+	}
+
+	.text-lg-center {
+		text-align: center !important;
+	}
+}
+
+@include media-breakpoint-down(md) {
+	.text-md-left {
+		text-align: left !important;
+	}
+
+	.text-md-right {
+		text-align: right !important;
+	}
+
+	.text-md-center {
+		text-align: center !important;
+	}
+}
+
+@include media-breakpoint-down(sm) {
+	.text-sm-left {
+		text-align: left !important;
+	}
+
+	.text-sm-right {
+		text-align: right !important;
+	}
+
+	.text-sm-center {
+		text-align: center !important;
+	}
+}
+
+
+// 2. vertical 속성정의
+.vertical-top {
+	vertical-align: top !important;
+}
+
+.vertical-middle {
+	vertical-align: middle !important;
+}
+
+.vertical-bottom {
+	vertical-align: bottom !important;
+}
+
+//3. flex 사용정렬
+.content-row {
+	@include media-breakpoint-up(lg) {
+		display: flex;
+
+		>.col-item,
+		>.col-item-fit {
+
+			+.col-item {
+				margin-left: 40px;
+			}
+
+			+.col-item-fit {
+				margin-left: 40px;
+			}
+		}
+
+		>.col-item {
+			flex: 1 1 50%;
+		}
+
+		>.col-item-fit {
+			flex: 0 0 auto;
+		}
+	}
+}

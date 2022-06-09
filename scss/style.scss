@@ -1,0 +1,60 @@
+@charset "utf-8";
+// @import ".."; //연결 import 방법 => 파일 namming : _test.scss
+
+// 
+// 공통 컴포넌트
+// 
+
+// variables : 기본설정 ✨
+@import "variables";
+
+// funtions : 기본설정 ✨(윈도우 + . or ; )
+@import "breakpoints";
+@import "mixins";
+
+// global : 기본설정 ✨
+@import "webfonts";
+@import "default";
+
+// utilities : 기본설정 ✨
+@import "utilities/align";
+@import "utilities/spacing";
+@import "utilities/border";
+@import "utilities/display";
+@import "utilities/colors";
+@import "utilities/typo";
+
+
+// plugins =================================================== custom
+// @import "plugins/slick";
+
+// components : 전체 custom 하는 부분
+// @import "components/loadingbar";
+// @import "components/container";
+// @import "components/icons";
+// @import "components/lists";
+// @import "components/buttons";
+// @import "components/forms";
+// @import "components/tabmenus";
+// @import "components/boxs";
+// @import "components/popups";
+// @import "components/tables";
+// @import "components/datepicker";
+
+// layout : 기본 페이지에 대한 layout 설정 부분
+// @import "layout/base";
+// @import "layout/header";
+// @import "layout/sidebar";
+// @import "layout/content";
+// @import "layout/footer";
+
+
+
+// pages : custom --------------------------------------------------------------------
+// [필독] SCSS 작업방법 안내
+// 1. IA에 정의된 대메뉴별 path명과 맞춰 scss 파일 추가 후 사용
+//    예) path명 + Pages
+// 2. 반응형 사이트인 경우 breakpoint mixin 사용 필수 : 사용법 _guidePages.scss 참고
+// 3. 색상값 등 변수 사용 필수 : _variables.scss 참고
+
+@import "pages/test";

@@ -1,0 +1,24 @@
+/* color 속성에 대한 정의  => 확인 필요 */
+/* 1. text-[color] / 2. bg-color */
+
+@each $color,
+$value in $colors {
+	.text-#{$color} {
+		color: $value !important;
+	}
+}
+
+@each $bg-color,
+$value in $dark-bg-colors {
+	.#{$bg-color} {
+		background-color: $value !important;
+		color: #fff;
+	}
+}
+
+@each $bg-color,
+$value in $light-bg-colors {
+	.#{$bg-color} {
+		background-color: $value !important;
+	}
+}

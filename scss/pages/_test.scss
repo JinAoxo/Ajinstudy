@@ -1,0 +1,144 @@
+//rayout
+.container {
+	display: flex;
+	width: 100vw;
+	height: 100vh;
+
+	.link-list {
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 10vw;
+		height: 100vh;
+		padding: 10px;
+		background-color: rgb(233, 233, 233);
+	}
+
+	.content-wrap {
+		width: 100vw;
+		height: 100vh;
+		padding: 20px 50px;
+		padding-left: 15vw;
+
+		section {
+			padding-top: 20px;
+			height: 100vh;
+		}
+	}
+}
+
+//link-list : styling
+.link-list {
+	ol {
+		li {
+			padding: 5px;
+			font-weight: 900;
+
+			&:hover {
+				background: #333;
+
+				a {
+					color: #fff;
+				}
+			}
+
+			&.on {
+				background: #333;
+
+				a {
+					color: #fff;
+				}
+			}
+		}
+	}
+}
+
+//study-list
+.study-list {
+	.item-wrap {
+		display: grid;
+		grid-template-rows: repeat(2, 300px);
+		grid-template-columns: repeat(5, 1fr);
+		grid-gap: 10px;
+		justify-items: center;
+		height: 620px;
+		overflow-y: scroll;
+
+		li {
+			padding: 10px;
+			background: rgba(200, 200, 200, .25);
+			border-radius: 15px;
+		}
+
+		.item {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+
+			img {
+				display: block;
+				width: 100%;
+				padding-top: 80px;
+				background: #333;
+				object-fit: contain;
+			}
+		}
+	}
+}
+
+//tip-wrap
+.tip-wrap {
+	.tip {
+		margin: 30px;
+		padding: 10px;
+		background: #f3f3f3;
+	}
+}
+
+//btn-filter : custom 공통
+.btn-filter {
+	display: flex;
+	align-items: center;
+	width: 500px;
+	margin: 10px 0;
+	padding: 10px;
+	background: #999;
+	border-radius: 15px;
+
+	label {
+		font-size: x-large;
+		font-weight: 600;
+		color: #fff;
+	}
+
+	input {
+		width: 200px;
+		height: 30px;
+		border: none;
+		border-radius: 0;
+		margin-left: 10px;
+	}
+}
+
+//test
+.bg-patten {
+	width: 100px;
+	height: 100px;
+	background: linear-gradient(45deg, rgba(0, 0, 0, 0.02) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.02) 75%, rgba(0, 0, 0, 0.02) 0),
+		linear-gradient(45deg, rgba(0, 0, 0, 0.02) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.02) 75%, rgba(0, 0, 0, 0.02) 0),
+		white;
+	background-repeat: repeat, repeat;
+	background-position: 0px 0, 13px 13px;
+	background-size: 26px 26px, 26px 26px;
+}
+
+// 임시 :link
+a {
+	text-decoration: none;
+	color: black;
+
+	&.link {
+		font-weight: bold;
+		color: royalblue;
+	}
+}

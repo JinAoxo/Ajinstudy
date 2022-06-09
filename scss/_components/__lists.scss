@@ -1,0 +1,79 @@
+/* 불릿 및 목록 */
+.list {
+	>li {
+		position: relative;
+		@include clearfix;
+
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0;
+		}
+
+		&.none {
+			&:before {
+				display: none;
+			}
+		}
+
+		&.bullet-none {
+			font-weight: bold;
+			padding: 5px 0 0;
+
+			&:before {
+				display: none;
+			}
+		}
+	}
+}
+
+.list-dot {
+	>li {
+		&:before {
+			content: '';
+			position: absolute;
+			width: 4px;
+			height: 4px;
+			border-radius: 50%;
+			left: 0;
+		}
+	}
+
+	@include media-breakpoint-up(lg) {
+		>li {
+			padding-left: 12px;
+
+			&:before {
+				top: .7em;
+			}
+		}
+	}
+
+	@include media-breakpoint-down(md) {
+		>li {
+			padding-left: 9px;
+
+			&:before {
+				top: 10px;
+			}
+		}
+	}
+}
+
+.list-dot {
+	>li {
+		&:before {
+			background-color: #CAD1D8;
+		}
+	}
+}
+
+.list-hyphen {
+	>li {
+		padding-left: 8px;
+
+		&:before {
+			content: '-';
+		}
+	}
+}
