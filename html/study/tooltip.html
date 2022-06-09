@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>tooltip</title>
+	<link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+	<h1 class="sr-only">#1. 스터디 주제 : tooltip</h1>
+
+	<div class="wrap p-10">
+		<h2>tooltip</h2>
+		<p><strong>스터디 내용 :</strong> btn or icon에 붙어서 나오는 tooltip의 경우 해당 btn에 걸려서 작동 되게 하는 방법</p>
+
+		<section class="p-5">
+			<h3>원리 or 방법</h3>
+			<ol>
+				<li>1. 상단 부모의 최상단 높이에서 툴팁영역까지의 거리를 재는 함수 (.resize / .offset)</li>
+				<li>2. for문/ 반복문 => 계속해서 반복되어 표기 되기 때문에 </li>
+				<li class="sr-only">다음주 까지 과제 : vocode 미리보기 링크 적용하기 /tooltip 구현 해오기</li>
+			</ol>
+		</section>
+		<section class="p-5">
+			<h3>JS</h3>
+			<ul>
+				<li>1. resize를 사용하는 방법 --- $(window).resize(){} </li>
+				<li>2. offset으로 사용하는 방법 --- $('.yearBtn').offset();
+					<!-- <div class="reference sr-only">
+						<strong>$(function(){<br>
+							setInterval(function(){<br>
+							$('.myStatus').each(function(){<br>
+							var tg = $('.yearBtn').offset();<br>
+							$('#yearCalender').css({left : tg.left, top : tg.top + 40})<br>
+							})<br>
+							}, 1000) });
+						</strong><br><br>
+						<strong>
+							$('.class').css('top', height);<br>
+							console.log(height);
+						</strong>
+					</div> -->
+				</li>
+			</ul>
+		</section>
+		<section class="p-5">
+			<h3>내용</h3>
+			<p class="tooltip-btn-area">tooltip에 대한 내용입니다.
+				<a href="#;" class="tooltip-btn text-red text-bold">툴팁 버튼 링크</a>
+				확인해보세요! tooltip에 대한 내용입니다.tooltip에 대한 내용입니다.tooltip에 대한 내용입니다.tooltip에 대한 내용입니다.tooltip에 대한 내용입니다.tooltip에 대한
+				내용입니다.
+				<a href=" #;" class="tooltip-btn text-red text-bold">툴팁 버튼 링크</a>
+				확인해보세요!</p>
+			<div class="tooltip">
+				툴팁 내용입니다!11111
+			</div>
+			<!-- <div class="tooltip">
+				툴팁 내용입니다!22222
+			</div> -->
+		</section>
+	</div>
+
+	<!-- JavaScript -->
+	<script src="/js/jquery-3.5.1.min.js"></script>
+
+	<!-- TODO : 개발시 반드시 삭제, 레이아웃 세팅 JS -->
+	<!-- <script src="../js/ui-layout-setting.js"></script> -->
+
+	<!-- 공통 UI 컴포넌트 -->
+	<script src="/js/ui-main.js"></script>
+	<script src="/js/study.js"></script>
+
+	<!-- 페이지 개별 스크립트 -->
+	<script>
+		// 이곳에 정의
+	</script>
+</body>
+
+</html>

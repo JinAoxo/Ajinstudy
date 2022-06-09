@@ -2623,3 +2623,24 @@ a.link {
   font-weight: bold;
   color: royalblue;
 }
+
+.tooltip-btn-area .tooltip-btn {
+  position: relative;
+}
+
+.tooltip {
+  position: absolute;
+  left: 150px;
+  top: 450px;
+  display: none;
+  width: 300px;
+  height: 80px;
+  background: #fef5e5;
+  border-radius: 10px;
+  padding: 6px;
+  text-align: center;
+}
+
+.tooltip.on {
+  display: block;
+}
