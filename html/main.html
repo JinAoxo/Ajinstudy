@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>메인(미정)</title>
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="body-wrap">
+	<div class="container">
+		<h1 class="sr-only">study list page</h1>
+		<!-- <h2 class="_sr-only">clone coding page</h2> -->
+		<div class="list-typeA">
+			<section id="con2">
+				<div class="title-area">
+					<h2 class="title text-bold">Clone Coding List</h2>
+					<p class="sub-title">study list page tilte color is blue.<br>A one-line tip tilte color is coral.</p>
+				</div>
+				<div class="study-list">
+					<div class="btn-wrap btn-filter">
+						<label for="filter-text1">search :</label><input type="text" class="filter-text" id="filter-text1" name="검색">
+						<button type="button" data-filter-btn="study">STUDY</button>
+						<button type="button" data-filter-btn="tip">TIP</button>
+						<button type="reset">All</button>
+					</div>
+					<ul class="item-wrap filter-wrap">
+						<!-- list : 콘텐츠 영역 : s -->
+						<li class="item" data-filter-type="tip">
+							<a href="#;" class="link tip link-filter">
+								<div class="thumbnail-image"><img src="" alt="썸네일"></div>
+								<h4 class="tilte">table 태그</h4>
+								<div class="detail">
+									<p class="detail-ex">table</p>
+									<span class="data">2022-06-09</span>
+									<span class="tag-search">#table #오류</span>
+								</div>
+							</a>
+						</li>
+						<li class="item" data-filter-type="study">
+							<a href="/html/study/tooltip.html" class="link study">
+								<div class="thumbnail-image"><img src="" alt="썸네일"></div>
+								<h4 class="tilte">tooltip 구현</h4>
+								<div class="detail">
+									<p class="detail-ex">콘텐츠 toogle기능활용 / data()함수 활용 / tabindex로 접근성 맞춤</p>
+									<span class="data">2022-06-15</span>
+									<span class="tag-search">#tooltip #toogle #data #tabindex #study</span>
+								</div>
+							</a>
+						</li>
+						<!-- list : 콘텐츠 영역 : e -->
+					</ul>
+				</div>
+			</section>
+		</div>
+	</div>
+
+	<!-- JavaScript -->
+	<script src="../js/jquery-3.5.1.min.js"></script>
+
+	<!-- TODO : 개발시 반드시 삭제, 레이아웃 세팅 JS -->
+	<!-- <script src="../js/ui-layout-setting.js"></script> -->
+
+	<!-- 공통 UI 컴포넌트 -->
+	<script src="../js/ui-main.js"></script>
+
+	<!-- 페이지 개별 스크립트 -->
+	<script>
+		// 이곳에 정의
+	</script>
+</body>
+
+</html>
