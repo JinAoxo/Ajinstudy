@@ -11,20 +11,11 @@ $('.filter-text').keyup(function (event) {
 // 출처: https: //tozitizi.tistory.com/7
 
 // 버튼 필터
-$('[data-filter-btn]').click(function (event) {
-	// var $btn = $(this);
-	var type = $(this).data('study');
-	var $cont = $('[data-filter-type=' + type + ']');
-	// $cont.click();
-	console.log($cont);
-
-	// if (type == $cont) {
-	// 	$cont.css('display', 'none');
-	// }
-	if ($cont.hasClass('item')) {
-		$cont.css('display', 'none');
-		// $cont.appendTo('#content').attr('tabindex', '0').focus();
-	};
+$('[data-filter-btn]').click(function () {
+	var type = $(this).data('filter-btn');
+	var cont = $('[data-filter-type=' + type + ']');
+	$('.item-wrap.filter-wrap .item').hide();
+	cont.show();
 });
 
 //list tab 선택

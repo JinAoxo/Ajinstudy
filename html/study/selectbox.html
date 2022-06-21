@@ -8,6 +8,9 @@
 	<title>dropdown</title>
 	<link rel="stylesheet" href="../../css/style.css">
 </head>
+<style>
+.try-2 .selectbox-wrap.search{}
+</style>
 
 <body>
 	<h1 class="sr-only">#2. 스터디 주제 : selectbox/ dropdown</h1>
@@ -77,22 +80,21 @@
 				</div>
 			</div>
 
-			<h4>데이터 관련 내용 참고해서 수정한 내용 </h4>
-			<p>: data-toggle-btn/ data-toggle-content의 경우 공통으로 사용하기 위한 옵션</p>
-			<div class="try-2">
-				<p class="tooltip-btn-area">tooltip에 대한 내용입니다.
-					<a href="#;" class="tooltip-btn" data-toggle-btn="toggle1">툴팁 버튼 링크</a>
-					확인해보세요! tooltip에 대한 내용입니다.tooltip에 대한 내용입니다.tooltip에 대한 내용입니다.tooltip에 대한 내용입니다.tooltip에 대한 내용입니다.tooltip에 대한
-					내용입니다.
-					<a href=" #;" class="tooltip-btn" data-toggle-btn="toggle2">툴팁 버튼 링크</a>
-					확인해보세요!</p>
-				<div class="tooltip" data-toggle-content="toggle1">
-					툴팁 내용입니다!11111
+			 <h4>데이터 관련 내용 참고해서 수정한 내용 </h4>
+			<!-- <p>: data-toggle-btn/ data-toggle-content의 경우 공통으로 사용하기 위한 옵션</p> -->
+				<div class="try-2 mb-15">
+					<div class="selectbox-wrap search">
+						<dl>
+							<dt><a href="#;" title="선택"><span>전체</span></a></dt>
+							<dd>
+								<ul>
+									<li><a href="#;"><span>전체</span></a></li>
+									<li><a href="#;"><span>전체</span></a></li>
+								</ul>
+							</dd>
+						</dl>
+					</div>
 				</div>
-				<div class="tooltip" data-toggle-content="toggle2">
-					툴팁 내용입니다!22222
-				</div>
-			</div>
 		</section>
 	</div>
 
@@ -109,6 +111,39 @@
 	<!-- 페이지 개별 스크립트 -->
 	<script>
 		// 이곳에 정의
+
+		//selectbox
+		$(function(){
+			$(".selectbox-wrap.search dt").click(function() {
+				var select = $(this);
+				
+				//드롭다운 열기
+				select.addClass("active").next('.selectbox-wrap.search dd').slideDown(100).addClass("active");
+				
+				//다른영역 클릭 시 닫기
+				$(document).mouseup(function(e) {
+					var seting = $(".selectbox-wrap.search dd");
+					if (seting.has(e.target).length === 0) {
+					seting.removeClass("active").slideUp(100);
+					select.removeClass("active");
+					}
+				});
+
+				$(".selectbox-wrap.search dd>ul>li").click(function() {
+					var option = $(this).text();
+					
+					//클릭 시 드롭다운 닫기
+					$(".selectbox-wrap dd>ul>li").removeClass('selected');
+					$(".selectbox-wrap dd").removeClass("active").slideUp(100);
+					select.removeClass("active");
+					$(this).addClass('selected');
+					
+					// select에  text 넣기
+					select.text(option);
+				});
+			});
+	});
+
 	</script>
 </body>
 

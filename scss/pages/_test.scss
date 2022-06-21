@@ -58,6 +58,7 @@
 .body-wrap {
 	max-width: 1440px;
 	padding: 80px 112px;
+	margin: 0 auto;
 
 	.container {
 		width: 100%;
@@ -112,7 +113,7 @@ a {
 	}
 }
 
-//study-list
+//study-list (미디어 쿼리 적용 필요)
 .study-list {
 	.item-wrap {
 		display: grid;
@@ -126,8 +127,8 @@ a {
 
 		li {
 			padding: 30px;
-			// background: rgba(200, 200, 200, .25);
 			border-radius: 10px;
+			box-sizing: border-box;
 		}
 
 		.item {
@@ -136,6 +137,7 @@ a {
 			justify-content: center;
 			align-items: center;
 			width: 100%;
+			min-width: 33.3%;
 
 			.thumbnail-image {
 				display: block;
@@ -190,6 +192,19 @@ a {
 	}
 }
 
+@media(max-width: 767.98px) {
+	.study-list {
+		.item-wrap {
+			display: grid;
+			grid-template-rows: repeat(2, 246px);
+			grid-template-columns: repeat(1, 1fr);
+			grid-gap: 32px;
+			justify-items: center;
+			align-items: start;
+		}
+	}
+}
+
 //tip-wrap
 .tip-wrap {
 	.tip {
@@ -236,4 +251,10 @@ a {
 	background-repeat: repeat, repeat;
 	background-position: 0px 0, 13px 13px;
 	background-size: 26px 26px, 26px 26px;
+}
+
+
+//dark mode
+@media(prefers-color-scheme:dark) {
+	//dark mode
 }
