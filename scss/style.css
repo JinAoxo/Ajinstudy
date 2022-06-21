@@ -2539,6 +2539,7 @@ ol {
 .body-wrap {
   max-width: 1440px;
   padding: 80px 112px;
+  margin: 0 auto;
 }
 
 .body-wrap .container {
@@ -2609,6 +2610,8 @@ a.link.tip {
 .study-list .item-wrap li {
   padding: 30px;
   border-radius: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .study-list .item-wrap .item {
@@ -2626,6 +2629,7 @@ a.link.tip {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
+  min-width: 33.3%;
 }
 
 .study-list .item-wrap .item .thumbnail-image {
@@ -2763,5 +2767,10 @@ a.link.tip {
   padding: 10px;
   border: 2px solid #ffd997;
   border-radius: 15px;
+}
+
+.try-2 .selectbox-wrap select {
+  width: 150px;
+  height: 150px;
 }
 /*# sourceMappingURL=style.css.map */
