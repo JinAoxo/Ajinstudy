@@ -30,7 +30,7 @@
 			<div class="try-1 mb-15">
 				<div class="selectbox-wrap">
 					<dl>
-						<dt><a href="#;" title="선택"><span>전체</span></a></dt>
+						<dt><a href="#;" title="선택 접기"><span>전체</span></a></dt>
 						<dd>
 							<ul>
 								<li><a href="#;"><span>option</span></a></li>
@@ -111,70 +111,73 @@
 	<script>
 		// 이곳에 정의
 		//1. 우체국 참고
-		$(function ($) {
-			$.fn.customSelect = function () {
+		//mousedown : 마우스를 눌렀을때의 이벤트
+		//length : 
+		//closest : 가장 가까운 상위 요소 
+		//replace : replace("찾을 문자열", "변경할 문자열") 문자를 찾아서 바꾸는 형식 ✨
+		$(function () {
+			$('.try-1 .selectbox-wrap dl dt a').on('mousedown', function (e) {
+				$('.try-1 .selectbox-wrap').addClass('active');
+			})
+		});
 
-				$(document).on('mousedown', function (e) {
-					if (!$(e.target).closest('.selectbox-wrap').length) {
-						$('.selectbox-wrap.active dt a').each(function () {
-							if ($(this).attr('title') != undefined) {
-								$(this).attr('title', $(this).attr('title').replace('접기', '펼치기'))
-							}
-						});
-						$('.selectbox-wrap.active').removeClass('active');
-					}
-				});
+		$(function () {
+			// $.fn.customSelect = function () {
 
-				return this.each(function () {
-					const $el = $(this);
-					const $btn = $('dt a', this);
-					const $listItem = $('dd a', this);
+			$(document).on('mousedown', function (e) {
+				if (!$(e.target).closest('.try-1 .selectbox-wrap').length) {
+					$('.try-1 .selectbox-wrap.active dt a').each(function () {
+						if ($(this).attr('title') != undefined) {
+							$(this).attr('title', $(this).attr('title').replace('접기', '펼치기'))
+						}
+					});
+					// $('.try-1 .selectbox-wrap').addClass('active');
+					$('.try-1 .selectbox-wrap.active').removeClass('active');
+				}
+			});
 
-					let addText = $el.hasClass('active') ? '접기' : '펼치기';
-					let title = $btn.attr('title');
-					if (title != undefined) {
-						title = title + ' ' + addText;
-					}
+			// return this.each(function () {
+			// 	const $el = $(this);
+			// 	const $btn = $('dt a', this);
+			// 	const $listItem = $('dd a', this);
 
-					if ($el.hasClass('disabled')) {
-						$btn.removeAttr('href');
-					} else {
-						$btn.attr('title', title);
+			// 	let addText = $el.hasClass('active') ? '접기' : '펼치기';
+			// 	let title = $btn.attr('title');
+			// 	if (title != undefined) {
+			// 		title = title + ' ' + addText;
+			// 	}
 
-						$btn.click(function (e) {
-							e.preventDefault();
-							const $otherBtn = $('.selectbox-wrap').not($el).find('dt a');
-							$('.selectbox-wrap').not($el).removeClass('active')
-							if ($otherBtn.attr('title') != undefined) {
-								$otherBtn.attr('title', $otherBtn.attr('title').replace('접기', '펼치기'));
-							}
+			// 	if ($el.hasClass('disabled')) {
+			// 		$btn.removeAttr('href');
+			// 	} else {
+			// 		$btn.attr('title', title);
 
-							$el.toggleClass('active');
-							if ($otherBtn.attr('title') != undefined) {
-								if ($el.hasClass('active')) {
-									$btn.attr('title', $btn.attr('title').replace('펼치기', '접기'));
-								} else {
-									$btn.attr('title', $btn.attr('title').replace('접기', '펼치기'));
-								}
-							}
-						});
+			// 		$btn.click(function (e) {
+			// 			e.preventDefault();
+			// 			const $otherBtn = $('.try-1 .selectbox-wrap').not($el).find('dt a');
+			// 			$('.try-1 .selectbox-wrap').not($el).removeClass('active')
+			// 			if ($otherBtn.attr('title') != undefined) {
+			// 				$otherBtn.attr('title', $otherBtn.attr('title').replace('접기', '펼치기'));
+			// 			}
 
-						$listItem.click(function (e) {
-							e.preventDefault();
-							$btn.children('span').text($(this).text());
-							$el.toggleClass('active').removeClass('error');
-							$el.closest('td').find('> .error_info').hide();
-							if ($btn.attr('title') != undefined) {
-								$btn.attr('title', $btn.attr('title').replace('접기', '펼치기')).focus();
-							}
-						});
-					}
-				});
-			};
-		})(jQuery);
+			// 			$el.toggleClass('active');
+			// 			if ($otherBtn.attr('title') != undefined) {
+			// 				if ($el.hasClass('active')) {
+			// 					$btn.attr('title', $btn.attr('title').replace('펼치기', '접기'));
+			// 				} else {
+			// 					$btn.attr('title', $btn.attr('title').replace('접기', '펼치기'));
+			// 				}
+			// 			}
+			// 		});
+			// 	}
+			// });
+			// };
+		});
+		// (jQuery);
 		// $(function () {
 		// 	$('.selectbox-wrap').customSelect();
 		// });
+
 
 		//3. 혼자 작업했던 밀크티
 		$(function () {

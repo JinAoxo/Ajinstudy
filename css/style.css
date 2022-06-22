@@ -2794,12 +2794,21 @@ a.link.tip {
   vertical-align: middle;
 }
 
+.try-1 .selectbox-wrap dl {
+  position: relative;
+}
+
 .try-1 .selectbox-wrap dt a {
   display: block;
   border: 1px solid #ddd;
   border-radius: 6px;
   background: #fff;
   padding: 3px;
+}
+
+.try-1 .selectbox-wrap dt a > span {
+  display: block;
+  margin: 0 40px 0 15px;
 }
 
 .try-1 .selectbox-wrap dt a > span:after {
@@ -2810,11 +2819,71 @@ a.link.tip {
   right: 15px;
   width: 13px;
   height: 7px;
-  background: url(/1.png) no-repeat 0 0;
 }
 
-.try-1.active {
+.try-1 .selectbox-wrap dd {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 45px;
+  width: 100%;
+  background: #fff;
+}
+
+.try-1 .selectbox-wrap dd ul {
+  max-height: 202px;
+  overflow-y: auto;
+  border-top: 1px solid #eee;
+  border-radius: 0 0 6px 6px;
+}
+
+.try-1 .selectbox-wrap dd a {
+  display: block;
+  background: #fff;
+}
+
+.try-1 .selectbox-wrap dd a:hover {
+  background: #f3f3f3;
+}
+
+.try-1 .selectbox-wrap dd a:hover > span {
+  color: #f3f3f3;
+}
+
+.try-1 .selectbox-wrap dd a > span {
+  color: #666;
+}
+
+.try-1 .selectbox-wrap dd li:last-child a {
+  border-radius: 0 0 5px 5px;
+}
+
+.try-1 .selectbox-wrap dd a span {
+  display: block;
+  margin: 0 27px 0 15px;
+  height: 50px;
+  line-height: 50px;
+}
+
+.try-1 .selectbox-wrap dd li.active a {
+  background: #f3f3f3;
+}
+
+.try-1 .selectbox-wrap dd li.active a > span {
+  color: #f3f3f3;
+}
+
+.try-1 .selectbox-wrap.active {
   z-index: 100;
+}
+
+.try-1 .selectbox-wrap.active dd {
+  display: block;
+}
+
+.try-1 .selectbox-wrap.active dt a {
+  border: 1px solid #333;
+  border-radius: 6px 6px 0 0;
 }
 
 .try-2 .selectbox-wrap select {
