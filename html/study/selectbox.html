@@ -17,7 +17,7 @@
 		<p><strong>스터디 내용 : </strong>selectbox & dropdown 웹접근성에 맞춘 마크업</p>
 
 		<section class="p-5">
-			<h3>웹접근성을 맞추는 방법</h3>
+			<h3>시멘틱 마크업 /웹접근성을 맞추는 방법</h3>
 			<ol>
 				<li>1. 마크업 부분 : div로 상위 전체를 한번 감싸고 -> <span class="text-red"> dl > dt(a) + dd(ul > li > a)</span></li>
 				<li>2. '펼치기/접기' 텍스트 title에 표기</li>
@@ -26,11 +26,13 @@
 		<section class="p-5">
 			<h3>내용</h3>
 			<h4 class="text-red">1. dl > dt(a) + dd(ul > li > a) : 우체국 참고</h4>
-			<p> - </p>
+			<p> - 웹 접근성 tab 사용했을 경우 선택되는 부분 js 커스텀</p>
+			<p> - '펼치기/접기' 텍스트 title에 표기 변경되는 부분 커스텀</p>
+			<p> - 커스텀 시 🔻 사용하고 싶다면 :after 부분에 커스텀 후 작업 </p>
 			<div class="try-1 mb-15">
 				<div class="selectbox-wrap">
 					<dl>
-						<dt><a href="#;" title="선택 접기"><span>전체</span></a></dt>
+						<dt><a href="#;" title="선택 펼치기"><span>전체</span></a></dt>
 						<dd>
 							<ul>
 								<li><a href="#;"><span>option</span></a></li>
@@ -44,6 +46,7 @@
 			<h4>2. select / option </h4>
 			<p> - select : 옵션 메뉴를 제공하는 드롭다운 리스트(drop-down list)를 정의할 때 사용</p>
 			<p> - custom 할때 appearance를 사용하여 기본 스타일 제거 후 커스텀 <span class="text-red text-bold">/ 커스텀이 힘듬</span></p>
+			<p> - 웹 접근성 tab 사용시 select 자체는 선택됨 option 부분은 화살표로만 선택가능</p>
 			<div class="try-2 mb-15">
 				<div class="selectbox-wrap">
 					<div>
@@ -80,7 +83,8 @@
 
 			<h4>3. 혼자 작업 했던 밀크티</h4>
 			<p> - button 으로 작업 후 -> div > ul > li 로 작업 / label이 active가 되었을때 slideDown slideUp 으로 option 표시</p>
-			<p> - 웹 접근성 작업 안되어 있음</p>
+			<p> - 커스텀 시 🔻 사용하고 싶다면 :after 부분에 커스텀 후 작업 </p>
+			<p> - 웹 접근성 tab 사용시 select option 선택됨 : button 과 a로 마크업 되어 있기 때문에 가능한 부분</p>
 			<div class="try-2 mb-15">
 				<div class="select-milkt">
 					<button class="label">option기본</button>
@@ -112,67 +116,70 @@
 		// 이곳에 정의
 		//1. 우체국 참고
 		//mousedown : 마우스를 눌렀을때의 이벤트
-		//length : 
+		//length : 문자열의 길이를 체크하는 방법
 		//closest : 가장 가까운 상위 요소 
 		//replace : replace("찾을 문자열", "변경할 문자열") 문자를 찾아서 바꾸는 형식 ✨
+		//toggle() : 선택한 요소가 보이면 보이지 않게, 보이지 않으면 보이게 방법
+		//toggleClass() : 선택한 요소의 클래스값을 넣었다가 뺐다가 하는 방법
+
+		//셀렉트 박스 펼치기
 		$(function () {
 			$('.try-1 .selectbox-wrap dl dt a').on('mousedown', function (e) {
-				$('.try-1 .selectbox-wrap').addClass('active');
-			})
-		});
-
-		$(function () {
-			// $.fn.customSelect = function () {
-
-			$(document).on('mousedown', function (e) {
-				if (!$(e.target).closest('.try-1 .selectbox-wrap').length) {
-					$('.try-1 .selectbox-wrap.active dt a').each(function () {
-						if ($(this).attr('title') != undefined) {
-							$(this).attr('title', $(this).attr('title').replace('접기', '펼치기'))
-						}
-					});
-					// $('.try-1 .selectbox-wrap').addClass('active');
-					$('.try-1 .selectbox-wrap.active').removeClass('active');
+				$('.try-1 .selectbox-wrap').toggleClass('active');
+				if ($('.try-1 .selectbox-wrap').hasClass('active')) {
+					$(e.target).parents('.selectbox-wrap dl dt a').attr('title', $(this).attr('title').replace('펼치기', '접기'))
+				} else {
+					$(e.target).parents('.selectbox-wrap dl dt a').attr('title', $(this).attr('title').replace('접기', '펼치기'))
 				}
 			});
+			// $('.try-1 .selectbox-wrap dl dd a').on('click', function (e) {
+			// 	$('.try-1 .selectbox-wrap.active').removeClass('active');
+			// 	// $(e.target).parents('.selectbox-wrap dl dt a').attr('title', $(this).attr('title').replace('접기', '펼치기'))
 
-			// return this.each(function () {
-			// 	const $el = $(this);
-			// 	const $btn = $('dt a', this);
-			// 	const $listItem = $('dd a', this);
-
-			// 	let addText = $el.hasClass('active') ? '접기' : '펼치기';
-			// 	let title = $btn.attr('title');
-			// 	if (title != undefined) {
-			// 		title = title + ' ' + addText;
-			// 	}
-
-			// 	if ($el.hasClass('disabled')) {
-			// 		$btn.removeAttr('href');
-			// 	} else {
-			// 		$btn.attr('title', title);
-
-			// 		$btn.click(function (e) {
-			// 			e.preventDefault();
-			// 			const $otherBtn = $('.try-1 .selectbox-wrap').not($el).find('dt a');
-			// 			$('.try-1 .selectbox-wrap').not($el).removeClass('active')
-			// 			if ($otherBtn.attr('title') != undefined) {
-			// 				$otherBtn.attr('title', $otherBtn.attr('title').replace('접기', '펼치기'));
-			// 			}
-
-			// 			$el.toggleClass('active');
-			// 			if ($otherBtn.attr('title') != undefined) {
-			// 				if ($el.hasClass('active')) {
-			// 					$btn.attr('title', $btn.attr('title').replace('펼치기', '접기'));
-			// 				} else {
-			// 					$btn.attr('title', $btn.attr('title').replace('접기', '펼치기'));
-			// 				}
-			// 			}
-			// 		});
-			// 	}
 			// });
-			// };
 		});
+
+		// $(function () {
+		// $.fn.customSelect = function () {
+
+
+		// return this.each(function () {
+		// 	const $el = $(this);
+		// 	const $btn = $('dt a', this);
+		// 	const $listItem = $('dd a', this);
+
+		// 	let addText = $el.hasClass('active') ? '접기' : '펼치기';
+		// 	let title = $btn.attr('title');
+		// 	if (title != undefined) {
+		// 		title = title + ' ' + addText;
+		// 	}
+
+		// 	if ($el.hasClass('disabled')) {
+		// 		$btn.removeAttr('href');
+		// 	} else {
+		// 		$btn.attr('title', title);
+
+		// 		$btn.click(function (e) {
+		// 			e.preventDefault();
+		// 			const $otherBtn = $('.try-1 .selectbox-wrap').not($el).find('dt a');
+		// 			$('.try-1 .selectbox-wrap').not($el).removeClass('active')
+		// 			if ($otherBtn.attr('title') != undefined) {
+		// 				$otherBtn.attr('title', $otherBtn.attr('title').replace('접기', '펼치기'));
+		// 			}
+
+		// 			$el.toggleClass('active');
+		// 			if ($otherBtn.attr('title') != undefined) {
+		// 				if ($el.hasClass('active')) {
+		// 					$btn.attr('title', $btn.attr('title').replace('펼치기', '접기'));
+		// 				} else {
+		// 					$btn.attr('title', $btn.attr('title').replace('접기', '펼치기'));
+		// 				}
+		// 			}
+		// 		});
+		// 	}
+		// });
+		// };
+		// });
 		// (jQuery);
 		// $(function () {
 		// 	$('.selectbox-wrap').customSelect();
