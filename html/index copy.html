@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>클론 코딩 setting</title>
+	<link rel="stylesheet" href="../css/style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script>
+		$(document).ready(function () {
+
+			$('section').on('click', '[data-btn]', function () {
+				// var tooltip1 = $('.tooltip').attr('tabindex', '0');
+				var offsety = $(this).offset().top + 20;
+				var btn = $(this);
+				var togglecont = btn.data('btn');
+				var cont = $('[data-tool=' + togglecont + ']').attr('tabindex', '0');
+				$(cont).toggle().focus().css({
+					'top': offsety
+				});
+
+				var btn = $(this);
+				var togglecont = btn.data('btn');
+
+				$this = $(this);
+				// 접근성 포커싱 이전위치로
+				$('.tooltip .close').on('click', function () {
+					var tooltip2 = $('.tooltip').removeAttr('tabindex');
+					$(tooltip2).hide();
+					$this.focus()
+				})
+			});
+
+			// 접근성 포커싱 유지 
+			$(document).on('keydown', '.close', function (e) {
+				if (e.keyCode == 9 && !e.shiftKey) { // shift
+					e.preventDefault();
+					$(this).closest('.tooltip').focus();
+
+				}
+			}).on('keydown', '.tooltip', function (e) {
+				if ($('.tooltip').is(e.target) && e.keyCode == 9 && e.shiftKey) { // shift + tab
+					e.preventDefault();
+					$(this).find('.close').focus();
+				}
+			});
+
+		});
+	</script>
+</head>
+
+<body>
+	<section>
+		<h2>툴팀 예제1</h2>
+		<p>
+			콘텐츠 내용 중간에 들어갈 때 도움말콘텐츠 <button type="button" data-btn="1" class="btn-open" title="툴팁열기"><i
+					class="ico ico-help"></i>
+			</button>내용
+			중간에 들어갈 때 동해물과
+			백두산이 마르고 닳도록
+			하느님이 보우하사 우리나라 만세 무궁화 삼천리
+			화려강산 도움말콘텐츠 내용 중간에 들어갈 때 동해물과 <button data-btn="2" type="button" class="btn-open" title="툴팁열기"><i
+					class="ico ico-help"></i></button>
+			백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세 무궁화 삼천리 화려강산
+		</p>
+	</section>
+
+	<div class="tooltip" data-tool="1">
+		<div class="tooltip-body">
+			<p>
+				콘텐츠 내용 중간에 들어갈 때 도움말콘텐츠 입니다
+			</p>
+			<a href="#">test</a>
+			<a href="#">test2</a>
+			<button type="button" class="close btn-close-tooltip">X
+			</button>
+		</div>
+	</div>
+
+	<div class="tooltip" data-tool="2">
+		<div class="tooltip-body">
+			<p>
+				콘텐츠 내용 중간에 들어갈 때 도움말콘텐츠 입니다콘텐츠 내용 중간에 들어갈 때 도움말콘텐츠 입니다콘텐츠 내용 중간에 들어갈 때 도움말콘텐츠 입니다콘텐츠 내용 중간에 들어갈 때 도움말콘텐츠 입니다콘텐츠
+				내용 중간에 들어갈 때 도움말콘텐츠 입니다콘텐츠 내용 중간에 들어갈 때 도움말콘텐츠 입니다콘텐츠 내용 중간에 들어갈 때 도움말콘텐츠 입니다
+			</p>
+			<button type="button" class="close btn-close-tooltip">X
+			</button>
+		</div>
+	</div>
+<p>https://yoshizukiyoo.github.io/yoshi/study/html/tooltip.html#</p>
+	<section style="margin-bottom:50px;">
+		<table style="border-collapse: collapse; width: 100%; height: 680px;" border="1" data-ke-align="alignLeft"
+			data-ke-style="style4">
+			<tbody>
+				<tr style="height: 20px;">
+					<td style="height: 20px; width: 18.9534%; text-align: center;"><span><span
+								style="color: #353535;"><b>Key</b></span></span></td>
+					<td style="height: 20px; width: 11.2791%; text-align: center;"><span><span
+								style="color: #353535;"><b>Code</b></span></span></td>
+					<td style="height: 20px; width: 20.0001%; text-align: center;"><span><span
+								style="color: #353535;"><b>Key</b></span></span></td>
+					<td style="height: 20px; width: 10.8138%; text-align: center;"><span><span
+								style="color: #353535;"><b>Code</b></span></span></td>
+					<td style="height: 20px; width: 22.2093%; text-align: center;"><span><span
+								style="color: #353535;"><b>Key</b></span></span></td>
+					<td style="height: 20px; width: 13.1396%; text-align: center;"><span><span
+								style="color: #353535;"><b>Code</b></span></span></td>
+				</tr>
+				<tr style="height: 20px;">
+					<td style="height: 20px; width: 18.9534%; text-align: center;"><span><span
+								style="color: #353535;">backspace</span></span></td>
+					<td style="height: 20px; width: 11.2791%; text-align: center;"><span><span
+								style="color: #353535;">8</span></span></td>
+					<td style="height: 20px; width: 20.0001%; text-align: center;"><span><span
+								style="color: #353535;">e</span></span></td>
+					<td style="height: 20px; width: 10.8138%; text-align: center;"><span><span
+								style="color: #353535;">69</span></span></td>
+					<td style="height: 20px; width: 22.2093%; text-align: center;"><span><span style="color: #353535;">숫자패드
+								8</span></span></td>
+					<td style="height: 20px; width: 13.1396%; text-align: center;"><span><span
+								style="color: #353535;">104</span></span></td>
+				</tr>
+				<tr style="height: 20px;">
+					<td style="height: 20px; width: 18.9534%; text-align: center;"><span><span
+								style="color: #353535;">tab</span></span></td>
+					<td style="height: 20px; width: 11.2791%; text-align: center;"><span><span
+								style="color: #353535;">9</span></span></td>
+					<td style="height: 20px; width: 20.0001%; text-align: center;"><span><span
+								style="color: #353535;">f</span></span></td>
+					<td style="height: 20px; width: 10.8138%; text-align: center;"><span><span
+								style="color: #353535;">70</span></span></td>
+					<td style="height: 20px; width: 22.2093%; text-align: center;"><span><span style="color: #353535;">숫자패드
+								9</span></span></td>
+					<td style="height: 20px; width: 13.1396%; text-align: center;"><span><span
+								style="color: #353535;">105</span></span></td>
+				</tr>
+				<tr style="height: 20px;">
+					<td style="height: 20px; width: 18.9534%; text-align: center;"><span><span
+								style="color: #353535;">enter</span></span></td>
+					<td style="height: 20px; width: 11.2791%; text-align: center;"><span><span
+								style="color: #353535;">13</span></span></td>
+					<td style="height: 20px; width: 20.0001%; text-align: center;"><span><span
+								style="color: #353535;">g</span></span></td>
+					<td style="height: 20px; width: 10.8138%; text-align: center;"><span><span
+								style="color: #353535;">71</span></span></td>
+					<td style="height: 20px; width: 22.2093%; text-align: center;"><span><span style="color: #353535;">숫자패드
+								*</span></span></td>
+					<td style="height: 20px; width: 13.1396%; text-align: center;"><span><span
+								style="color: #353535;">106</span></span></td>
+				</tr>
+				<tr style="height: 20px;">
+					<td style="height: 20px; width: 18.9534%; text-align: center;"><span><span
+								style="color: #353535;">shift</span></span></td>
+					<td style="height: 20px; width: 11.2791%; text-align: center;"><span><span
+								style="color: #353535;">16</span></span></td>
+					<td style="height: 20px; width: 20.0001%; text-align: center;"><span><span
+								style="color: #353535;">h</span></span></td>
+					<td style="height: 20px; width: 10.8138%; text-align: center;"><span><span
+								style="color: #353535;">72</span></span></td>
+					<td style="height: 20px; width: 22.2093%; text-align: center;"><span><span style="color: #353535;">숫자패드
+								+</span></span></td>
+					<td style="height: 20px; width: 13.1396%; text-align: center;"><span><span
+								style="color: #353535;">107</span></span></td>
+				</tr>
+				<tr style="height: 20px;">
+					<td style="height: 20px; width: 18.9534%; text-align: center;"><span><span
+								style="color: #353535;">ctrl</span></span></td>
+					<td style="height: 20px; width: 11.2791%; text-align: center;"><span><span
+								style="color: #353535;">17</span></span></td>
+					<td style="height: 20px; width: 20.0001%; text-align: center;"><span><span
+								style="color: #353535;">i</span></span></td>
+					<td style="height: 20px; width: 10.8138%; text-align: center;"><span><span
+								style="color: #353535;">73</span></span></td>
+					<td style="height: 20px; width: 22.2093%; text-align: center;"><span><span style="color: #353535;">숫자패드
+								-</span></span></td>
+					<td style="height: 20px; width: 13.1396%; text-align: center;"><span><span
+								style="color: #353535;">109</span></span></td>
+				</tr>
+				<tr style="height: 20px;">
+					<td style="height: 20px; width: 18.9534%; text-align: center;"><span><span
+								style="color: #353535;">alt</span></span></td>
+					<td style="height: 20px; width: 11.2791%; text-align: center;"><span><span
+								style="color: #353535;">18</span></span></td>
+					<td style="height: 20px; width: 20.0001%; text-align: center;"><span><span
+								style="color: #353535;">j</span></span></td>
+					<td style="height: 20px; width: 10.8138%; text-align: center;"><span><span
+								style="color: #353535;">74</span></span></td>
+					<td style="height: 20px; width: 22.2093%; text-align: center;"><span><span style="color: #353535;">숫자패드
+								.</span></span></td>
+					<td style="height: 20px; width: 13.1396%; text-align: center;"><span><span
+								style="color: #353535;">110</span></span></td>
+				</tr>
+				<tr style="height: 20px;">
+					<td style="height: 20px; width: 18.9534%; text-align: center;"><span><span
+								style="color: #353535;">pause/break</span></span></td>
+					<td style="height: 20px; width: 11.2791%; text-align: center;"><span><span
+								style="color: #353535;">19</span></span></td>
+					<td style="height: 20px; width: 20.0001%; text-align: center;"><span><span
+								style="color: #353535;">k</span></span></td>
+					<td style="height: 20px; width: 10.8138%; text-align: center;"><span><span
+								style="color: #353535;">75</span></span></td>
+					<td style="height: 20px; width: 22.2093%; text-align: center;"><span><span style="color: #353535;">숫자패드
+								/</span></span></td>
+					<td style="height: 20px; width: 13.1396%; text-align: center;"><span><span
+								style="color: #353535;">111</span></span></td>
+				</tr>
+				<tr style="height: 20px;">
+					<td style="height: 20px; width: 18.9534%; text-align: center;"><span><span style="color: #353535;">caps
+								lock</span></span></td>
+					<td style="height: 20px; width: 11.2791%; text-align: center;"><span><span
+								style="color: #353535;">20</span></span></td>
+					<td style="height: 20px; width: 20.0001%; text-align: center;"><span><span
+								style="color: #353535;">l</span></span></td>
+					<td style="height: 20px; width: 10.8138%; text-align: center;"><span><span
+								style="color: #353535;">76</span></span></td>
+					<td style="height: 20px; width: 22.2093%; text-align: center;"><span><span
+								style="color: #353535;">f1</span></span></td>
+					<td style="height: 20px; width: 13.1396%; text-align: center;"><span><span
+								style="color: #353535;">112</span></span></td>
+				</tr>
+				<tr style="height: 20px;">
+					<td style="height: 20px; width: 18.9534%; text-align: center;"><span><span
+								style="color: #353535;">ESC</span></span></td>
+					<td style="height: 20px; width: 11.2791%; text-align: center;"><span><span
+								style="color: #353535;">27</span></span></td>
+					<td style="height: 20px; width: 20.0001%; text-align: center;"><span><span
+								style="color: #353535;">m</span></span></td>
+					<td style="height: 20px; width: 10.8138%; text-align: center;"><span><span
+								style="color: #353535;">77</span></span></td>
+					<td style="height: 20px; width: 22.2093%; text-align: center;"><span><span
+								style="color: #353535;">f2</span></span></td>
+					<td style="height: 20px; width: 13.1396%; text-align: center;"><span><span
+								style="color: #353535;">113</span></span></td>
+				</tr>
+				<tr style="height: 20px;">
+					<td style="height: 20px; width: 18.9534%; text-align: center;"><span><span style="color: #353535;">page
+								up</span></span></td>
+					<td style="height: 20px; width: 11.2791%; text-align: center;"><span><span
+								style="color: #353535;">33</span></span></td>
+					<td style="height: 20px; width: 20.0001%; text-align: center;"><span><span
+								style="color: #353535;">n</span></span></td>
+					<td style="height: 20px; width: 10.8138%; text-align: center;"><span><span
+								style="color: #353535;">78</span></span></td>
+					<td style="height: 20px; width: 22.2093%; text-align: center;"><span><span
+								style="color: #353535;">f3</span></span></td>
+					<td style="height: 20px; width: 13.1396%; text-align: center;"><span><span
+								style="color: #353535;">114</span></span></td>
+				</tr>
+				<tr style="height: 20px;">
+					<td style="height: 20px; width: 18.9534%; text-align: center;"><span><span style="color: #353535;">page
+								down</span></span></td>
+					<td style="height: 20px; width: 11.2791%; text-align: center;"><span><span
+								style="color: #353535;">34</span></span></td>
+					<td style="height: 20px; width: 20.0001%; text-align: center;"><span><span
+								style="color: #353535;">o</span></span></td>
+					<td style="height: 20px; width: 10.8138%; text-align: center;"><span><span
+								style="color: #353535;">79</span></span></td>
+					<td style="height: 20px; width: 22.2093%; text-align: center;"><span><span
+								style="color: #353535;">f4</span></span></td>
+					<td style="height: 20px; width: 13.1396%; text-align: center;"><span><span
+								style="color: #353535;">115</span></span></td>
+				</tr>
+				<tr style="height: 20px;">
+					<td style="height: 20px; width: 18.9534%; text-align: center;"><span><span
+								style="color: #353535;">end</span></span></td>
+					<td style="height: 20px; width: 11.2791%; text-align: center;"><span><span
+								style="color: #353535;">35</span></span></td>
+					<td style="height: 20px; width: 20.0001%; text-align: center;"><span><span
+								style="color: #353535;">p</span></span></td>
+					<td style="height: 20px; width: 10.8138%; text-align: center;"><span><span
+								style="color: #353535;">80</span></span></td>
+					<td style="height: 20px; width: 22.2093%; text-align: center;"><span><span
+								style="color: #353535;">f5</span></span></td>
+					<td style="height: 20px; width: 13.1396%; text-align: center;"><span><span
+								style="color: #353535;">116</span></span></td>
+				</tr>
+				<tr style="height: 20px;">
+					<td style="height: 20px; width: 18.9534%; text-align: center;"><span><span
+								style="color: #353535;">home</span></span></td>
+					<td style="height: 20px; width: 11.2791%; text-align: center;"><span><span
+								style="color: #353535;">36</span></span></td>
+					<td style="height: 20px; width: 20.0001%; text-align: center;"><span><span
+								style="color: #353535;">q</span></span></td>
+					<td style="height: 20px; width: 10.8138%; text-align: center;"><span><span
+								style="color: #353535;">81</span></span></td>
+					<td style="height: 20px; width: 22.2093%; text-align: center;"><span><span
+								style="color: #353535;">f6</span></span></td>
+					<td style="height: 20px; width: 13.1396%; text-align: center;"><span><span
+								style="color: #353535;">117</span></span></td>
+				</tr>
+				<tr style="height: 20px;">
+					<td style="height: 20px; width: 18.9534%; text-align: center;"><span><span style="color: #353535;">left
+								arrow</span></span></td>
+					<td style="height: 20px; width: 11.2791%; text-align: center;"><span><span
+								style="color: #353535;">37</span></span></td>
+					<td style="height: 20px; width: 20.0001%; text-align: center;"><span><span
+								style="color: #353535;">r</span></span></td>
+					<td style="height: 20px; width: 10.8138%; text-align: center;"><span><span
+								style="color: #353535;">82</span></span></td>
+					<td style="height: 20px; width: 22.2093%; text-align: center;"><span><span
+								style="color: #353535;">f7</span></span></td>
+					<td style="height: 20px; width: 13.1396%; text-align: center;"><span><span
+								style="color: #353535;">118</span></span></td>
+				</tr>
+				<tr style="height: 20px;">
+					<td style="height: 20px; width: 18.9534%; text-align: center;"><span><span style="color: #353535;">up
+								arrow</span></span></td>
+					<td style="height: 20px; width: 11.2791%; text-align: center;"><span><span
+								style="color: #353535;">38</span></span></td>
+					<td style="height: 20px; width: 20.0001%; text-align: center;"><span><span
+								style="color: #353535;">s</span></span></td>
+					<td style="height: 20px; width: 10.8138%; text-align: center;"><span><span
+								style="color: #353535;">83</span></span></td>
+					<td style="height: 20px; width: 22.2093%; text-align: center;"><span><span
+								style="color: #353535;">f8</span></span></td>
+					<td style="height: 20px; width: 13.1396%; text-align: center;"><span><span
+								style="color: #353535;">119</span></span></td>
+				</tr>
+				<tr style="height: 20px;">
+					<td style="height: 20px; width: 18.9534%; text-align: center;"><span><span style="color: #353535;">right
+								arrow</span></span></td>
+					<td style="height: 20px; width: 11.2791%; text-align: center;"><span><span
+								style="color: #353535;">39</span></span></td>
+					<td style="height: 20px; width: 20.0001%; text-align: center;"><span><span
+								style="color: #353535;">t</span></span></td>
+					<td style="height: 20px; width: 10.8138%; text-align: center;"><span><span
+								style="color: #353535;">84</span></span></td>
+					<td style="height: 20px; width: 22.2093%; text-align: center;"><span><span
+								style="color: #353535;">f9</span></span></td>
+					<td style="height: 20px; width: 13.1396%; text-align: center;"><span><span
+								style="color: #353535;">120</span></span></td>
+				</tr>
+				<tr style="height: 20px;">
+					<td style="height: 20px; width: 18.9534%; text-align: center;"><span><span style="color: #353535;">down
+								arrow</span></span></td>
+					<td style="height: 20px; width: 11.2791%; text-align: center;"><span><span
+								style="color: #353535;">40</span></span></td>
+					<td style="height: 20px; width: 20.0001%; text-align: center;"><span><span
+								style="color: #353535;">u</span></span></td>
+					<td style="height: 20px; width: 10.8138%; text-align: center;"><span><span
+								style="color: #353535;">85</span></span></td>
+					<td style="height: 20px; width: 22.2093%; text-align: center;"><span><span
+								style="color: #353535;">f10</span></span></td>
+					<td style="height: 20px; width: 13.1396%; text-align: center;"><span><span
+								style="color: #353535;">121</span></span></td>
+				</tr>
+				<tr style="height: 20px;">
+					<td style="height: 20px; width: 18.9534%; text-align: center;"><span><span
+								style="color: #353535;">insert</span></span></td>
+					<td style="height: 20px; width: 11.2791%; text-align: center;"><span><span
+								style="color: #353535;">45</span></span></td>
+					<td style="height: 20px; width: 20.0001%; text-align: center;"><span><span
+								style="color: #353535;">v</span></span></td>
+					<td style="height: 20px; width: 10.8138%; text-align: center;"><span><span
+								style="color: #353535;">86</span></span></td>
+					<td style="height: 20px; width: 22.2093%; text-align: center;"><span><span
+								style="color: #353535;">f11</span></span></td>
+					<td style="height: 20px; width: 13.1396%; text-align: center;"><span><span
+								style="color: #353535;">122</span></span></td>
+				</tr>
+				<tr style="height: 20px;">
+					<td style="height: 20px; width: 18.9534%; text-align: center;"><span><span
+								style="color: #353535;">delete</span></span></td>
+					<td style="height: 20px; width: 11.2791%; text-align: center;"><span><span
+								style="color: #353535;">46</span></span></td>
+					<td style="height: 20px; width: 20.0001%; text-align: center;"><span><span
+								style="color: #353535;">w</span></span></td>
+					<td style="height: 20px; width: 10.8138%; text-align: center;"><span><span
+								style="color: #353535;">87</span></span></td>
+					<td style="height: 20px; width: 22.2093%; text-align: center;"><span><span
+								style="color: #353535;">f12</span></span></td>
+					<td style="height: 20px; width: 13.1396%; text-align: center;"><span><span
+								style="color: #353535;">123</span></span></td>
+				</tr>
+				<tr style="height: 20px;">
+					<td style="height: 20px; width: 18.9534%; text-align: center;"><span><span
+								style="color: #353535;">0</span></span></td>
+					<td style="height: 20px; width: 11.2791%; text-align: center;"><span><span
+								style="color: #353535;">48</span></span></td>
+					<td style="height: 20px; width: 20.0001%; text-align: center;"><span><span
+								style="color: #353535;">x</span></span></td>
+					<td style="height: 20px; width: 10.8138%; text-align: center;"><span><span
+								style="color: #353535;">88</span></span></td>
+					<td style="height: 20px; width: 22.2093%; text-align: center;"><span><span style="color: #353535;">num
+								lock</span></span></td>
+					<td style="height: 20px; width: 13.1396%; text-align: center;"><span><span
+								style="color: #353535;">144</span></span></td>
+				</tr>
+				<tr style="height: 20px;">
+					<td style="height: 20px; width: 18.9534%; text-align: center;"><span><span
+								style="color: #353535;">1</span></span></td>
+					<td style="height: 20px; width: 11.2791%; text-align: center;"><span><span
+								style="color: #353535;">49</span></span></td>
+					<td style="height: 20px; width: 20.0001%; text-align: center;"><span><span
+								style="color: #353535;">y</span></span></td>
+					<td style="height: 20px; width: 10.8138%; text-align: center;"><span><span
+								style="color: #353535;">89</span></span></td>
+					<td style="height: 20px; width: 22.2093%; text-align: center;"><span><span style="color: #353535;">scroll
+								lock</span></span></td>
+					<td style="height: 20px; width: 13.1396%; text-align: center;"><span><span
+								style="color: #353535;">145</span></span></td>
+				</tr>
+				<tr style="height: 20px;">
+					<td style="height: 20px; width: 18.9534%; text-align: center;"><span><span
+								style="color: #353535;">2</span></span></td>
+					<td style="height: 20px; width: 11.2791%; text-align: center;"><span><span
+								style="color: #353535;">50</span></span></td>
+					<td style="height: 20px; width: 20.0001%; text-align: center;"><span><span
+								style="color: #353535;">z</span></span></td>
+					<td style="height: 20px; width: 10.8138%; text-align: center;"><span><span
+								style="color: #353535;">90</span></span></td>
+					<td style="height: 20px; width: 22.2093%; text-align: center;"><span><span
+								style="color: #353535;">;</span></span></td>
+					<td style="height: 20px; width: 13.1396%; text-align: center;"><span><span
+								style="color: #353535;">186</span></span></td>
+				</tr>
+				<tr style="height: 20px;">
+					<td style="height: 20px; width: 18.9534%; text-align: center;"><span><span
+								style="color: #353535;">3</span></span></td>
+					<td style="height: 20px; width: 11.2791%; text-align: center;"><span><span
+								style="color: #353535;">51</span></span></td>
+					<td style="height: 20px; width: 20.0001%; text-align: center;"><span><span style="color: #353535;">left window
+								key</span></span></td>
+					<td style="height: 20px; width: 10.8138%; text-align: center;"><span><span
+								style="color: #353535;">91</span></span></td>
+					<td style="height: 20px; width: 22.2093%; text-align: center;"><span><span
+								style="color: #353535;">=</span></span></td>
+					<td style="height: 20px; width: 13.1396%; text-align: center;"><span><span
+								style="color: #353535;">187</span></span></td>
+				</tr>
+				<tr style="height: 20px;">
+					<td style="height: 20px; width: 18.9534%; text-align: center;"><span><span
+								style="color: #353535;">4</span></span></td>
+					<td style="height: 20px; width: 11.2791%; text-align: center;"><span><span
+								style="color: #353535;">52</span></span></td>
+					<td style="height: 20px; width: 20.0001%; text-align: center;"><span><span style="color: #353535;">right
+								window key</span></span></td>
+					<td style="height: 20px; width: 10.8138%; text-align: center;"><span><span
+								style="color: #353535;">92</span></span></td>
+					<td style="height: 20px; width: 22.2093%; text-align: center;"><span><span
+								style="color: #353535;">,</span></span></td>
+					<td style="height: 20px; width: 13.1396%; text-align: center;"><span><span
+								style="color: #353535;">188</span></span></td>
+				</tr>
+				<tr style="height: 20px;">
+					<td style="height: 20px; width: 18.9534%; text-align: center;"><span><span
+								style="color: #353535;">5</span></span></td>
+					<td style="height: 20px; width: 11.2791%; text-align: center;"><span><span
+								style="color: #353535;">53</span></span></td>
+					<td style="height: 20px; width: 20.0001%; text-align: center;"><span><span style="color: #353535;">select
+								key</span></span></td>
+					<td style="height: 20px; width: 10.8138%; text-align: center;"><span><span
+								style="color: #353535;">93</span></span></td>
+					<td style="height: 20px; width: 22.2093%; text-align: center;"><span><span
+								style="color: #353535;">-</span></span></td>
+					<td style="height: 20px; width: 13.1396%; text-align: center;"><span><span
+								style="color: #353535;">189</span></span></td>
+				</tr>
+				<tr style="height: 20px;">
+					<td style="height: 20px; width: 18.9534%; text-align: center;"><span><span
+								style="color: #353535;">6</span></span></td>
+					<td style="height: 20px; width: 11.2791%; text-align: center;"><span><span
+								style="color: #353535;">54</span></span></td>
+					<td style="height: 20px; width: 20.0001%; text-align: center;"><span><span style="color: #353535;">숫자패드
+								0</span></span></td>
+					<td style="height: 20px; width: 10.8138%; text-align: center;"><span><span
+								style="color: #353535;">96</span></span></td>
+					<td style="height: 20px; width: 22.2093%; text-align: center;"><span><span
+								style="color: #353535;">.</span></span></td>
+					<td style="height: 20px; width: 13.1396%; text-align: center;"><span><span
+								style="color: #353535;">190</span></span></td>
+				</tr>
+				<tr style="height: 20px;">
+					<td style="height: 20px; width: 18.9534%; text-align: center;"><span><span
+								style="color: #353535;">7</span></span></td>
+					<td style="height: 20px; width: 11.2791%; text-align: center;"><span><span
+								style="color: #353535;">55</span></span></td>
+					<td style="height: 20px; width: 20.0001%; text-align: center;"><span><span style="color: #353535;">숫자패드
+								1</span></span></td>
+					<td style="height: 20px; width: 10.8138%; text-align: center;"><span><span
+								style="color: #353535;">97</span></span></td>
+					<td style="height: 20px; width: 22.2093%; text-align: center;"><span><span
+								style="color: #353535;">/</span></span></td>
+					<td style="height: 20px; width: 13.1396%; text-align: center;"><span><span
+								style="color: #353535;">191</span></span></td>
+				</tr>
+				<tr style="height: 20px;">
+					<td style="height: 20px; width: 18.9534%; text-align: center;"><span><span
+								style="color: #353535;">8</span></span></td>
+					<td style="height: 20px; width: 11.2791%; text-align: center;"><span><span
+								style="color: #353535;">56</span></span></td>
+					<td style="height: 20px; width: 20.0001%; text-align: center;"><span><span style="color: #353535;">숫자패드
+								2</span></span></td>
+					<td style="height: 20px; width: 10.8138%; text-align: center;"><span><span
+								style="color: #353535;">98</span></span></td>
+					<td style="height: 20px; width: 22.2093%; text-align: center;"><span><span
+								style="color: #353535;">`</span></span></td>
+					<td style="height: 20px; width: 13.1396%; text-align: center;"><span><span
+								style="color: #353535;">192</span></span></td>
+				</tr>
+				<tr style="height: 20px;">
+					<td style="height: 20px; width: 18.9534%; text-align: center;"><span><span
+								style="color: #353535;">9</span></span></td>
+					<td style="height: 20px; width: 11.2791%; text-align: center;"><span><span
+								style="color: #353535;">57</span></span></td>
+					<td style="height: 20px; width: 20.0001%; text-align: center;"><span><span style="color: #353535;">숫자패드
+								3</span></span></td>
+					<td style="height: 20px; width: 10.8138%; text-align: center;"><span><span
+								style="color: #353535;">99</span></span></td>
+					<td style="height: 20px; width: 22.2093%; text-align: center;"><span><span
+								style="color: #353535;">[</span></span></td>
+					<td style="height: 20px; width: 13.1396%; text-align: center;"><span><span
+								style="color: #353535;">219</span></span></td>
+				</tr>
+				<tr style="height: 20px;">
+					<td style="height: 20px; width: 18.9534%; text-align: center;"><span><span
+								style="color: #353535;">a</span></span></td>
+					<td style="height: 20px; width: 11.2791%; text-align: center;"><span><span
+								style="color: #353535;">65</span></span></td>
+					<td style="height: 20px; width: 20.0001%; text-align: center;"><span><span style="color: #353535;">숫자패드
+								4</span></span></td>
+					<td style="height: 20px; width: 10.8138%; text-align: center;"><span><span
+								style="color: #353535;">100</span></span></td>
+					<td style="height: 20px; width: 22.2093%; text-align: center;"><span><span
+								style="color: #353535;">(백슬래시)</span></span></td>
+					<td style="height: 20px; width: 13.1396%; text-align: center;"><span><span
+								style="color: #353535;">220</span></span></td>
+				</tr>
+				<tr style="height: 20px;">
+					<td style="height: 20px; width: 18.9534%; text-align: center;"><span><span
+								style="color: #353535;">b</span></span></td>
+					<td style="height: 20px; width: 11.2791%; text-align: center;"><span><span
+								style="color: #353535;">66</span></span></td>
+					<td style="height: 20px; width: 20.0001%; text-align: center;"><span><span style="color: #353535;">숫자패드
+								5</span></span></td>
+					<td style="height: 20px; width: 10.8138%; text-align: center;"><span><span
+								style="color: #353535;">101</span></span></td>
+					<td style="height: 20px; width: 22.2093%; text-align: center;"><span><span
+								style="color: #353535;">]</span></span></td>
+					<td style="height: 20px; width: 13.1396%; text-align: center;"><span><span
+								style="color: #353535;">221</span></span></td>
+				</tr>
+				<tr style="height: 20px;">
+					<td style="height: 20px; width: 18.9534%; text-align: center;"><span><span
+								style="color: #353535;">c</span></span></td>
+					<td style="height: 20px; width: 11.2791%; text-align: center;"><span><span
+								style="color: #353535;">67</span></span></td>
+					<td style="height: 20px; width: 20.0001%; text-align: center;"><span><span style="color: #353535;">숫자패드
+								6</span></span></td>
+					<td style="height: 20px; width: 10.8138%; text-align: center;"><span><span
+								style="color: #353535;">102</span></span></td>
+					<td style="height: 20px; width: 22.2093%; text-align: center;"><span><span
+								style="color: #353535;">‘</span></span></td>
+					<td style="height: 20px; width: 13.1396%; text-align: center;"><span><span
+								style="color: #353535;">222</span></span></td>
+				</tr>
+				<tr style="height: 20px;">
+					<td style="height: 20px; width: 18.9534%; text-align: center;"><span><span
+								style="color: #353535;">d</span></span></td>
+					<td style="height: 20px; width: 11.2791%; text-align: center;"><span><span
+								style="color: #353535;">68</span></span></td>
+					<td style="height: 20px; width: 20.0001%; text-align: center;"><span><span style="color: #353535;">숫자패드
+								7</span></span></td>
+					<td style="height: 20px; width: 10.8138%; text-align: center;"><span><span
+								style="color: #353535;">103</span></span></td>
+					<td style="width: 22.2093%; text-align: center;">&nbsp;</td>
+					<td style="width: 13.1396%; text-align: center;">&nbsp;</td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+
+</body>
+
+</html>

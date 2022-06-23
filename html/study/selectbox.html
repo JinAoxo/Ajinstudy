@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>dropdown</title>
+	<link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+	<h1 class="sr-only">#2. 스터디 주제 : selectbox/ dropdown</h1>
+
+	<div class="wrap p-10">
+		<h2>selectbox / dropdown / 커스텀 셀렉트(리스트형 드롭다운) </h2>
+		<p><strong>스터디 내용 : </strong>selectbox & dropdown 웹접근성에 맞춘 마크업</p>
+
+		<section class="p-5">
+			<h3>시멘틱 마크업 /웹접근성을 맞추는 방법</h3>
+			<ol>
+				<li>1. 마크업 부분 : div로 상위 전체를 한번 감싸고 -> <span class="text-red"> dl > dt(a) + dd(ul > li > a)</span></li>
+				<li>2. '펼치기/접기' 텍스트 title에 표기</li>
+			</ol>
+		</section>
+		<section class="p-5">
+			<h3>내용</h3>
+			<h4 class="text-red">1. dl > dt(a) + dd(ul > li > a) : 우체국 참고</h4>
+			<p> - 웹 접근성 tab 사용했을 경우 선택되는 부분 js 커스텀</p>
+			<p> - '펼치기/접기' 텍스트 title에 표기 변경되는 부분 커스텀</p>
+			<p> - 커스텀 시 🔻 사용하고 싶다면 :after 부분에 커스텀 후 작업 </p>
+			<div class="try-1 mb-15">
+				<div class="selectbox-wrap">
+					<dl>
+						<dt><a href="#;" title="선택 펼치기"><span>전체</span></a></dt>
+						<dd>
+							<ul>
+								<li><a href="#;"><span>option</span></a></li>
+								<li><a href="#;"><span>option</span></a></li>
+							</ul>
+						</dd>
+					</dl>
+				</div>
+			</div>
+
+			<h4>2. select / option </h4>
+			<p> - select : 옵션 메뉴를 제공하는 드롭다운 리스트(drop-down list)를 정의할 때 사용</p>
+			<p> - custom 할때 appearance를 사용하여 기본 스타일 제거 후 커스텀 <span class="text-red text-bold">/ 커스텀이 힘듬</span></p>
+			<p> - 웹 접근성 tab 사용시 select 자체는 선택됨 option 부분은 화살표로만 선택가능</p>
+			<div class="try-2 mb-15">
+				<div class="selectbox-wrap">
+					<div>
+						<form action="#;">
+							<label for="select1">select label(화살표를 커스텀 한다면 label에)/ autofocus: 기능사용 가능
+								<select id="select1" autofocus required>
+									<option value="해당 속성을 사용하여 서버에 제출할 데이터 값을 넣을 수 있음">option기본</option>
+									<option>option1</option>
+									<option>option2</option>
+								</select>
+							</label>
+						</form>
+					</div>
+					<div>
+						<form action="#;">
+							<label for="select2">select label
+								<select id="select2">
+									<optgroup>
+										<option>optgroup1</option>
+										<option>option1</option>
+										<option>option2</option>
+									</optgroup>
+									<optgroup>
+										<option>optgroup2</option>
+										<option>option1</option>
+										<option disabled>option2</option>
+									</optgroup>
+								</select>
+							</label>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<h4>3. 혼자 작업 했던 밀크티</h4>
+			<p> - button 으로 작업 후 -> div > ul > li 로 작업 / label이 active가 되었을때 slideDown slideUp 으로 option 표시</p>
+			<p> - 커스텀 시 🔻 사용하고 싶다면 :after 부분에 커스텀 후 작업 </p>
+			<p> - 웹 접근성 tab 사용시 select option 선택됨 : button 과 a로 마크업 되어 있기 때문에 가능한 부분</p>
+			<div class="try-2 mb-15">
+				<div class="select-milkt">
+					<button class="label">option기본</button>
+					<div class="select-option">
+						<ul>
+							<li class="option"><a href="#">option1</a></li>
+							<li class="option"><a href="#">option2</a></li>
+							<li class="option"><a href="#">option3</a></li>
+							<li class="option"><a href="#">option4</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<!-- JavaScript -->
+	<script src="../../js/jquery-3.5.1.min.js"></script>
+
+	<!-- TODO : 개발시 반드시 삭제, 레이아웃 세팅 JS -->
+	<!-- <script src="../js/ui-layout-setting.js"></script> -->
+
+	<!-- 공통 UI 컴포넌트 -->
+	<script src="../../js/ui-main.js"></script>
+	<script src="../../js/study.js"></script>
+
+	<!-- 페이지 개별 스크립트 -->
+	<script>
+		// 이곳에 정의
+		//1. 우체국 참고
+		//mousedown : 마우스를 눌렀을때의 이벤트
+		//length : 문자열의 길이를 체크하는 방법
+		//closest : 가장 가까운 상위 요소
+		//parents : 부모요소
+		//replace : replace("찾을 문자열", "변경할 문자열") 문자를 찾아서 바꾸는 형식 ✨
+		//toggle() : 선택한 요소가 보이면 보이지 않게, 보이지 않으면 보이게 방법
+		//toggleClass() : 선택한 요소의 클래스값을 넣었다가 뺐다가 하는 방법
+
+		//셀렉트 박스 접기, 펼치기
+		$(function () {
+			$('.try-1 .selectbox-wrap dl dt a').on('click', function (e) {
+				$('.try-1 .selectbox-wrap').toggleClass('active');
+				if ($('.try-1 .selectbox-wrap').hasClass('active')) {
+					$(e.target).closest('.selectbox-wrap dl dt a').attr('title', $(this).attr('title').replace('펼치기', '접기'));
+				} else {
+					$(e.target).closest('.selectbox-wrap dl dt a').attr('title', $(this).attr('title').replace('접기', '펼치기'));
+				}
+			});
+		});
+
+		$(function () {
+			$('.try-1 .selectbox-wrap dl dd a').on('click', function (e) {
+				var option = $(this).text();
+				// console.log(option);
+				$('.try-1 .selectbox-wrap.active').removeClass('active');
+				// 질문 1. 작동 안되요.😥
+				// $(e.target).closest('.selectbox-wrap.active dl dt a').attr('title', $(this).attr('title').replace('접기', '펼치기'));
+				$('.selectbox-wrap dl dt a').text(option);
+			});
+		});
+
+
+		//3. 혼자 작업했던 밀크티
+		$(function () {
+			$(".select-milkt .label").click(function () {
+				var select = $(this);
+
+				//드롭다운 열기
+				select.addClass("active").next('.select-option').slideDown(100).addClass("active");
+
+				//다른영역 클릭 시 닫기
+				$(document).mouseup(function (e) {
+					var seting = $(".select-option");
+					if (seting.has(e.target).length === 0) {
+						seting.removeClass("active").slideUp(100);
+						select.removeClass("active");
+					}
+				});
+
+				$(".select-option .option").click(function () {
+					var option = $(this).text();
+
+					//클릭 시 드롭다운 닫기
+					$(".select-option .option").removeClass('selected');
+					$(".select-option").removeClass("active").slideUp(100);
+					select.removeClass("active");
+					$(this).addClass('selected');
+
+					//select에 text 넣기
+					select.text(option);
+				});
+			});
+		});
+	</script>
+</body>
+
+</html>
