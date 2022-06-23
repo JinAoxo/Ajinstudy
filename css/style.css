@@ -2811,7 +2811,7 @@ a.link.tip {
   margin: 0 20px;
 }
 
-.try-1 .selectbox-wrap dt a > span:after {
+.try-1 .selectbox-wrap dt a:after {
   content: '🔻';
   display: block;
   position: absolute;
@@ -2886,7 +2886,7 @@ a.link.tip {
   border-radius: 6px 6px 0 0;
 }
 
-.try-1 .selectbox-wrap.active dt a span:after {
+.try-1 .selectbox-wrap.active dt a:after {
   content: '🔺';
 }
 

@@ -77,15 +77,15 @@
 			&>span {
 				display: block;
 				margin: 0 20px;
+			}
 
-				&:after {
-					content: '🔻';
-					display: block;
-					position: absolute;
-					top: 4px;
-					right: 18px;
-					width: 13px;
-				}
+			&:after {
+				content: '🔻';
+				display: block;
+				position: absolute;
+				top: 4px;
+				right: 18px;
+				width: 13px;
 			}
 		}
 
@@ -155,11 +155,10 @@
 				border: 2px solid coral;
 				border-radius: 6px 6px 0 0;
 
-				span {
-					&:after {
-						content: '🔺';
-					}
+				&:after {
+					content: '🔺';
 				}
+
 			}
 		}
 	}

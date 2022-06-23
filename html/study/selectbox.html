@@ -117,73 +117,34 @@
 		//1. 우체국 참고
 		//mousedown : 마우스를 눌렀을때의 이벤트
 		//length : 문자열의 길이를 체크하는 방법
-		//closest : 가장 가까운 상위 요소 
+		//closest : 가장 가까운 상위 요소
+		//parents : 부모요소
 		//replace : replace("찾을 문자열", "변경할 문자열") 문자를 찾아서 바꾸는 형식 ✨
 		//toggle() : 선택한 요소가 보이면 보이지 않게, 보이지 않으면 보이게 방법
 		//toggleClass() : 선택한 요소의 클래스값을 넣었다가 뺐다가 하는 방법
 
-		//셀렉트 박스 펼치기
+		//셀렉트 박스 접기, 펼치기
 		$(function () {
-			$('.try-1 .selectbox-wrap dl dt a').on('mousedown', function (e) {
+			$('.try-1 .selectbox-wrap dl dt a').on('click', function (e) {
 				$('.try-1 .selectbox-wrap').toggleClass('active');
 				if ($('.try-1 .selectbox-wrap').hasClass('active')) {
-					$(e.target).parents('.selectbox-wrap dl dt a').attr('title', $(this).attr('title').replace('펼치기', '접기'))
+					$(e.target).closest('.selectbox-wrap dl dt a').attr('title', $(this).attr('title').replace('펼치기', '접기'));
 				} else {
-					$(e.target).parents('.selectbox-wrap dl dt a').attr('title', $(this).attr('title').replace('접기', '펼치기'))
+					$(e.target).closest('.selectbox-wrap dl dt a').attr('title', $(this).attr('title').replace('접기', '펼치기'));
 				}
 			});
-			// $('.try-1 .selectbox-wrap dl dd a').on('click', function (e) {
-			// 	$('.try-1 .selectbox-wrap.active').removeClass('active');
-			// 	// $(e.target).parents('.selectbox-wrap dl dt a').attr('title', $(this).attr('title').replace('접기', '펼치기'))
-
-			// });
 		});
 
-		// $(function () {
-		// $.fn.customSelect = function () {
-
-
-		// return this.each(function () {
-		// 	const $el = $(this);
-		// 	const $btn = $('dt a', this);
-		// 	const $listItem = $('dd a', this);
-
-		// 	let addText = $el.hasClass('active') ? '접기' : '펼치기';
-		// 	let title = $btn.attr('title');
-		// 	if (title != undefined) {
-		// 		title = title + ' ' + addText;
-		// 	}
-
-		// 	if ($el.hasClass('disabled')) {
-		// 		$btn.removeAttr('href');
-		// 	} else {
-		// 		$btn.attr('title', title);
-
-		// 		$btn.click(function (e) {
-		// 			e.preventDefault();
-		// 			const $otherBtn = $('.try-1 .selectbox-wrap').not($el).find('dt a');
-		// 			$('.try-1 .selectbox-wrap').not($el).removeClass('active')
-		// 			if ($otherBtn.attr('title') != undefined) {
-		// 				$otherBtn.attr('title', $otherBtn.attr('title').replace('접기', '펼치기'));
-		// 			}
-
-		// 			$el.toggleClass('active');
-		// 			if ($otherBtn.attr('title') != undefined) {
-		// 				if ($el.hasClass('active')) {
-		// 					$btn.attr('title', $btn.attr('title').replace('펼치기', '접기'));
-		// 				} else {
-		// 					$btn.attr('title', $btn.attr('title').replace('접기', '펼치기'));
-		// 				}
-		// 			}
-		// 		});
-		// 	}
-		// });
-		// };
-		// });
-		// (jQuery);
-		// $(function () {
-		// 	$('.selectbox-wrap').customSelect();
-		// });
+		$(function () {
+			$('.try-1 .selectbox-wrap dl dd a').on('click', function (e) {
+				var option = $(this).text();
+				// console.log(option);
+				$('.try-1 .selectbox-wrap.active').removeClass('active');
+				// 질문 1. 작동 안되요.😥
+				// $(e.target).closest('.selectbox-wrap.active dl dt a').attr('title', $(this).attr('title').replace('접기', '펼치기'));
+				$('.selectbox-wrap dl dt a').text(option);
+			});
+		});
 
 
 		//3. 혼자 작업했던 밀크티
