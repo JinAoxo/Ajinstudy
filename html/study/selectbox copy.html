@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>scroll event</title>
+	<link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+	<h1 class="sr-only">#3. 스터디 주제 : scroll event</h1>
+
+	<div class="wrap p-10">
+		<h2>scroll event</h2>
+		<p><strong>스터디 내용 : </strong>scroll event/ offset 좌표에 따른 변경</p>
+
+		<section class="p-5">
+			<h3>내용</h3>
+			<ol>
+				<li>1. scroll을 이용해서 버튼을 눌렀을때 해당 section(title 영역 포함) 해당 좌표로 이동</li>
+				<li>2. 좌표에 의해 해당 스크롤 위치로 이동함에 따라 배경 색상 변경 반복+계속 offset 이용</li>
+			</ol>
+			<div class="btn-area">
+				<button type="button" class="btn btn-bottom">맨 아래로🔻</button>
+				<button type="button" class="btn btn-middle">중간 🔻</button>
+			</div>
+		</section>
+		<section class="scroll-page p-5">
+			<h3>section : 1page</h3>
+		</section>
+		<section class="scroll-page p-5">
+			<h3>section : 2page</h3>
+		</section>
+		<section class="scroll-page p-5">
+			<h3>section : 3page</h3>
+		</section>
+		<section class="scroll-page p-5">
+			<h3>section : 4page</h3>
+		</section>
+	</div>
+
+	<!-- JavaScript -->
+	<script src="../../js/jquery-3.5.1.min.js"></script>
+
+	<!-- TODO : 개발시 반드시 삭제, 레이아웃 세팅 JS -->
+	<!-- <script src="../js/ui-layout-setting.js"></script> -->
+
+	<!-- 공통 UI 컴포넌트 -->
+	<script src="../../js/ui-main.js"></script>
+	<script src="../../js/study.js"></script>
+
+	<!-- 페이지 개별 스크립트 -->
+	<script>
+		// 이곳에 정의
+		// 1. scroll() 함수 =>
+		// var x = window.scrollX;
+		// var y = window.scrollY;
+		// 2. scrollTop, scrollHeight
+		// 2. animate() 함수 =>
+
+
+
+		//1. 스크롤에 따른 background 변경
+		$(function () {
+
+			var $window = $(window),
+				$body = $('body'),
+				$panel = $('.panel');
+
+			// var scroll = $window.scrollTop() + ($window.height() / 3);
+			var scroll = $window.scrollTop();
+			if (0 < scroll < 800) {
+				$('html').css('background', '#7A4EAB');
+			} else if (800 < scroll < 1600) {
+				$('html').css('background', '#4332CF');
+			}
+			// $panel.each(function () {
+			// 	var $this = $(this);
+			// 	// if ($this.position().top <= scroll && $this.position().top + $this.height() > scroll) {
+			// 	if ($this.position().top > 1000) {
+			// 		$('scroll-page').css('background', '#7A4EAB');
+			// 		// $body.removeClass(function (index, css) {
+			// 		// 	return (css.match(/(^|\s)color-\S+/g) || []).join(' ');
+			// 		// });
+			// 		// $body.addClass('color-' + $(this).data('color'));
+			// 	}
+			// });
+
+		});
+		// var scrollheight = window.scrollY;
+		// $('html').scroll(function () {
+		// $('html,body').scrollTop(0);
+		// });
+		// // 	// 	console.log('현재 스크롤 값은 ' + $('.content').scrollTop());
+		// // 	// });
+		// // window.addEventListener('scroll', function () {
+		// // 	console.log(window.scrollX, window.scrollY);
+		// });
+
+		//2. 중간 섹션으로 내려가는 이벤트
+		$(function () {
+			// var section = $('section').eq();
+			// var quickPos = $('.quick_pos').offset().top;
+			// var winPos = $(window).scrollTop();
+
+			$('.btn-middle').click(function () {
+				$('html,body').animate({
+						scrollTop: $("section").eq(2).offset().top
+						// scrollTop: $("section").eq(2).offset().top - 100 //title이 안나오거나 더 보고 싶다면 - 숫자 사용
+					},
+					'slow');
+			});
+		});
+
+		//3. 맨 아래로 내려가는 이벤트
+		$(function () {
+			// var scrollTop = $(window).scrollTop();
+			// var innerHeight = $(window).innerHeight(); 
+			// console.log(scrollTop, innerHeight);
+
+			//1. 버튼 클릭시
+			$('.btn-bottom').click(function () {
+				//2. html 파일을 스크롤로 문서의 높이값 최하단으로 한번에 이동
+				// $('html').scrollTop($(document).height());
+
+				//3. html 애니메이션() / scrollTop의 높이값을 변경 (0.5초로)
+				$('html').animate({
+					scrollTop: $('html')[0].scrollHeight
+				}, 500);
+			});
+		});
+	</script>
+</body>
+
+</html>

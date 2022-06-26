@@ -6,7 +6,7 @@ $(function () {
 	$('.try-1 .tooltip-btn-area .tooltip-btn').click(function () {
 		$('.try-1 .tooltip').toggleClass('on');
 	});
-	setInterval();
+	// setInterval();
 });
 
 setInterval(function () {
