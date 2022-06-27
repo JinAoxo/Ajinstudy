@@ -58,53 +58,60 @@
 		// var x = window.scrollX;
 		// var y = window.scrollY;
 		// 2. scrollTop, scrollHeight
-		// 2. animate() 함수 =>
+		// - let scroll = $(window).scrollTop();
+		// 3. animate() 함수 =>
 
+		//.offset() : 선택한 요소 집합의 첫 번째 요소의 위치를 HTML 문서를 기준으로 반환하거나, 선택한 요소의 위치를 인수로 전달받은 값으로 설정함.
+		//.position() : 선택한 요소 집합의 첫 번째 요소의 위치를 해당 요소가 웹 페이지에 위치할 때 기준이 되었던 부모 요소를 기준으로 하는 상대 위치를 반환함.
+		//.scrollLeft() : 선택한 요소 집합의 첫 번째 요소의 수평 스크롤 바의 위치를 얻거나, 선택된 요소의 수평 스크롤 바의 위치를 인수로 전달받은 값으로 설정함.
+		//.scrollTop() : 선택한 요소 집합의 첫 번째 요소의 수직 스크롤 바의 위치를 얻거나, 선택된 요소의 수직 스크롤 바의 위치를 인수로 전달받은 값으로 설정함.
 
+		// 💢 offset으로 하는 방법?????
 
 		//1. 스크롤에 따른 background 변경
+		//**. scrollTop()으로 해당 좌표 찾기 : 버그 scroll 이벤트가 발생하지 않으면 발동 안됨
 		$(function () {
-
-			var $window = $(window),
-				$body = $('body'),
-				$panel = $('.panel');
-
-			// var scroll = $window.scrollTop() + ($window.height() / 3);
-			var scroll = $window.scrollTop();
-			if (0 < scroll < 800) {
-				$('html').css('background', '#7A4EAB');
-			} else if (800 < scroll < 1600) {
-				$('html').css('background', '#4332CF');
-			}
-			// $panel.each(function () {
-			// 	var $this = $(this);
-			// 	// if ($this.position().top <= scroll && $this.position().top + $this.height() > scroll) {
-			// 	if ($this.position().top > 1000) {
-			// 		$('scroll-page').css('background', '#7A4EAB');
-			// 		// $body.removeClass(function (index, css) {
-			// 		// 	return (css.match(/(^|\s)color-\S+/g) || []).join(' ');
-			// 		// });
-			// 		// $body.addClass('color-' + $(this).data('color'));
-			// 	}
-			// });
-
+			$(window).on('scroll', function () {
+				var scrollpage = $(this).scrollTop();
+				// var scrollpage = $(this).offset().top;
+				console.log(scrollpage);
+				if (scrollpage > 2056) {
+					$('html').css('background', '#4DCF42');
+				} else if (scrollpage > 1160) {
+					$('html').css('background', '#2F8FED');
+				} else if (scrollpage > 260) {
+					$('html').css('background', '#4332CF');
+				} else {
+					$('html').css('background', '#7A4EAB');
+				}
+			});
 		});
-		// var scrollheight = window.scrollY;
-		// $('html').scroll(function () {
-		// $('html,body').scrollTop(0);
+
+
+		// **. mousewhell 이벤트이기 때문에 해당 위치로 한번에 이동하면 적용 안됨
+		// $(window).on('scroll', function () {
+		// 	// var ht = $('window').height(); //window 보여지는 view 높이값
+		// 	var ht = $('.scroll-page').offset().top + 646; //window 보여지는 view 높이값
+		// 	var scroll = $(window).scrollTop(); //window의 스크롤 값
+		// 	console.log(ht, scroll);
+
+		// 	$('html').on('mousewheel', function () {
+		// 		var bgchange = scroll / ht;
+		// 		if (bgchange <= 1) {
+		// 			$('html').css('background', '#7A4EAB');
+		// 		} else if (bgchange <= 2) {
+		// 			$('html').css('background', '#4332CF');
+		// 		} else if (bgchange <= 3) {
+		// 			$('html').css('background', '#2F8FED');
+		// 		} else if (bgchange <= 4) {
+		// 			$('html').css('background', '#4DCF42');
+		// 		}
+		// 	});
 		// });
-		// // 	// 	console.log('현재 스크롤 값은 ' + $('.content').scrollTop());
-		// // 	// });
-		// // window.addEventListener('scroll', function () {
-		// // 	console.log(window.scrollX, window.scrollY);
-		// });
+
 
 		//2. 중간 섹션으로 내려가는 이벤트
 		$(function () {
-			// var section = $('section').eq();
-			// var quickPos = $('.quick_pos').offset().top;
-			// var winPos = $(window).scrollTop();
-
 			$('.btn-middle').click(function () {
 				$('html,body').animate({
 						scrollTop: $("section").eq(2).offset().top
@@ -116,9 +123,6 @@
 
 		//3. 맨 아래로 내려가는 이벤트
 		$(function () {
-			// var scrollTop = $(window).scrollTop();
-			// var innerHeight = $(window).innerHeight(); 
-			// console.log(scrollTop, innerHeight);
 
 			//1. 버튼 클릭시
 			$('.btn-bottom').click(function () {
