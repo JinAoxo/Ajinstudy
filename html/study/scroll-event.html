@@ -54,12 +54,14 @@
 	<!-- 페이지 개별 스크립트 -->
 	<script>
 		// 이곳에 정의
-		// 1. scroll() 함수 =>
+		// 1. scroll() 함수 => 이벤트 핸들러를 "스크롤" JavaScript 이벤트에 바인딩하거나 요소에서 해당 이벤트를 트리거함
+		//.scroll( 핸들러 ) : 이벤트가 발생할 때 마다 실행함 , .scroll([eventData], 핸들러), .scroll()
 		// var x = window.scrollX;
 		// var y = window.scrollY;
-		// 2. scrollTop, scrollHeight
+		// 2-1. scrollTop => 스크롤 막대가 맨 위에 있거나 요소를 스크롤할 수 없는 경우 이 숫자 => '0'
 		// - let scroll = $(window).scrollTop();
-		// 3. animate() 함수 =>
+		// 2-2. scrollHeight
+		// 3. animate() 함수 => .animate( {properties}, [ duration:지속 시간 ], [ easing ], [ complete ] ) / .animate(속성, 옵션)
 
 		//.offset() : 선택한 요소의 첫 번째 요소의 위치를 HTML 문서를 기준으로 반환하거나, 선택한 요소의 위치를 인수로 전달받은 값으로 설정.
 		//.position() : 선택한 요소의 첫 번째 요소의 위치를 해당 요소가 웹 페이지에 위치할 때 기준이 되었던 부모 요소를 기준으로 하는 상대 위치를 반환.
