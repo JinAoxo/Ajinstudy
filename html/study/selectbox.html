@@ -122,6 +122,11 @@
 		//replace : replace("찾을 문자열", "변경할 문자열") 문자를 찾아서 바꾸는 형식 ✨
 		//toggle() : 선택한 요소가 보이면 보이지 않게, 보이지 않으면 보이게 방법
 		//toggleClass() : 선택한 요소의 클래스값을 넣었다가 뺐다가 하는 방법
+		//.has(e.target).length === 0 -> 이 부분이 해당 영역 해당영역에서 클릭 이벤트가 발생되는게 없다면
+
+		// if ($('.try-1 .selectbox-wrap').has(e.target).length === 0) {
+		// 	$('.try-1 .selectbox-wrap').removeClass("active");
+		// } ->공부 필요
 
 		//셀렉트 박스 접기, 펼치기
 		$(function () {
@@ -137,11 +142,16 @@
 
 		$(function () {
 			$('.try-1 .selectbox-wrap dl dd a').on('click', function (e) {
+				e.preventDefault()
 				var option = $(this).text();
 				// console.log(option);
 				$('.try-1 .selectbox-wrap.active').removeClass('active');
 				// 질문 1. 작동 안되요.😥
 				// $(e.target).closest('.selectbox-wrap.active dl dt a').attr('title', $(this).attr('title').replace('접기', '펼치기'));
+				// // console.log();
+				var test = $(e.target).closest('.try-1 .selectbox-wrap').children().children().children('a')
+				var test2 = test.attr('title', test.attr('title').replace('접기', '펼치기'))
+				console.log(test2);
 				$('.selectbox-wrap dl dt a').text(option);
 			});
 		});
