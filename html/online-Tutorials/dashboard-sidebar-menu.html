@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>클론 코딩 setting</title>
+	<link rel="stylesheet" href="../../css/style.css">
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body class="online">
+	<div class="wrap">
+		<div class="navigation">
+			<ul>
+				<li>
+					<a href="#;">
+						<span class="icon">
+							<ion-icon name="logo-apple"></ion-icon>
+						</span>
+						<span class="title">Brand Name</span>
+					</a>
+				</li>
+				<li>
+					<a href="#;">
+						<span class="icon">
+							<ion-icon name="home-outline"></ion-icon>
+						</span>
+						<span class="title">Dachboard</span>
+					</a>
+				</li>
+				<li>
+					<a href="#;">
+						<span class="icon">
+							<ion-icon name="people-outline"></ion-icon>
+						</span>
+						<span class="title">Customers</span>
+					</a>
+				</li>
+				<li>
+					<a href="#;">
+						<span class="icon">
+							<ion-icon name="chatbubble-outline"></ion-icon>
+						</span>
+						<span class="title">Messages</span>
+					</a>
+				</li>
+				<li>
+					<a href="#;">
+						<span class="icon">
+							<ion-icon name="help-outline"></ion-icon>
+						</span>
+						<span class="title">Help</span>
+					</a>
+				</li>
+				<li>
+					<a href="#;">
+						<span class="icon">
+							<ion-icon name="settings-outline"></ion-icon>
+						</span>
+						<span class="title">Setting</span>
+					</a>
+				</li>
+				<li>
+					<a href="#;">
+						<span class="icon">
+							<ion-icon name="lock-closed-outline"></ion-icon>
+						</span>
+						<span class="title">Password</span>
+					</a>
+				</li>
+				<li>
+					<a href="#;">
+						<span class="icon">
+							<ion-icon name="log-out-outline"></ion-icon>
+						</span>
+						<span class="title">Sign Out</span>
+					</a>
+				</li>
+			</ul>
+			<div class="toggle"></div>
+		</div>
+	</div>
+	<!-- JavaScript -->
+	<script src="../js/jquery-3.5.1.min.js"></script>
+
+	<!-- TODO : 개발시 반드시 삭제, 레이아웃 세팅 JS -->
+	<!-- <script src="../js/ui-layout-setting.js"></script> -->
+
+	<!-- 공통 UI 컴포넌트 -->
+	<script src="../js/ui-main.js"></script>
+
+	<!-- 페이지 개별 스크립트 -->
+	<script>
+		// 이곳에 정의
+		var navigation = document.querySelector('.navigation');
+		var toggle = document.querySelector('.toggle');
+		toggle.onclick = function () {
+			navigation.classList.toggle('active')
+		};
+	</script>
+</body>
+
+</html>
