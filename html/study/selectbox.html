@@ -117,8 +117,11 @@
 		//1. 우체국 참고
 		//mousedown : 마우스를 눌렀을때의 이벤트
 		//length : 문자열의 길이를 체크하는 방법
-		//closest : 가장 가까운 상위 요소
-		//parents : 부모요소
+		//closest : 가장 가까운 상위 요소 -> 단하나의 결과만 리턴
+		//parents : 부모요소 -> 하나가 아니라면
+		//parent : 부모요소 -> 해당요소 바로 위의 부모요소
+		//children : 직계 자식요소만 추출, 선택 가능
+		//find : 하위 자식 요소 전체
 		//replace : replace("찾을 문자열", "변경할 문자열") 문자를 찾아서 바꾸는 형식 ✨
 		//toggle() : 선택한 요소가 보이면 보이지 않게, 보이지 않으면 보이게 방법
 		//toggleClass() : 선택한 요소의 클래스값을 넣었다가 뺐다가 하는 방법
@@ -146,10 +149,12 @@
 				var option = $(this).text();
 				// console.log(option);
 				$('.try-1 .selectbox-wrap.active').removeClass('active');
-				// 질문 1. 작동 안되요.😥
+				// 질문 1. 작동 안되요.😥 : 해결 : 문제 1. children()이 많아진다 / 2. closest() + find()를 써야한다
+
 				// $(e.target).closest('.selectbox-wrap.active dl dt a').attr('title', $(this).attr('title').replace('접기', '펼치기'));
 				// // console.log();
-				var test = $(e.target).closest('.try-1 .selectbox-wrap').children().children().children('a')
+				// var test = $(e.target).closest('.try-1 .selectbox-wrap').children().children().children('a')
+				var test = $(e.target).closest('.try-1 .selectbox-wrap').find('dl dt a'); // 가능 
 				var test2 = test.attr('title', test.attr('title').replace('접기', '펼치기'))
 				console.log(test2);
 				$('.selectbox-wrap dl dt a').text(option);
@@ -162,15 +167,14 @@
 		$(document).on('keydown', '.try-1 .selectbox-wrap.active dl dd ul li:last-child a', function (e) {
 			if (e.keyCode == 9 && !e.shiftKey) { // shift
 				e.preventDefault();
-				var test3 = $(this).closest('.try-1 .selectbox-wrap.active dl').children('dt').children('a');
+				var test3 = $(this).closest('.try-1 .selectbox-wrap.active dl').find('dt a');
 				test3.focus();
-				// console.log(test3);
 			}
 		}).on('keydown', '.try-1 .selectbox-wrap.active dl dt a', function (e) {
-			if ($('.try-1 .selectbox-wrap.active dl dt a').is(e.target) && e.keyCode == 9 && e.shiftKey) {
-				// shift + tab
+			if ($('.try-1 .selectbox-wrap.active dl dt a').is(e.target) && e.keyCode == 9 && e.shiftKey) { // shift + tab
 				e.preventDefault();
-				var test4 = $(this).closest('.try-1 .selectbox-wrap.active dl').children('dd').children('ul').children('li:last-child').children('a');
+				// var test4 = $(this).closest('.try-1 .selectbox-wrap.active dl').children('dd').children('ul').children('li:last-child').children('a');
+				var test4 = $(this).closest('.try-1 .selectbox-wrap.active dl').find('dd ul li:last-child a');
 				test4.focus();
 				// console.log(test4);
 			}
