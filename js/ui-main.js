@@ -1,3 +1,5 @@
+// main page 작업
+
 // 검색 필터
 $('.filter-text').keyup(function (event) {
 	var val = $(this).val(); //검색한 값 (kayup ✨)

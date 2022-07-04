@@ -157,6 +157,26 @@
 		});
 
 
+		// 접근성 포커싱 유지
+
+		$(document).on('keydown', '.try-1 .selectbox-wrap.active dl dd ul li:last-child a', function (e) {
+			if (e.keyCode == 9 && !e.shiftKey) { // shift
+				e.preventDefault();
+				var test3 = $(this).closest('.try-1 .selectbox-wrap.active dl').children('dt').children('a');
+				test3.focus();
+				// console.log(test3);
+			}
+		}).on('keydown', '.try-1 .selectbox-wrap.active dl dt a', function (e) {
+			if ($('.try-1 .selectbox-wrap.active dl dt a').is(e.target) && e.keyCode == 9 && e.shiftKey) {
+				// shift + tab
+				e.preventDefault();
+				var test4 = $(this).closest('.try-1 .selectbox-wrap.active dl').children('dd').children('ul').children('li:last-child').children('a');
+				test4.focus();
+				// console.log(test4);
+			}
+		});
+
+
 		//3. 혼자 작업했던 밀크티
 		$(function () {
 			$(".select-milkt .label").click(function () {
