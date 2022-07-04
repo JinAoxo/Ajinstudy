@@ -1,0 +1,12 @@
+//clone-coding(hyundaicard) 페이지 입니다.
+
+.layout-set {
+	background: rgb(255, 216, 216);
+	border: 2px solid #000;
+}
+
+#header {
+	@extend .layout-set;
+	width: 100%;
+	height: 80px;
+}
