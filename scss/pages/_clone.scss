@@ -9,7 +9,55 @@
 	@extend .layout-set;
 	width: 100%;
 	height: 80px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	// vertical-align: middle;
+	.logo {
+		@extend .layout-set;
+		width: 20%;
+		height: 80px;
+		border: 2px solid rgb(199, 76, 76);
+	}
+
+	.gnb {
+		@extend .layout-set;
+		width: 60%;
+		height: 80px;
+		border: 2px solid rgb(199, 76, 76);
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+
+		.gnb-l {
+			float: left;
+			width: 60%;
+		}
+
+		.gnb-r {
+			float: right;
+			width: 40%;
+
+			ul {
+				justify-content: flex-end;
+			}
+		}
+
+		ul {
+			display: flex;
+			flex-direction: row;
+		}
+	}
+
+	.search {
+		@extend .layout-set;
+		width: 20%;
+		height: 80px;
+		border: 2px solid rgb(199, 76, 76);
+	}
 }
+
 
 #footer {
 	@extend .layout-set;

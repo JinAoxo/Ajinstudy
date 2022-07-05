@@ -2959,7 +2959,7 @@ a.link.tip {
   height: 900px;
 }
 
-.layout-set, #header, #footer, .wrap.layout-set > div section, .wrap.layout-set .side, .wrap.layout-set .card-area, .wrap.layout-set aside article {
+.layout-set, #header, #header .logo, #header .gnb, #header .search, #footer, .wrap.layout-set > div section, .wrap.layout-set .side, .wrap.layout-set .card-area, .wrap.layout-set aside article {
   background: rgba(255, 216, 216, 0.5);
   border: 2px solid #000;
 }
@@ -2967,6 +2967,70 @@ a.link.tip {
 #header {
   width: 100%;
   height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#header .logo {
+  width: 20%;
+  height: 80px;
+  border: 2px solid #c74c4c;
+}
+
+#header .gnb {
+  width: 60%;
+  height: 80px;
+  border: 2px solid #c74c4c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#header .gnb .gnb-l {
+  float: left;
+  width: 60%;
+}
+
+#header .gnb .gnb-r {
+  float: right;
+  width: 40%;
+}
+
+#header .gnb .gnb-r ul {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+#header .gnb ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#header .search {
+  width: 20%;
+  height: 80px;
+  border: 2px solid #c74c4c;
 }
 
 #footer {
@@ -2974,17 +3038,17 @@ a.link.tip {
   height: 80px;
 }
 
-.wrap.layout-set, .wrap#header, .wrap#footer, .wrap.layout-set > div section.wrap, .wrap.layout-set .wrap.side, .wrap.layout-set .wrap.card-area, .wrap.layout-set aside article.wrap {
+.wrap.layout-set, .wrap#header, #header .wrap.logo, #header .wrap.gnb, #header .wrap.search, .wrap#footer, .wrap.layout-set > div section.wrap, .wrap.layout-set .wrap.side, .wrap.layout-set .wrap.card-area, .wrap.layout-set aside article.wrap {
   width: 1600px;
   margin: 0 auto;
 }
 
-.wrap.layout-set > div, .wrap#header > div, .wrap#footer > div, .wrap.layout-set > div section.wrap > div, .wrap.layout-set .wrap.side > div, .wrap.layout-set .wrap.card-area > div, .wrap.layout-set aside article.wrap > div {
+.wrap.layout-set > div, .wrap#header > div, #header .wrap.logo > div, #header .wrap.gnb > div, #header .wrap.search > div, .wrap#footer > div, .wrap.layout-set > div section.wrap > div, .wrap.layout-set .wrap.side > div, .wrap.layout-set .wrap.card-area > div, .wrap.layout-set aside article.wrap > div {
   width: 1256px;
   float: left;
 }
 
-.wrap.layout-set > div section, .wrap#header > div section, .wrap#footer > div section, .wrap.layout-set .wrap.side > div section, .wrap.layout-set .wrap.card-area > div section, .wrap.layout-set aside article.wrap > div section {
+.wrap.layout-set > div section, .wrap#header > div section, #header .wrap.logo > div section, #header .wrap.gnb > div section, #header .wrap.search > div section, .wrap#footer > div section, .wrap.layout-set .wrap.side > div section, .wrap.layout-set .wrap.card-area > div section, .wrap.layout-set aside article.wrap > div section {
   width: 100%;
   height: 400px;
   display: -webkit-box;
@@ -2992,25 +3056,25 @@ a.link.tip {
   display: flex;
 }
 
-.wrap.layout-set .side, .wrap#header .side, .wrap#footer .side {
+.wrap.layout-set .side, .wrap#header .side, #header .wrap.logo .side, #header .wrap.gnb .side, #header .wrap.search .side, .wrap#footer .side {
   width: 200px;
   height: 100%;
   border: 2px solid #c74c4c;
 }
 
-.wrap.layout-set .card-area, .wrap#header .card-area, .wrap#footer .card-area {
+.wrap.layout-set .card-area, .wrap#header .card-area, #header .wrap.logo .card-area, #header .wrap.gnb .card-area, #header .wrap.search .card-area, .wrap#footer .card-area {
   width: 1056px;
   height: 400px;
   border: 2px solid #c74c4c;
 }
 
-.wrap.layout-set aside article, .wrap#header aside article, .wrap#footer aside article, .wrap.layout-set .wrap.side aside article, .wrap.layout-set .wrap.card-area aside article {
+.wrap.layout-set aside article, .wrap#header aside article, #header .wrap.logo aside article, #header .wrap.gnb aside article, #header .wrap.search aside article, .wrap#footer aside article, .wrap.layout-set .wrap.side aside article, .wrap.layout-set .wrap.card-area aside article {
   width: 20%;
   height: 300px;
   float: right;
 }
 
-.wrap.layout-set::after, .wrap#header::after, .wrap#footer::after, .wrap.layout-set > div section.wrap::after, .wrap.layout-set .wrap.side::after, .wrap.layout-set .wrap.card-area::after, .wrap.layout-set aside article.wrap::after {
+.wrap.layout-set::after, .wrap#header::after, #header .wrap.logo::after, #header .wrap.gnb::after, #header .wrap.search::after, .wrap#footer::after, .wrap.layout-set > div section.wrap::after, .wrap.layout-set .wrap.side::after, .wrap.layout-set .wrap.card-area::after, .wrap.layout-set aside article.wrap::after {
   display: block;
   content: '';
   clear: both;
