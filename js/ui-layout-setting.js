@@ -11,12 +11,11 @@
 */
 
 $(function () {
-	$('#header').load('_inc-header.html #header > *', function () {});
+	// header 영역
+	$('#header').load('_load-header.html #header > *', function () {});
 
+	// ???  #header > * 이부분이 없으면 계속해서 html 전체를 불러옴  >> 오류
 
-	$('#footer').load('_inc-footer.html #footer > *', function () {
-		$(this).after('<div class="layer-popup-area"></div>');
-
-		$('.layer-popup-area').load('_inc-layer.html #layer > *', function () {});
-	});
+	// footer 영역
+	$('#footer').load('_load-footer.html #footer > *', function () {});
 });
