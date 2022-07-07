@@ -2963,17 +2963,29 @@ a.link.tip {
   position: absolute;
 }
 
-.layout-set, #header, #header .head-area .logo, #header .head-area .gnb, #header .head-area .search, #header .head-event, #header .gnb-sub, #header .gnb-sub .sub-l, #header .gnb-sub .sub-l .sub-list, #header .gnb-sub .sub-r, #footer, .wrap.layout-set .main-wrap section, .wrap.layout-set .side, .wrap.layout-set .card-area, .wrap.layout-set aside article {
+.layout-set, #header,
+#header2, #header .head-area .logo,
+#header2 .head-area .logo, #header .head-area .gnb,
+#header2 .head-area .gnb, #header .head-area .search,
+#header2 .head-area .search, #header .head-event,
+#header2 .head-event, #header .gnb-sub,
+#header2 .gnb-sub, #header .gnb-sub .sub-l,
+#header2 .gnb-sub .sub-l, #header .gnb-sub .sub-l .sub-list,
+#header2 .gnb-sub .sub-l .sub-list, #header .gnb-sub .sub-r,
+#header2 .gnb-sub .sub-r, #footer,
+#footer2, .wrap.layout-set .main-wrap section, .wrap.layout-set .side, .wrap.layout-set .card-area, .wrap.layout-set aside article {
   background: rgba(255, 216, 216, 0.5);
   border: 2px solid #000;
 }
 
-#header {
+#header,
+#header2 {
   width: 100%;
   height: auto;
 }
 
-#header .head-area {
+#header .head-area,
+#header2 .head-area {
   width: 100%;
   height: 80px;
   display: -webkit-box;
@@ -2988,13 +3000,15 @@ a.link.tip {
           align-items: center;
 }
 
-#header .head-area .logo {
+#header .head-area .logo,
+#header2 .head-area .logo {
   width: 20%;
   height: 80px;
   border: 2px solid #c74c4c;
 }
 
-#header .head-area .gnb {
+#header .head-area .gnb,
+#header2 .head-area .gnb {
   width: 60%;
   height: 80px;
   border: 2px solid #c74c4c;
@@ -3010,12 +3024,14 @@ a.link.tip {
           align-items: center;
 }
 
-#header .head-area .gnb .gnb-l {
+#header .head-area .gnb .gnb-l,
+#header2 .head-area .gnb .gnb-l {
   float: left;
   width: 60%;
 }
 
-#header .head-area .gnb .gnb-l > ul {
+#header .head-area .gnb .gnb-l > ul,
+#header2 .head-area .gnb .gnb-l > ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3025,12 +3041,14 @@ a.link.tip {
           flex-direction: row;
 }
 
-#header .head-area .gnb .gnb-r {
+#header .head-area .gnb .gnb-r,
+#header2 .head-area .gnb .gnb-r {
   float: right;
   width: 40%;
 }
 
-#header .head-area .gnb .gnb-r > ul {
+#header .head-area .gnb .gnb-r > ul,
+#header2 .head-area .gnb .gnb-r > ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3043,19 +3061,22 @@ a.link.tip {
           justify-content: flex-end;
 }
 
-#header .head-area .search {
+#header .head-area .search,
+#header2 .head-area .search {
   width: 20%;
   height: 80px;
   border: 2px solid #c74c4c;
 }
 
-#header .head-event {
+#header .head-event,
+#header2 .head-event {
   width: 100%;
   height: 40px;
   display: none;
 }
 
-#header .gnb-sub {
+#header .gnb-sub,
+#header2 .gnb-sub {
   width: 100%;
   height: auto;
   position: absolute;
@@ -3064,18 +3085,21 @@ a.link.tip {
   display: none;
 }
 
-#header .gnb-sub .sub-wrap {
+#header .gnb-sub .sub-wrap,
+#header2 .gnb-sub .sub-wrap {
   width: 1200px;
   margin: 0 auto;
 }
 
-#header .gnb-sub .sub-wrap::after {
+#header .gnb-sub .sub-wrap::after,
+#header2 .gnb-sub .sub-wrap::after {
   display: block;
   content: '';
   clear: both;
 }
 
-#header .gnb-sub .sub-l {
+#header .gnb-sub .sub-l,
+#header2 .gnb-sub .sub-l {
   width: 860px;
   float: left;
   border: 2px solid #c74c4c;
@@ -3090,38 +3114,52 @@ a.link.tip {
       flex-wrap: wrap;
 }
 
-#header .gnb-sub .sub-l .sub-list {
+#header .gnb-sub .sub-l .sub-list,
+#header2 .gnb-sub .sub-l .sub-list {
   width: 25%;
   height: 100px;
   border: 2px solid #c74c4c;
 }
 
-#header .gnb-sub .sub-l .sub-list li {
+#header .gnb-sub .sub-l .sub-list li,
+#header2 .gnb-sub .sub-l .sub-list li {
   width: 100%;
 }
 
-#header .gnb-sub .sub-r {
+#header .gnb-sub .sub-r,
+#header2 .gnb-sub .sub-r {
   width: 326px;
   float: right;
   border: 2px solid #c74c4c;
 }
 
-#footer {
+#footer,
+#footer2 {
   width: 100%;
   height: 80px;
 }
 
-.wrap.layout-set, .wrap#header, #header .head-area .wrap.logo, #header .head-area .wrap.gnb, #header .head-area .wrap.search, #header .wrap.head-event, #header .wrap.gnb-sub, #header .gnb-sub .wrap.sub-l, #header .gnb-sub .sub-l .wrap.sub-list, #header .gnb-sub .wrap.sub-r, .wrap#footer, .wrap.layout-set .main-wrap section.wrap, .wrap.layout-set .wrap.side, .wrap.layout-set .wrap.card-area, .wrap.layout-set aside article.wrap {
+.wrap.layout-set, .wrap#header,
+.wrap#header2, #header .head-area .wrap.logo,
+#header2 .head-area .wrap.logo, #header .head-area .wrap.gnb,
+#header2 .head-area .wrap.gnb, #header .head-area .wrap.search,
+#header2 .head-area .wrap.search, #header .wrap.head-event,
+#header2 .wrap.head-event, #header .wrap.gnb-sub,
+#header2 .wrap.gnb-sub, #header .gnb-sub .wrap.sub-l,
+#header2 .gnb-sub .wrap.sub-l, #header .gnb-sub .sub-l .wrap.sub-list,
+#header2 .gnb-sub .sub-l .wrap.sub-list, #header .gnb-sub .wrap.sub-r,
+#header2 .gnb-sub .wrap.sub-r, .wrap#footer,
+.wrap#footer2, .wrap.layout-set .main-wrap section.wrap, .wrap.layout-set .wrap.side, .wrap.layout-set .wrap.card-area, .wrap.layout-set aside article.wrap {
   width: 1600px;
   margin: 0 auto;
 }
 
-.wrap.layout-set .main-wrap, .wrap#header .main-wrap, #header .head-area .wrap.logo .main-wrap, #header .head-area .wrap.gnb .main-wrap, #header .head-area .wrap.search .main-wrap, #header .wrap.head-event .main-wrap, #header .wrap.gnb-sub .main-wrap, #header .gnb-sub .wrap.sub-l .main-wrap, #header .gnb-sub .sub-l .wrap.sub-list .main-wrap, #header .gnb-sub .wrap.sub-r .main-wrap, .wrap#footer .main-wrap, .wrap.layout-set .main-wrap section.wrap .main-wrap {
+.wrap.layout-set .main-wrap, .wrap#header .main-wrap, .wrap#header2 .main-wrap, #header .head-area .wrap.logo .main-wrap, #header2 .head-area .wrap.logo .main-wrap, #header .head-area .wrap.gnb .main-wrap, #header2 .head-area .wrap.gnb .main-wrap, #header .head-area .wrap.search .main-wrap, #header2 .head-area .wrap.search .main-wrap, #header .wrap.head-event .main-wrap, #header2 .wrap.head-event .main-wrap, #header .wrap.gnb-sub .main-wrap, #header2 .wrap.gnb-sub .main-wrap, #header .gnb-sub .wrap.sub-l .main-wrap, #header2 .gnb-sub .wrap.sub-l .main-wrap, #header .gnb-sub .sub-l .wrap.sub-list .main-wrap, #header2 .gnb-sub .sub-l .wrap.sub-list .main-wrap, #header .gnb-sub .wrap.sub-r .main-wrap, #header2 .gnb-sub .wrap.sub-r .main-wrap, .wrap#footer .main-wrap, .wrap#footer2 .main-wrap, .wrap.layout-set .main-wrap section.wrap .main-wrap {
   width: 1256px;
   float: left;
 }
 
-.wrap.layout-set .main-wrap section, .wrap#header .main-wrap section, #header .head-area .wrap.logo .main-wrap section, #header .head-area .wrap.gnb .main-wrap section, #header .head-area .wrap.search .main-wrap section, #header .wrap.head-event .main-wrap section, #header .wrap.gnb-sub .main-wrap section, #header .gnb-sub .wrap.sub-l .main-wrap section, #header .gnb-sub .sub-l .wrap.sub-list .main-wrap section, #header .gnb-sub .wrap.sub-r .main-wrap section, .wrap#footer .main-wrap section {
+.wrap.layout-set .main-wrap section, .wrap#header .main-wrap section, .wrap#header2 .main-wrap section, #header .head-area .wrap.logo .main-wrap section, #header2 .head-area .wrap.logo .main-wrap section, #header .head-area .wrap.gnb .main-wrap section, #header2 .head-area .wrap.gnb .main-wrap section, #header .head-area .wrap.search .main-wrap section, #header2 .head-area .wrap.search .main-wrap section, #header .wrap.head-event .main-wrap section, #header2 .wrap.head-event .main-wrap section, #header .wrap.gnb-sub .main-wrap section, #header2 .wrap.gnb-sub .main-wrap section, #header .gnb-sub .wrap.sub-l .main-wrap section, #header2 .gnb-sub .wrap.sub-l .main-wrap section, #header .gnb-sub .sub-l .wrap.sub-list .main-wrap section, #header2 .gnb-sub .sub-l .wrap.sub-list .main-wrap section, #header .gnb-sub .wrap.sub-r .main-wrap section, #header2 .gnb-sub .wrap.sub-r .main-wrap section, .wrap#footer .main-wrap section, .wrap#footer2 .main-wrap section {
   width: 100%;
   height: 400px;
   display: -webkit-box;
@@ -3129,19 +3167,19 @@ a.link.tip {
   display: flex;
 }
 
-.wrap.layout-set .side, .wrap#header .side, #header .head-area .wrap.logo .side, #header .head-area .wrap.gnb .side, #header .head-area .wrap.search .side, #header .wrap.head-event .side, #header .wrap.gnb-sub .side, #header .gnb-sub .wrap.sub-l .side, #header .gnb-sub .sub-l .wrap.sub-list .side, #header .gnb-sub .wrap.sub-r .side, .wrap#footer .side, .wrap.layout-set .main-wrap section.wrap .side {
+.wrap.layout-set .side, .wrap#header .side, .wrap#header2 .side, #header .head-area .wrap.logo .side, #header2 .head-area .wrap.logo .side, #header .head-area .wrap.gnb .side, #header2 .head-area .wrap.gnb .side, #header .head-area .wrap.search .side, #header2 .head-area .wrap.search .side, #header .wrap.head-event .side, #header2 .wrap.head-event .side, #header .wrap.gnb-sub .side, #header2 .wrap.gnb-sub .side, #header .gnb-sub .wrap.sub-l .side, #header2 .gnb-sub .wrap.sub-l .side, #header .gnb-sub .sub-l .wrap.sub-list .side, #header2 .gnb-sub .sub-l .wrap.sub-list .side, #header .gnb-sub .wrap.sub-r .side, #header2 .gnb-sub .wrap.sub-r .side, .wrap#footer .side, .wrap#footer2 .side, .wrap.layout-set .main-wrap section.wrap .side {
   width: 200px;
   height: 100%;
   border: 2px solid #c74c4c;
 }
 
-.wrap.layout-set .card-area, .wrap#header .card-area, #header .head-area .wrap.logo .card-area, #header .head-area .wrap.gnb .card-area, #header .head-area .wrap.search .card-area, #header .wrap.head-event .card-area, #header .wrap.gnb-sub .card-area, #header .gnb-sub .wrap.sub-l .card-area, #header .gnb-sub .sub-l .wrap.sub-list .card-area, #header .gnb-sub .wrap.sub-r .card-area, .wrap#footer .card-area, .wrap.layout-set .main-wrap section.wrap .card-area {
+.wrap.layout-set .card-area, .wrap#header .card-area, .wrap#header2 .card-area, #header .head-area .wrap.logo .card-area, #header2 .head-area .wrap.logo .card-area, #header .head-area .wrap.gnb .card-area, #header2 .head-area .wrap.gnb .card-area, #header .head-area .wrap.search .card-area, #header2 .head-area .wrap.search .card-area, #header .wrap.head-event .card-area, #header2 .wrap.head-event .card-area, #header .wrap.gnb-sub .card-area, #header2 .wrap.gnb-sub .card-area, #header .gnb-sub .wrap.sub-l .card-area, #header2 .gnb-sub .wrap.sub-l .card-area, #header .gnb-sub .sub-l .wrap.sub-list .card-area, #header2 .gnb-sub .sub-l .wrap.sub-list .card-area, #header .gnb-sub .wrap.sub-r .card-area, #header2 .gnb-sub .wrap.sub-r .card-area, .wrap#footer .card-area, .wrap#footer2 .card-area, .wrap.layout-set .main-wrap section.wrap .card-area {
   width: 1056px;
   height: 400px;
   border: 2px solid #c74c4c;
 }
 
-.wrap.layout-set .card-area ul, .wrap#header .card-area ul, #header .head-area .wrap.logo .card-area ul, #header .head-area .wrap.gnb .card-area ul, #header .head-area .wrap.search .card-area ul, #header .wrap.head-event .card-area ul, #header .wrap.gnb-sub .card-area ul, #header .gnb-sub .wrap.sub-l .card-area ul, #header .gnb-sub .sub-l .wrap.sub-list .card-area ul, #header .gnb-sub .wrap.sub-r .card-area ul, .wrap#footer .card-area ul {
+.wrap.layout-set .card-area ul, .wrap#header .card-area ul, .wrap#header2 .card-area ul, #header .head-area .wrap.logo .card-area ul, #header2 .head-area .wrap.logo .card-area ul, #header .head-area .wrap.gnb .card-area ul, #header2 .head-area .wrap.gnb .card-area ul, #header .head-area .wrap.search .card-area ul, #header2 .head-area .wrap.search .card-area ul, #header .wrap.head-event .card-area ul, #header2 .wrap.head-event .card-area ul, #header .wrap.gnb-sub .card-area ul, #header2 .wrap.gnb-sub .card-area ul, #header .gnb-sub .wrap.sub-l .card-area ul, #header2 .gnb-sub .wrap.sub-l .card-area ul, #header .gnb-sub .sub-l .wrap.sub-list .card-area ul, #header2 .gnb-sub .sub-l .wrap.sub-list .card-area ul, #header .gnb-sub .wrap.sub-r .card-area ul, #header2 .gnb-sub .wrap.sub-r .card-area ul, .wrap#footer .card-area ul, .wrap#footer2 .card-area ul {
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -3151,45 +3189,65 @@ a.link.tip {
       flex-wrap: wrap;
 }
 
-.wrap.layout-set .card-area ul .card-item, .wrap#header .card-area ul .card-item, #header .head-area .wrap.logo .card-area ul .card-item, #header .head-area .wrap.gnb .card-area ul .card-item, #header .head-area .wrap.search .card-area ul .card-item, #header .wrap.head-event .card-area ul .card-item, #header .wrap.gnb-sub .card-area ul .card-item, #header .gnb-sub .wrap.sub-l .card-area ul .card-item, #header .gnb-sub .sub-l .wrap.sub-list .card-area ul .card-item, #header .gnb-sub .wrap.sub-r .card-area ul .card-item, .wrap#footer .card-area ul .card-item {
+.wrap.layout-set .card-area ul .card-item, .wrap#header .card-area ul .card-item, .wrap#header2 .card-area ul .card-item, #header .head-area .wrap.logo .card-area ul .card-item, #header2 .head-area .wrap.logo .card-area ul .card-item, #header .head-area .wrap.gnb .card-area ul .card-item, #header2 .head-area .wrap.gnb .card-area ul .card-item, #header .head-area .wrap.search .card-area ul .card-item, #header2 .head-area .wrap.search .card-area ul .card-item, #header .wrap.head-event .card-area ul .card-item, #header2 .wrap.head-event .card-area ul .card-item, #header .wrap.gnb-sub .card-area ul .card-item, #header2 .wrap.gnb-sub .card-area ul .card-item, #header .gnb-sub .wrap.sub-l .card-area ul .card-item, #header2 .gnb-sub .wrap.sub-l .card-area ul .card-item, #header .gnb-sub .sub-l .wrap.sub-list .card-area ul .card-item, #header2 .gnb-sub .sub-l .wrap.sub-list .card-area ul .card-item, #header .gnb-sub .wrap.sub-r .card-area ul .card-item, #header2 .gnb-sub .wrap.sub-r .card-area ul .card-item, .wrap#footer .card-area ul .card-item, .wrap#footer2 .card-area ul .card-item {
   width: 25%;
   height: 50%;
   border: 2px solid rgba(199, 76, 76, 0.5);
 }
 
-.wrap.layout-set .event-area, .wrap#header .event-area, #header .head-area .wrap.logo .event-area, #header .head-area .wrap.gnb .event-area, #header .head-area .wrap.search .event-area, #header .wrap.head-event .event-area, #header .wrap.gnb-sub .event-area, #header .gnb-sub .wrap.sub-l .event-area, #header .gnb-sub .sub-l .wrap.sub-list .event-area, #header .gnb-sub .wrap.sub-r .event-area, .wrap#footer .event-area, .wrap.layout-set .main-wrap section.wrap .event-area {
+.wrap.layout-set .event-area, .wrap#header .event-area, .wrap#header2 .event-area, #header .head-area .wrap.logo .event-area, #header2 .head-area .wrap.logo .event-area, #header .head-area .wrap.gnb .event-area, #header2 .head-area .wrap.gnb .event-area, #header .head-area .wrap.search .event-area, #header2 .head-area .wrap.search .event-area, #header .wrap.head-event .event-area, #header2 .wrap.head-event .event-area, #header .wrap.gnb-sub .event-area, #header2 .wrap.gnb-sub .event-area, #header .gnb-sub .wrap.sub-l .event-area, #header2 .gnb-sub .wrap.sub-l .event-area, #header .gnb-sub .sub-l .wrap.sub-list .event-area, #header2 .gnb-sub .sub-l .wrap.sub-list .event-area, #header .gnb-sub .wrap.sub-r .event-area, #header2 .gnb-sub .wrap.sub-r .event-area, .wrap#footer .event-area, .wrap#footer2 .event-area, .wrap.layout-set .main-wrap section.wrap .event-area {
   width: 100%;
 }
 
-.wrap.layout-set .event-area .card-area, .wrap#header .event-area .card-area, #header .head-area .wrap.logo .event-area .card-area, #header .head-area .wrap.gnb .event-area .card-area, #header .head-area .wrap.search .event-area .card-area, #header .wrap.head-event .event-area .card-area, #header .wrap.gnb-sub .event-area .card-area, #header .gnb-sub .wrap.sub-l .event-area .card-area, #header .gnb-sub .sub-l .wrap.sub-list .event-area .card-area, #header .gnb-sub .wrap.sub-r .event-area .card-area, .wrap#footer .event-area .card-area {
+.wrap.layout-set .event-area .card-area, .wrap#header .event-area .card-area, .wrap#header2 .event-area .card-area, #header .head-area .wrap.logo .event-area .card-area, #header2 .head-area .wrap.logo .event-area .card-area, #header .head-area .wrap.gnb .event-area .card-area, #header2 .head-area .wrap.gnb .event-area .card-area, #header .head-area .wrap.search .event-area .card-area, #header2 .head-area .wrap.search .event-area .card-area, #header .wrap.head-event .event-area .card-area, #header2 .wrap.head-event .event-area .card-area, #header .wrap.gnb-sub .event-area .card-area, #header2 .wrap.gnb-sub .event-area .card-area, #header .gnb-sub .wrap.sub-l .event-area .card-area, #header2 .gnb-sub .wrap.sub-l .event-area .card-area, #header .gnb-sub .sub-l .wrap.sub-list .event-area .card-area, #header2 .gnb-sub .sub-l .wrap.sub-list .event-area .card-area, #header .gnb-sub .wrap.sub-r .event-area .card-area, #header2 .gnb-sub .wrap.sub-r .event-area .card-area, .wrap#footer .event-area .card-area, .wrap#footer2 .event-area .card-area {
   width: 100%;
 }
 
-.wrap.layout-set aside, .wrap#header aside, #header .head-area .wrap.logo aside, #header .head-area .wrap.gnb aside, #header .head-area .wrap.search aside, #header .wrap.head-event aside, #header .wrap.gnb-sub aside, #header .gnb-sub .wrap.sub-l aside, #header .gnb-sub .sub-l .wrap.sub-list aside, #header .gnb-sub .wrap.sub-r aside, .wrap#footer aside, .wrap.layout-set .main-wrap section.wrap aside, .wrap.layout-set .wrap.side aside, .wrap.layout-set .wrap.card-area aside, .wrap.layout-set aside article.wrap aside {
+.wrap.layout-set aside, .wrap#header aside, .wrap#header2 aside, #header .head-area .wrap.logo aside, #header2 .head-area .wrap.logo aside, #header .head-area .wrap.gnb aside, #header2 .head-area .wrap.gnb aside, #header .head-area .wrap.search aside, #header2 .head-area .wrap.search aside, #header .wrap.head-event aside, #header2 .wrap.head-event aside, #header .wrap.gnb-sub aside, #header2 .wrap.gnb-sub aside, #header .gnb-sub .wrap.sub-l aside, #header2 .gnb-sub .wrap.sub-l aside, #header .gnb-sub .sub-l .wrap.sub-list aside, #header2 .gnb-sub .sub-l .wrap.sub-list aside, #header .gnb-sub .wrap.sub-r aside, #header2 .gnb-sub .wrap.sub-r aside, .wrap#footer aside, .wrap#footer2 aside, .wrap.layout-set .main-wrap section.wrap aside, .wrap.layout-set .wrap.side aside, .wrap.layout-set .wrap.card-area aside, .wrap.layout-set aside article.wrap aside {
   width: 333px;
   height: auto;
   float: right;
 }
 
-.wrap.layout-set aside article, .wrap#header aside article, #header .head-area .wrap.logo aside article, #header .head-area .wrap.gnb aside article, #header .head-area .wrap.search aside article, #header .wrap.head-event aside article, #header .wrap.gnb-sub aside article, #header .gnb-sub .wrap.sub-l aside article, #header .gnb-sub .sub-l .wrap.sub-list aside article, #header .gnb-sub .wrap.sub-r aside article, .wrap#footer aside article, .wrap.layout-set .main-wrap section.wrap aside article, .wrap.layout-set .wrap.side aside article, .wrap.layout-set .wrap.card-area aside article {
+.wrap.layout-set aside article, .wrap#header aside article, .wrap#header2 aside article, #header .head-area .wrap.logo aside article, #header2 .head-area .wrap.logo aside article, #header .head-area .wrap.gnb aside article, #header2 .head-area .wrap.gnb aside article, #header .head-area .wrap.search aside article, #header2 .head-area .wrap.search aside article, #header .wrap.head-event aside article, #header2 .wrap.head-event aside article, #header .wrap.gnb-sub aside article, #header2 .wrap.gnb-sub aside article, #header .gnb-sub .wrap.sub-l aside article, #header2 .gnb-sub .wrap.sub-l aside article, #header .gnb-sub .sub-l .wrap.sub-list aside article, #header2 .gnb-sub .sub-l .wrap.sub-list aside article, #header .gnb-sub .wrap.sub-r aside article, #header2 .gnb-sub .wrap.sub-r aside article, .wrap#footer aside article, .wrap#footer2 aside article, .wrap.layout-set .main-wrap section.wrap aside article, .wrap.layout-set .wrap.side aside article, .wrap.layout-set .wrap.card-area aside article {
   width: 100%;
   height: 300px;
 }
 
-.wrap.layout-set::after, .wrap#header::after, #header .head-area .wrap.logo::after, #header .head-area .wrap.gnb::after, #header .head-area .wrap.search::after, #header .wrap.head-event::after, #header .wrap.gnb-sub::after, #header .gnb-sub .wrap.sub-l::after, #header .gnb-sub .sub-l .wrap.sub-list::after, #header .gnb-sub .wrap.sub-r::after, .wrap#footer::after, .wrap.layout-set .main-wrap section.wrap::after, .wrap.layout-set .wrap.side::after, .wrap.layout-set .wrap.card-area::after, .wrap.layout-set aside article.wrap::after {
+.wrap.layout-set::after, .wrap#header::after,
+.wrap#header2::after, #header .head-area .wrap.logo::after,
+#header2 .head-area .wrap.logo::after, #header .head-area .wrap.gnb::after,
+#header2 .head-area .wrap.gnb::after, #header .head-area .wrap.search::after,
+#header2 .head-area .wrap.search::after, #header .wrap.head-event::after,
+#header2 .wrap.head-event::after, #header .wrap.gnb-sub::after,
+#header2 .wrap.gnb-sub::after, #header .gnb-sub .wrap.sub-l::after,
+#header2 .gnb-sub .wrap.sub-l::after, #header .gnb-sub .sub-l .wrap.sub-list::after,
+#header2 .gnb-sub .sub-l .wrap.sub-list::after, #header .gnb-sub .wrap.sub-r::after,
+#header2 .gnb-sub .wrap.sub-r::after, .wrap#footer::after,
+.wrap#footer2::after, .wrap.layout-set .main-wrap section.wrap::after, .wrap.layout-set .wrap.side::after, .wrap.layout-set .wrap.card-area::after, .wrap.layout-set aside article.wrap::after {
   display: block;
   content: '';
   clear: both;
 }
 
 @media (max-width: 1600px) {
-  .wrap.layout-set.wrap.layout-set, .wrap.wrap#header, #header .head-area .wrap.wrap.logo, #header .head-area .wrap.wrap.gnb, #header .head-area .wrap.wrap.search, #header .wrap.wrap.head-event, #header .wrap.wrap.gnb-sub, #header .gnb-sub .wrap.wrap.sub-l, #header .gnb-sub .sub-l .wrap.wrap.sub-list, #header .gnb-sub .wrap.wrap.sub-r, .wrap.wrap#footer, .wrap.layout-set .main-wrap section.wrap.wrap, .wrap.layout-set .wrap.wrap.side, .wrap.layout-set .wrap.wrap.card-area, .wrap.layout-set aside article.wrap.wrap {
+  .wrap.layout-set.wrap.layout-set, .wrap.wrap#header,
+  .wrap.wrap#header2, #header .head-area .wrap.wrap.logo,
+  #header2 .head-area .wrap.wrap.logo, #header .head-area .wrap.wrap.gnb,
+  #header2 .head-area .wrap.wrap.gnb, #header .head-area .wrap.wrap.search,
+  #header2 .head-area .wrap.wrap.search, #header .wrap.wrap.head-event,
+  #header2 .wrap.wrap.head-event, #header .wrap.wrap.gnb-sub,
+  #header2 .wrap.wrap.gnb-sub, #header .gnb-sub .wrap.wrap.sub-l,
+  #header2 .gnb-sub .wrap.wrap.sub-l, #header .gnb-sub .sub-l .wrap.wrap.sub-list,
+  #header2 .gnb-sub .sub-l .wrap.wrap.sub-list, #header .gnb-sub .wrap.wrap.sub-r,
+  #header2 .gnb-sub .wrap.wrap.sub-r, .wrap.wrap#footer,
+  .wrap.wrap#footer2, .wrap.layout-set .main-wrap section.wrap.wrap, .wrap.layout-set .wrap.wrap.side, .wrap.layout-set .wrap.wrap.card-area, .wrap.layout-set aside article.wrap.wrap {
     width: 1228px;
   }
-  .wrap.layout-set.wrap.layout-set .main-wrap, .wrap.wrap#header .main-wrap, #header .head-area .wrap.wrap.logo .main-wrap, #header .head-area .wrap.wrap.gnb .main-wrap, #header .head-area .wrap.wrap.search .main-wrap, #header .wrap.wrap.head-event .main-wrap, #header .wrap.wrap.gnb-sub .main-wrap, #header .gnb-sub .wrap.wrap.sub-l .main-wrap, #header .gnb-sub .sub-l .wrap.wrap.sub-list .main-wrap, #header .gnb-sub .wrap.wrap.sub-r .main-wrap, .wrap.wrap#footer .main-wrap {
+  .wrap.layout-set.wrap.layout-set .main-wrap, .wrap.wrap#header .main-wrap, .wrap.wrap#header2 .main-wrap, #header .head-area .wrap.wrap.logo .main-wrap, #header2 .head-area .wrap.wrap.logo .main-wrap, #header .head-area .wrap.wrap.gnb .main-wrap, #header2 .head-area .wrap.wrap.gnb .main-wrap, #header .head-area .wrap.wrap.search .main-wrap, #header2 .head-area .wrap.wrap.search .main-wrap, #header .wrap.wrap.head-event .main-wrap, #header2 .wrap.wrap.head-event .main-wrap, #header .wrap.wrap.gnb-sub .main-wrap, #header2 .wrap.wrap.gnb-sub .main-wrap, #header .gnb-sub .wrap.wrap.sub-l .main-wrap, #header2 .gnb-sub .wrap.wrap.sub-l .main-wrap, #header .gnb-sub .sub-l .wrap.wrap.sub-list .main-wrap, #header2 .gnb-sub .sub-l .wrap.wrap.sub-list .main-wrap, #header .gnb-sub .wrap.wrap.sub-r .main-wrap, #header2 .gnb-sub .wrap.wrap.sub-r .main-wrap, .wrap.wrap#footer .main-wrap, .wrap.wrap#footer2 .main-wrap {
     width: 885px;
   }
-  .wrap.layout-set.wrap.layout-set aside, .wrap.wrap#header aside, #header .head-area .wrap.wrap.logo aside, #header .head-area .wrap.wrap.gnb aside, #header .head-area .wrap.wrap.search aside, #header .wrap.wrap.head-event aside, #header .wrap.wrap.gnb-sub aside, #header .gnb-sub .wrap.wrap.sub-l aside, #header .gnb-sub .sub-l .wrap.wrap.sub-list aside, #header .gnb-sub .wrap.wrap.sub-r aside, .wrap.wrap#footer aside {
+  .wrap.layout-set.wrap.layout-set aside, .wrap.wrap#header aside, .wrap.wrap#header2 aside, #header .head-area .wrap.wrap.logo aside, #header2 .head-area .wrap.wrap.logo aside, #header .head-area .wrap.wrap.gnb aside, #header2 .head-area .wrap.wrap.gnb aside, #header .head-area .wrap.wrap.search aside, #header2 .head-area .wrap.wrap.search aside, #header .wrap.wrap.head-event aside, #header2 .wrap.wrap.head-event aside, #header .wrap.wrap.gnb-sub aside, #header2 .wrap.wrap.gnb-sub aside, #header .gnb-sub .wrap.wrap.sub-l aside, #header2 .gnb-sub .wrap.wrap.sub-l aside, #header .gnb-sub .sub-l .wrap.wrap.sub-list aside, #header2 .gnb-sub .sub-l .wrap.wrap.sub-list aside, #header .gnb-sub .wrap.wrap.sub-r aside, #header2 .gnb-sub .wrap.wrap.sub-r aside, .wrap.wrap#footer aside, .wrap.wrap#footer2 aside {
     width: 333px;
   }
 }
