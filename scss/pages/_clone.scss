@@ -189,7 +189,13 @@
 		}
 	}
 
-	aside {
+	&::after {
+		display: block;
+		content: '';
+		clear: both;
+	}
+
+	.aside-wrap {
 		width: 333px;
 		height: auto;
 		float: right;
@@ -199,12 +205,6 @@
 			width: 100%;
 			height: 300px;
 		}
-	}
-
-	&::after {
-		display: block;
-		content: '';
-		clear: both;
 	}
 
 	@media (max-width:1600px) {
