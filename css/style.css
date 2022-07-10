@@ -3252,6 +3252,295 @@ a.link.tip {
   }
 }
 
+.subpage-wrap {
+  width: 1200px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.erp-wrap {
+  padding-bottom: 160px;
+}
+
+.erp-wrap .title1 {
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 44px;
+  text-align: center;
+  margin-top: 70px;
+}
+
+.erp-wrap .con-wrap {
+  margin-top: 60px;
+}
+
+.erp-wrap .con-wrap .title2 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+.erp-wrap .con-wrap .title2 + .text-style {
+  margin-top: 12px;
+}
+
+.erp-wrap .con-wrap .text-style {
+  font-size: 16px;
+  font-weight: 500;
+  color: #5c5c5c;
+  line-height: 26px;
+}
+
+.erp-wrap .con-wrap .table-styleA {
+  width: 100%;
+  border-top: 2px solid #000;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.erp-wrap .con-wrap .table-styleA tr {
+  border-bottom: 1px solid #ebebeb;
+}
+
+.erp-wrap .con-wrap .table-styleA th {
+  padding: 20px;
+  text-align: left;
+  vertical-align: top;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.erp-wrap .con-wrap .table-styleA td {
+  padding: 20px;
+  font-weight: 700;
+  font-size: 16px;
+  color: #5c5c5c;
+}
+
+.erp-wrap .con-wrap .table-styleA td .list-typeA strong {
+  width: 100%;
+}
+
+.erp-wrap .con-wrap .table-styleA td .list-typeA strong + p {
+  margin-bottom: 10px;
+}
+
+.erp-wrap .con-wrap .table-styleA td .list-typeA p {
+  font-weight: 500;
+  position: relative;
+  padding-left: 8px;
+}
+
+.erp-wrap .con-wrap .table-styleA td .list-typeA p::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 2px;
+  height: 2px;
+  background: #5c5c5c;
+  border-radius: 50%;
+  content: '';
+}
+
+.erp-wrap .con-wrap .table-styleA td .list-typeB li {
+  position: relative;
+  padding-left: 8px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.erp-wrap .con-wrap .table-styleA td .list-typeB li::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 2px;
+  height: 2px;
+  background: #5c5c5c;
+  border-radius: 50%;
+  content: '';
+}
+
+.erp-wrap .con-wrap .table-styleA td .list-typeB li:last-child {
+  margin-bottom: 0px;
+}
+
+.erp-wrap .con-wrap .table-styleA + .bul-list {
+  margin-top: 20px;
+}
+
+.erp-wrap .con-wrap .bul-list {
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  color: #5c5c5c;
+}
+
+.erp-wrap .con-wrap .bul-list::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 2px;
+  height: 2px;
+  background: #5c5c5c;
+  border-radius: 50%;
+  content: '';
+}
+
+.erp-wrap .con-wrap .way-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 216px;
+  padding: 36px 22px 35px;
+  margin-top: 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.erp-wrap .con-wrap .way-list li {
+  position: relative;
+  width: 33.3%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.erp-wrap .con-wrap .way-list li strong {
+  font-weight: 700;
+}
+
+.erp-wrap .con-wrap .way-list li p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #858585;
+}
+
+.erp-wrap .con-wrap .way-list li img {
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto;
+  margin-bottom: 5px;
+}
+
+.erp-wrap .con-wrap .way-list li::after {
+  position: absolute;
+  top: calc(50% - 16px);
+  right: -16px;
+  display: block;
+  width: 32px;
+  height: 32px;
+  background: url(/images/arrow-gry.png);
+  background-size: cover;
+  content: '';
+}
+
+.erp-wrap .con-wrap .way-list li:last-child::after {
+  display: none;
+}
+
+.erp-wrap .con-wrap .link-list {
+  font-size: 16px;
+  font-weight: 700;
+  color: #5c5c5c;
+  line-height: 22px;
+  margin-top: 12px;
+}
+
+.erp-wrap .con-wrap .link-list ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.erp-wrap .con-wrap .link-list li {
+  width: 180px;
+  margin-right: 60px;
+}
+
+.erp-wrap .con-wrap .link-list li .tit {
+  margin-bottom: 5px;
+}
+
+.erp-wrap .con-wrap .link-list li .tit span {
+  position: relative;
+  padding-right: 14px;
+}
+
+.erp-wrap .con-wrap .link-list li .tit span::after {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  display: block;
+  width: 1px;
+  height: 12px;
+  background: #ddd;
+  content: '';
+}
+
+.erp-wrap .con-wrap .link-list li .tit span:last-child::after {
+  display: none;
+}
+
+.erp-wrap .con-wrap .link-list li .link {
+  position: relative;
+  padding-right: 16px;
+  font-size: 14px;
+  font-weight: 900;
+  color: #0070f0;
+}
+
+.erp-wrap .con-wrap .link-list li .link::after {
+  position: absolute;
+  top: 3px;
+  right: 0px;
+  width: 16px;
+  height: 16px;
+  background: url(/images/ico-arrow-forward-blue.png);
+  background-size: cover;
+  content: '';
+}
+
+.btn-area {
+  width: 100%;
+  margin-top: 60px;
+  text-align: center;
+}
+
+.btn-area .btn-request {
+  display: inline-block;
+  width: 300px;
+  padding: 20px 0;
+  background-color: #000;
+  border-radius: 8px;
+  font-size: 20px;
+  line-height: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.subpage-footer {
+  width: 1200px;
+  height: auto;
+  min-height: 250px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.subpage-footer .footer-item {
+  width: 300px;
+  font-size: 12px;
+  color: #000;
+}
+
 body.online {
   margin: 0;
   padding: 0;

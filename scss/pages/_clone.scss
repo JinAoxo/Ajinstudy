@@ -221,3 +221,295 @@
 		}
 	}
 }
+
+
+// sub-page01 
+.subpage-wrap {
+	width: 1200px;
+	height: auto;
+	margin: 0 auto;
+}
+
+.erp-wrap {
+	.title1 {
+		font-size: 34px;
+		font-weight: 600;
+		line-height: 44px;
+		text-align: center;
+		margin-top: 70px;
+	}
+
+	.con-wrap {
+		margin-top: 60px;
+
+		.title2 {
+			font-size: 24px;
+			font-weight: 700;
+			line-height: 32px;
+
+			&+.text-style {
+				margin-top: 12px;
+			}
+		}
+
+		.text-style {
+			font-size: 16px;
+			font-weight: 500;
+			color: #5c5c5c;
+			line-height: 26px;
+		}
+
+		.table-styleA {
+			width: 100%;
+			border-top: 2px solid #000;
+			border-collapse: collapse;
+			margin-top: 20px;
+
+			tr {
+				border-bottom: 1px solid #ebebeb;
+			}
+
+			th {
+				padding: 20px;
+				text-align: left;
+				vertical-align: top;
+				font-weight: 700;
+				font-size: 16px;
+			}
+
+
+			td {
+				padding: 20px;
+				font-weight: 700;
+				font-size: 16px;
+				color: #5c5c5c;
+
+				.list-typeA {
+					strong {
+						width: 100%;
+
+						&+p {
+							margin-bottom: 10px;
+						}
+					}
+
+					p {
+						font-weight: 500;
+						position: relative;
+						padding-left: 8px;
+
+						&::before {
+							position: absolute;
+							top: 50%;
+							left: 0;
+							width: 2px;
+							height: 2px;
+							background: #5c5c5c;
+							border-radius: 50%;
+							content: '';
+						}
+					}
+				}
+
+				.list-typeB {
+					li {
+						position: relative;
+						padding-left: 8px;
+						font-weight: 500;
+						margin-bottom: 10px;
+
+						&::before {
+							position: absolute;
+							top: 50%;
+							left: 0;
+							width: 2px;
+							height: 2px;
+							background: #5c5c5c;
+							border-radius: 50%;
+							content: '';
+						}
+
+						&:last-child {
+							margin-bottom: 0px;
+						}
+					}
+
+				}
+
+			}
+
+			&+.bul-list {
+				margin-top: 20px;
+			}
+		}
+
+		.bul-list {
+			position: relative;
+			margin-bottom: 10px;
+			padding-left: 8px;
+			font-weight: 500;
+			font-size: 16px;
+			color: #5c5c5c;
+
+			&::before {
+				position: absolute;
+				top: 50%;
+				left: 0;
+				width: 2px;
+				height: 2px;
+				background: #5c5c5c;
+				border-radius: 50%;
+				content: '';
+			}
+		}
+
+		.way-list {
+			display: flex;
+			width: 100%;
+			height: 216px;
+			padding: 36px 22px 35px;
+			margin-top: 12px;
+			border: 1px solid #ddd;
+			border-radius: 10px;
+
+			li {
+				position: relative;
+				width: 33.3%;
+				margin: 0 auto;
+				text-align: center;
+
+				strong {
+					font-weight: 700;
+				}
+
+				p {
+					font-size: 14px;
+					font-weight: 500;
+					color: #858585;
+				}
+
+				img {
+					display: block;
+					width: 64px;
+					height: 64px;
+					margin: 0 auto;
+					margin-bottom: 5px;
+				}
+
+				&::after {
+					position: absolute;
+					top: calc(50% - 16px);
+					right: -16px;
+					display: block;
+					width: 32px;
+					height: 32px;
+					background: url(/images/arrow-gry.png);
+					background-size: cover;
+					content: '';
+				}
+
+				&:last-child::after {
+					display: none;
+				}
+			}
+		}
+
+		.link-list {
+			font-size: 16px;
+			font-weight: 700;
+			color: #5c5c5c;
+			line-height: 22px;
+			margin-top: 12px;
+
+			ul {
+				display: flex;
+				flex-direction: row;
+			}
+
+			li {
+				width: 180px;
+				margin-right: 60px;
+
+				.tit {
+					margin-bottom: 5px;
+
+					span {
+						position: relative;
+						padding-right: 14px;
+
+						&::after {
+							position: absolute;
+							top: 7px;
+							right: 7px;
+							display: block;
+							width: 1px;
+							height: 12px;
+							background: #ddd;
+							content: '';
+						}
+
+						&:last-child {
+							&::after {
+								display: none;
+							}
+						}
+					}
+				}
+
+				.link {
+					position: relative;
+					padding-right: 16px;
+					font-size: 14px;
+					font-weight: 900;
+					color: #0070f0;
+
+					&::after {
+						position: absolute;
+						top: 3px;
+						right: 0px;
+						width: 16px;
+						height: 16px;
+						background: url(/images/ico-arrow-forward-blue.png);
+						background-size: cover;
+						content: '';
+					}
+				}
+			}
+		}
+	}
+
+	padding-bottom: 160px;
+}
+
+.btn-area {
+	width: 100%;
+	margin-top: 60px;
+	text-align: center;
+
+	.btn-request {
+		display: inline-block;
+		width: 300px;
+		padding: 20px 0;
+		background-color: #000;
+		border-radius: 8px;
+		font-size: 20px;
+		line-height: 20px;
+		color: #fff;
+		text-align: center;
+	}
+}
+
+
+.subpage-footer {
+	width: 1200px;
+	height: auto;
+	min-height: 250px;
+	margin: 0 auto;
+	display: flex;
+
+	.footer-item {
+		width: 300px;
+		font-size: 12px;
+		color: #000;
+	}
+}
