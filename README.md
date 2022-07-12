@@ -26,5 +26,5 @@
 <br>
 
 ### 2022-07-14 : study - clone markup (현대카드)
-<https://mycompany.hyundaicard.com/as/at/ASAT1001.do?_method=x&chk=12>
+<https://mycompany.hyundaicard.com/as/at/ASAT1001.do?_method=x&chk=12> <br>
 <https://jinaoxo.github.io/Ajinstudy/html/study/clone-hyundaicard-subpage.html>
