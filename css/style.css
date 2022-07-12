@@ -3432,7 +3432,7 @@ a.link.tip {
   display: block;
   width: 32px;
   height: 32px;
-  background: url(/images/arrow-gry.png);
+  background: url(../../../images/arrow-gry.png);
   background-size: cover;
   content: '';
 }
@@ -3502,7 +3502,7 @@ a.link.tip {
   right: 0px;
   width: 16px;
   height: 16px;
-  background: url(/images/ico-arrow-forward-blue.png);
+  background: url(../../../images/ico-arrow-forward-blue.png);
   background-size: cover;
   content: '';
 }
