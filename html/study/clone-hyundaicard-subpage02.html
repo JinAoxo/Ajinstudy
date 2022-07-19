@@ -60,6 +60,7 @@
 			var faqcont = $('.faq-list .cont');
 			faq.on('click', function (e) {
 				$(e.target).closest(faq).toggleClass('on');
+				$(e.target).closest('dl').toggleClass('on');
 				$(e.target).parent().next('dd').toggleClass('open');
 				if ($(faq).hasClass('on')) {
 					$(e.target).attr('title', faqtit.attr('title').replace('펼치기', '닫기'));

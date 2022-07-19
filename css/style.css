@@ -4024,8 +4024,12 @@ a.link.tip {
   width: 100%;
   height: auto;
   padding: 20px 30px 0px;
-  background-color: #f8f8f8;
+  background-color: #fff;
   border-bottom: 1px solid #ebebeb;
+}
+
+.certi-wrap .faq-list dl:hover {
+  background-color: #f8f8f8;
 }
 
 .certi-wrap .faq-list dl .tit {
@@ -4157,6 +4161,10 @@ a.link.tip {
 
 .certi-wrap .guide-area dd.open {
   display: block;
+}
+
+.certi-wrap .faq-list dl.on {
+  background-color: #f8f8f8;
 }
 
 .certi-wrap .faq-list .tit.on > button::after {
