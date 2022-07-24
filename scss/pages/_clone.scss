@@ -1148,3 +1148,381 @@
 		}
 	}
 }
+
+//header 영역
+.hyundaicard {
+	.header {
+		z-index: 50;
+		width: 100%;
+		min-width: 1380px;
+
+		.head-area {
+			display: flex;
+			width: 100%;
+			height: 80px;
+
+			&>div {
+				flex: 0 1 auto;
+				// border: 1px solid #f00;
+			}
+
+			.logo-area {
+				display: inline-block;
+				width: 200px;
+				height: 100%;
+				// padding: 20px;
+			}
+
+			.gnb-area {
+				width: calc(100% - 480px);
+				height: 100%;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+
+				.gnb-l {
+					display: flex;
+					flex-direction: row;
+					min-width: 520px;
+
+					.gnb {
+						li {
+							display: inline-block;
+							height: 100%;
+
+							&>a {
+								position: relative;
+								display: inline-block;
+								height: 100%;
+								padding: 0 20px;
+								line-height: 5em;
+								text-align: center;
+								vertical-align: middle;
+
+								&:hover {
+									&::after {
+										position: absolute;
+										bottom: 0;
+										left: 0;
+										display: inline-block;
+										width: 100%;
+										height: 2px;
+										background: #000;
+										content: '';
+									}
+								}
+							}
+						}
+
+						li.on {
+							&>a {
+								&::after {
+									position: absolute;
+									bottom: 0;
+									left: 0;
+									display: inline-block;
+									width: 100%;
+									height: 2px;
+									background: #000;
+									content: '';
+								}
+							}
+						}
+					}
+				}
+
+				.gnb-r {
+					&>ul {
+						display: inline-block;
+
+						&+ul {
+							position: relative;
+							margin-left: 5px;
+							padding-left: 5px;
+
+							&::before {
+								position: absolute;
+								top: calc(50% - 6.5px);
+								left: 0;
+								display: inline-block;
+								width: 1px;
+								height: 15px;
+								background: #777;
+								content: '';
+							}
+						}
+					}
+
+					&>ul {
+						li {
+							display: inline-block;
+							padding: 0 5px;
+
+							&>a {
+								display: inline-block;
+								font-size: 14px;
+								color: #777;
+								line-height: 2.2em;
+								vertical-align: middle;
+							}
+						}
+					}
+				}
+
+				.gnb-sub {
+					z-index: 150;
+					position: absolute;
+					top: 80px;
+					left: 0;
+					// display: inline-block;
+					display: none;
+					width: 100%;
+					background: #fff;
+
+					.sub-wrap {
+						display: flex;
+						width: 1480px;
+						margin: 0 auto;
+					}
+				}
+
+				.sub-l {
+					position: relative;
+					display: inline-block;
+					width: calc(100% - 375px);
+					padding: 10px 50px;
+
+					&::after {
+						position: absolute;
+						top: 10px;
+						right: 0;
+						display: inline-block;
+						width: 1px;
+						height: calc(100% - 20px);
+						background: #999;
+						content: '';
+					}
+
+					.sub-list {
+						display: inline-flex;
+						flex-direction: column;
+						width: calc(25% - 20px);
+						margin: 8px 8px 15px;
+
+						&>li {
+
+							a {
+								display: inline-block;
+								width: 100%;
+								padding: 0 20px 0 0;
+								font-size: 14px;
+								line-height: 1.5em;
+								text-align: left;
+
+								&::after {
+									display: none;
+								}
+
+								&:hover {
+									&::after {
+										display: none;
+									}
+								}
+							}
+
+							&.tit {
+								margin-bottom: 5px;
+								font-weight: 700;
+								font-size: 14px;
+							}
+						}
+					}
+				}
+
+				.detail-list {
+					display: inline-flex;
+					flex-direction: column;
+					width: 100%;
+
+					&>li {
+						padding-left: 20px;
+					}
+				}
+
+				.sub-r {
+					display: inline-block;
+					width: 375px;
+					height: 100%;
+					padding: 10px 50px;
+					// border: 1px solid #f00;
+
+					strong {
+						font-weight: 700;
+						font-size: 14px;
+					}
+
+					.login {
+						width: 100%;
+						height: 100px;
+						margin-top: 60px;
+						text-align: center;
+
+						p {
+							font-weight: 500;
+							font-size: 14px;
+						}
+
+						.login-btn {
+							display: inline-block;
+							margin-top: 20px;
+							width: 100px;
+							border-radius: 5px;
+							background-color: #ececec;
+							font-weight: 700;
+							font-size: 16px;
+							line-height: 2.5em;
+						}
+					}
+				}
+			}
+
+			.search-area {
+				width: 280px;
+				height: 100%;
+				padding: 20px;
+
+				fieldset {
+					border: none;
+				}
+
+				.search {
+					position: relative;
+				}
+
+				.search-bar {
+					width: 240px;
+					height: 40px;
+					border: 2px solid #000;
+					border-radius: 20px;
+					padding: 0 20px 0 40px;
+
+					&+label {
+						position: absolute;
+						top: 0;
+						left: 0;
+						text-indent: -9999px;
+					}
+				}
+
+				.search-btn {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 40px;
+					height: 40px;
+					margin-left: 5px;
+					border: none;
+					background-color: transparent;
+					text-indent: -9999px;
+					opacity: 0.5;
+
+					&:after {
+						position: absolute;
+						top: calc(50% - 15px);
+						left: calc(50% - 15px);
+						display: inline-block;
+						width: 30px;
+						height: 30px;
+						background-image: url(../images/ico_searchB.png);
+						background-size: cover;
+						content: '';
+					}
+
+					&:active {
+						opacity: 1;
+					}
+				}
+			}
+
+			.logo {
+				display: inline-block;
+				width: 100%;
+				height: 100%;
+				padding: 25px;
+
+				img {
+					width: 100%;
+					height: auto;
+				}
+			}
+		}
+
+		.head-event {
+			height: 50px;
+			background: #2AC1BC;
+
+			.event {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				width: 1480px;
+				height: 100%;
+				margin: 0 auto;
+			}
+
+			.banner {
+				flex: 1 1 auto;
+				width: calc(100% - 204px);
+				height: 100%;
+
+				a {
+					display: inline-block;
+					width: 100%;
+					line-height: 3em;
+					vertical-align: middle;
+					font-weight: 700;
+				}
+			}
+
+			.btn-area {
+				flex: 1 1 auto;
+				width: 200px;
+				margin-top: 0;
+
+				.chk-btn {
+					display: inline-block;
+					width: 20px;
+					height: 20px;
+					vertical-align: middle;
+
+					&+label {
+						margin-right: 10px;
+						font-size: 14px;
+					}
+				}
+
+				.close {
+					position: relative;
+					width: 30px;
+					height: 30px;
+					border: none;
+					background: transparent;
+					text-indent: -9999px;
+					cursor: pointer;
+
+					&::before {
+						position: absolute;
+						top: 0;
+						left: 0;
+						display: inline-block;
+						width: 30px;
+						height: 30px;
+						background-image: url(../images/ico_x_o_gry_b.png);
+						background-size: cover;
+						content: '';
+					}
+				}
+			}
+		}
+	}
+}

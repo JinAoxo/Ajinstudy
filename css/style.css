@@ -4180,6 +4180,397 @@ a.link.tip {
   display: block;
 }
 
+.hyundaicard .header {
+  z-index: 50;
+  width: 100%;
+  min-width: 1380px;
+}
+
+.hyundaicard .header .head-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 80px;
+}
+
+.hyundaicard .header .head-area > div {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+}
+
+.hyundaicard .header .head-area .logo-area {
+  display: inline-block;
+  width: 200px;
+  height: 100%;
+}
+
+.hyundaicard .header .head-area .gnb-area {
+  width: calc(100% - 480px);
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hyundaicard .header .head-area .gnb-area .gnb-l {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  min-width: 520px;
+}
+
+.hyundaicard .header .head-area .gnb-area .gnb-l .gnb li {
+  display: inline-block;
+  height: 100%;
+}
+
+.hyundaicard .header .head-area .gnb-area .gnb-l .gnb li > a {
+  position: relative;
+  display: inline-block;
+  height: 100%;
+  padding: 0 20px;
+  line-height: 5em;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.hyundaicard .header .head-area .gnb-area .gnb-l .gnb li > a:hover::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  height: 2px;
+  background: #000;
+  content: '';
+}
+
+.hyundaicard .header .head-area .gnb-area .gnb-l .gnb li.on > a::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  height: 2px;
+  background: #000;
+  content: '';
+}
+
+.hyundaicard .header .head-area .gnb-area .gnb-r > ul {
+  display: inline-block;
+}
+
+.hyundaicard .header .head-area .gnb-area .gnb-r > ul + ul {
+  position: relative;
+  margin-left: 5px;
+  padding-left: 5px;
+}
+
+.hyundaicard .header .head-area .gnb-area .gnb-r > ul + ul::before {
+  position: absolute;
+  top: calc(50% - 6.5px);
+  left: 0;
+  display: inline-block;
+  width: 1px;
+  height: 15px;
+  background: #777;
+  content: '';
+}
+
+.hyundaicard .header .head-area .gnb-area .gnb-r > ul li {
+  display: inline-block;
+  padding: 0 5px;
+}
+
+.hyundaicard .header .head-area .gnb-area .gnb-r > ul li > a {
+  display: inline-block;
+  font-size: 14px;
+  color: #777;
+  line-height: 2.2em;
+  vertical-align: middle;
+}
+
+.hyundaicard .header .head-area .gnb-area .gnb-sub {
+  z-index: 150;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  display: none;
+  width: 100%;
+  background: #fff;
+}
+
+.hyundaicard .header .head-area .gnb-area .gnb-sub .sub-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1480px;
+  margin: 0 auto;
+}
+
+.hyundaicard .header .head-area .gnb-area .sub-l {
+  position: relative;
+  display: inline-block;
+  width: calc(100% - 375px);
+  padding: 10px 50px;
+}
+
+.hyundaicard .header .head-area .gnb-area .sub-l::after {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  display: inline-block;
+  width: 1px;
+  height: calc(100% - 20px);
+  background: #999;
+  content: '';
+}
+
+.hyundaicard .header .head-area .gnb-area .sub-l .sub-list {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: calc(25% - 20px);
+  margin: 8px 8px 15px;
+}
+
+.hyundaicard .header .head-area .gnb-area .sub-l .sub-list > li a {
+  display: inline-block;
+  width: 100%;
+  padding: 0 20px 0 0;
+  font-size: 14px;
+  line-height: 1.5em;
+  text-align: left;
+}
+
+.hyundaicard .header .head-area .gnb-area .sub-l .sub-list > li a::after {
+  display: none;
+}
+
+.hyundaicard .header .head-area .gnb-area .sub-l .sub-list > li a:hover::after {
+  display: none;
+}
+
+.hyundaicard .header .head-area .gnb-area .sub-l .sub-list > li.tit {
+  margin-bottom: 5px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.hyundaicard .header .head-area .gnb-area .detail-list {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.hyundaicard .header .head-area .gnb-area .detail-list > li {
+  padding-left: 20px;
+}
+
+.hyundaicard .header .head-area .gnb-area .sub-r {
+  display: inline-block;
+  width: 375px;
+  height: 100%;
+  padding: 10px 50px;
+}
+
+.hyundaicard .header .head-area .gnb-area .sub-r strong {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.hyundaicard .header .head-area .gnb-area .sub-r .login {
+  width: 100%;
+  height: 100px;
+  margin-top: 60px;
+  text-align: center;
+}
+
+.hyundaicard .header .head-area .gnb-area .sub-r .login p {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.hyundaicard .header .head-area .gnb-area .sub-r .login .login-btn {
+  display: inline-block;
+  margin-top: 20px;
+  width: 100px;
+  border-radius: 5px;
+  background-color: #ececec;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 2.5em;
+}
+
+.hyundaicard .header .head-area .search-area {
+  width: 280px;
+  height: 100%;
+  padding: 20px;
+}
+
+.hyundaicard .header .head-area .search-area fieldset {
+  border: none;
+}
+
+.hyundaicard .header .head-area .search-area .search {
+  position: relative;
+}
+
+.hyundaicard .header .head-area .search-area .search-bar {
+  width: 240px;
+  height: 40px;
+  border: 2px solid #000;
+  border-radius: 20px;
+  padding: 0 20px 0 40px;
+}
+
+.hyundaicard .header .head-area .search-area .search-bar + label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-indent: -9999px;
+}
+
+.hyundaicard .header .head-area .search-area .search-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  margin-left: 5px;
+  border: none;
+  background-color: transparent;
+  text-indent: -9999px;
+  opacity: 0.5;
+}
+
+.hyundaicard .header .head-area .search-area .search-btn:after {
+  position: absolute;
+  top: calc(50% - 15px);
+  left: calc(50% - 15px);
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-image: url(../images/ico_searchB.png);
+  background-size: cover;
+  content: '';
+}
+
+.hyundaicard .header .head-area .search-area .search-btn:active {
+  opacity: 1;
+}
+
+.hyundaicard .header .head-area .logo {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding: 25px;
+}
+
+.hyundaicard .header .head-area .logo img {
+  width: 100%;
+  height: auto;
+}
+
+.hyundaicard .header .head-event {
+  height: 50px;
+  background: #2AC1BC;
+}
+
+.hyundaicard .header .head-event .event {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 1480px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.hyundaicard .header .head-event .banner {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  width: calc(100% - 204px);
+  height: 100%;
+}
+
+.hyundaicard .header .head-event .banner a {
+  display: inline-block;
+  width: 100%;
+  line-height: 3em;
+  vertical-align: middle;
+  font-weight: 700;
+}
+
+.hyundaicard .header .head-event .btn-area {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  width: 200px;
+  margin-top: 0;
+}
+
+.hyundaicard .header .head-event .btn-area .chk-btn {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+.hyundaicard .header .head-event .btn-area .chk-btn + label {
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.hyundaicard .header .head-event .btn-area .close {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: transparent;
+  text-indent: -9999px;
+  cursor: pointer;
+}
+
+.hyundaicard .header .head-event .btn-area .close::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-image: url(../images/ico_x_o_gry_b.png);
+  background-size: cover;
+  content: '';
+}
+
 body.online {
   margin: 0;
   padding: 0;
