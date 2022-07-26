@@ -1186,7 +1186,7 @@
 					min-width: 520px;
 
 					.gnb {
-						li {
+						&>li {
 							display: inline-block;
 							height: 100%;
 
@@ -1214,7 +1214,7 @@
 							}
 						}
 
-						li.on {
+						&>li.on {
 							&>a {
 								&::after {
 									position: absolute;
@@ -1274,10 +1274,14 @@
 					position: absolute;
 					top: 80px;
 					left: 0;
-					// display: inline-block;
 					display: none;
 					width: 100%;
 					background: #fff;
+					border-top: 1px solid #ececec;
+
+					&.open {
+						display: inline-block;
+					}
 
 					.sub-wrap {
 						display: flex;
@@ -1340,9 +1344,13 @@
 				}
 
 				.detail-list {
-					display: inline-flex;
+					display: none;
 					flex-direction: column;
 					width: 100%;
+
+					&.open {
+						display: inline-flex;
+					}
 
 					&>li {
 						padding-left: 20px;

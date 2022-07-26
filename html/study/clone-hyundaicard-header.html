@@ -20,7 +20,23 @@
 
 	<!-- 페이지 개별 스크립트 -->
 	<script>
-		// 이곳에 정의
+		$(function () {
+			$('.gnb>li a').on('click', function () {
+				$(this).closest('li').addClass('on');
+				$('.gnb>li').removeClass('on');
+				$(this).closest('li').children('.gnb-sub').toggleClass('open');
+
+				$('.event .close').on('click', function () {
+					$('.head-event').css('display', 'none');
+				});
+			});
+		});
+
+		$(function () {
+			$('.sub-list>li a').on('click', function () {
+				$(this).next('.detail-list').toggleClass('open');
+			});
+		});
 	</script>
 </head>
 
@@ -35,7 +51,7 @@
 			<div class="gnb-area">
 				<nav class="gnb-l">
 					<ul class="gnb">
-						<li class="on"><a href="#;" title="선택됨">My Account</a>
+						<li><a href="#;" title="">My Account</a>
 							<div class="gnb-sub">
 								<div class="sub-wrap">
 									<div class="sub-l">

@@ -4231,12 +4231,12 @@ a.link.tip {
   min-width: 520px;
 }
 
-.hyundaicard .header .head-area .gnb-area .gnb-l .gnb li {
+.hyundaicard .header .head-area .gnb-area .gnb-l .gnb > li {
   display: inline-block;
   height: 100%;
 }
 
-.hyundaicard .header .head-area .gnb-area .gnb-l .gnb li > a {
+.hyundaicard .header .head-area .gnb-area .gnb-l .gnb > li > a {
   position: relative;
   display: inline-block;
   height: 100%;
@@ -4246,7 +4246,7 @@ a.link.tip {
   vertical-align: middle;
 }
 
-.hyundaicard .header .head-area .gnb-area .gnb-l .gnb li > a:hover::after {
+.hyundaicard .header .head-area .gnb-area .gnb-l .gnb > li > a:hover::after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -4257,7 +4257,7 @@ a.link.tip {
   content: '';
 }
 
-.hyundaicard .header .head-area .gnb-area .gnb-l .gnb li.on > a::after {
+.hyundaicard .header .head-area .gnb-area .gnb-l .gnb > li.on > a::after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -4310,6 +4310,11 @@ a.link.tip {
   display: none;
   width: 100%;
   background: #fff;
+  border-top: 1px solid #ececec;
+}
+
+.hyundaicard .header .head-area .gnb-area .gnb-sub.open {
+  display: inline-block;
 }
 
 .hyundaicard .header .head-area .gnb-area .gnb-sub .sub-wrap {
@@ -4374,14 +4379,18 @@ a.link.tip {
 }
 
 .hyundaicard .header .head-area .gnb-area .detail-list {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
+}
+
+.hyundaicard .header .head-area .gnb-area .detail-list.open {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 .hyundaicard .header .head-area .gnb-area .detail-list > li {
