@@ -4362,10 +4362,7 @@ a.link.tip {
   font-size: 14px;
   line-height: 1.5em;
   text-align: left;
-}
-
-.hyundaicard .header .head-area .gnb-area .sub-l .sub-list > li a::after {
-  display: none;
+  position: relative;
 }
 
 .hyundaicard .header .head-area .gnb-area .sub-l .sub-list > li a:hover::after {
@@ -4376,6 +4373,35 @@ a.link.tip {
   margin-bottom: 5px;
   font-weight: 700;
   font-size: 14px;
+}
+
+.hyundaicard .header .head-area .gnb-area .sub-l .sub-list > li > a:after {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 15px;
+  height: 15px;
+  font-size: 18px;
+  content: '+';
+}
+
+.hyundaicard .header .head-area .gnb-area .sub-l .sub-list > li > a:hover::after {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 15x;
+  height: 15px;
+  content: '+';
+}
+
+.hyundaicard .header .head-area .gnb-area .sub-l .sub-list > li > a.open:after {
+  content: '-';
+}
+
+.hyundaicard .header .head-area .gnb-area .sub-l .sub-list > li > a.open:hover::after {
+  content: '-';
 }
 
 .hyundaicard .header .head-area .gnb-area .detail-list {
