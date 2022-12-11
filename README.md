@@ -30,7 +30,7 @@
 <summary>예전 study 정리</summary>
 
 <!-- summary 아래 한칸 공백 두어야함 -->
-
+<div  markdown="1" >
 ### 2022-06-02 : study - 스터디 방향성 + setting 과제
 
 - pull push test 예요!ㅇ0ㅇ
@@ -68,16 +68,5 @@
 
 <https://jinaoxo.github.io/Ajinstudy/html/study/clone-hyundaicard-subpage02.html>
 
+</div>
 </details>
-
-## 접기 시작
-
-<details>
-<summary>접기/펼치기</summary>
-
-<!-- summary 아래 한칸 공백 두어야함 -->
-## 접은 제목
-접은 내용
-</details>
-
-## 접기 끝
