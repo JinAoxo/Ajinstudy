@@ -3432,7 +3432,7 @@ a.link.tip {
   display: block;
   width: 32px;
   height: 32px;
-  background: url(../../../images/arrow-gry.png);
+  background: url(../images/arrow-gry.png);
   background-size: cover;
   content: '';
 }
@@ -3502,7 +3502,7 @@ a.link.tip {
   right: 0px;
   width: 16px;
   height: 16px;
-  background: url(../../../images/ico-arrow-forward-blue.png);
+  background: url(../images/ico-arrow-forward-blue.png);
   background-size: cover;
   content: '';
 }
@@ -3641,6 +3641,975 @@ a.link.tip {
   width: 118px;
   height: 24px;
   opacity: 0.5;
+}
+
+.certi-wrap {
+  display: block;
+  width: 1200px;
+  height: auto;
+  margin: 50px auto;
+  padding-bottom: 60px;
+  line-height: 1.2em;
+  letter-spacing: -0.02em;
+}
+
+.certi-wrap .tit1 {
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 1.2em;
+  text-align: center;
+}
+
+.certi-wrap .tab-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  width: 100%;
+  height: auto;
+  margin: 50px 0;
+}
+
+.certi-wrap .tab-nav li {
+  background: #ebebeb;
+  border-radius: 20px;
+  margin-right: 5px;
+}
+
+.certi-wrap .tab-nav li a {
+  padding: 0 10px;
+  color: #555;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 2.2em;
+}
+
+.certi-wrap .tab-nav li.active {
+  background: #111;
+}
+
+.certi-wrap .tab-nav li.active a {
+  color: #fff;
+}
+
+.certi-wrap .tab {
+  width: 100%;
+  height: auto;
+}
+
+.certi-wrap .tab.tab-con1, .certi-wrap .tab.tab-con3 {
+  display: none;
+  width: 100%;
+  height: 20px;
+  border: 1px solid #0070f0;
+}
+
+.certi-wrap .tab-con2 .certi-box > form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+
+.certi-wrap .tab-con2 .certi-box > form .number-area {
+  border-bottom: 2px solid #888;
+}
+
+.certi-wrap .tab-con2 .certi-box > form .number-area .num-group {
+  position: relative;
+  display: inline-block;
+}
+
+.certi-wrap .tab-con2 .certi-box > form .number-area label {
+  position: absolute;
+  top: calc(50% - 10px);
+  left: 10px;
+  font-size: 20px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  color: #5c5c5c;
+}
+
+.certi-wrap .tab-con2 .certi-box > form .number-area input {
+  padding: 15px;
+  border: none;
+  width: 370px;
+  font-size: 20px;
+}
+
+.certi-wrap .tab-con2 .certi-box > form .number-area input:focus {
+  outline: none;
+}
+
+.certi-wrap .tab-con2 .certi-box > form .number-area input:focus + label {
+  -webkit-transform: translate(0px, -25px);
+          transform: translate(0px, -25px);
+  font-size: 12px;
+}
+
+.certi-wrap .tab-con2 .certi-box > form .number-area input:valid + label {
+  -webkit-transform: translate(0px, -25px);
+          transform: translate(0px, -25px);
+  font-size: 12px;
+}
+
+.certi-wrap .tab-con2 .certi-box > form .number-area:hover, .certi-wrap .tab-con2 .certi-box > form .number-area:focus {
+  border-bottom: 2px solid #000;
+}
+
+.certi-wrap .tab-con2 .certi-box > form .btn-area02 button {
+  padding: 0 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  line-height: 3.5em;
+}
+
+.certi-wrap .tab-con2 .certi-box > form .btn-area02 button + button {
+  margin-left: 8px;
+}
+
+.certi-wrap .tab-con2 .certi-box > form .btn-area02 button.btn-regist {
+  background: #000;
+  color: #fff;
+}
+
+.certi-wrap .tab-con2 .certi-box > form .btn-area02 button.btn-del {
+  background: #ebebeb;
+  color: #000;
+}
+
+.certi-wrap .tab-con2 .certi-box > form .btn-area02 button:hover {
+  opacity: 0.5;
+}
+
+.certi-wrap .tab-con2 .certi-box + .list {
+  margin-top: 20px;
+}
+
+.certi-wrap .list.list-typeA li {
+  position: relative;
+  padding-left: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #5c5c5c;
+  line-height: 1.8em;
+}
+
+.certi-wrap .list.list-typeA li:before {
+  content: '';
+  position: absolute;
+  top: calc(50% - 1px);
+  left: 0;
+  display: inline-block;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background: #5c5c5c;
+}
+
+.certi-wrap .list.list-typeA .link {
+  position: relative;
+  padding-right: 16px;
+}
+
+.certi-wrap .list.list-typeA .link::after {
+  content: '';
+  position: absolute;
+  top: calc(50% - 7px);
+  right: 0;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-image: url(../images/ico_arrowB_forward_blue.png);
+  background-size: cover;
+}
+
+.certi-wrap .sect01 {
+  margin-top: 50px;
+}
+
+.certi-wrap .tit2 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.3em;
+}
+
+.certi-wrap .tit3 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.3em;
+}
+
+.certi-wrap .tit3 + p {
+  margin: 10px 0 20px;
+}
+
+.certi-wrap p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5em;
+  color: #5c5c5c;
+}
+
+.certi-wrap .cont-area {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 2px solid #000;
+}
+
+.certi-wrap .cont-area .step-area .list-typeB {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 50px;
+}
+
+.certi-wrap .cont-area .step-area .list-typeB li {
+  display: inline-block;
+  width: 588px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 calc(50% - 10px);
+          flex: 0 1 calc(50% - 10px);
+  height: auto;
+  margin-bottom: 40px;
+}
+
+.certi-wrap .cont-area .step-area .list-typeB li .tit3 {
+  position: relative;
+  display: inline-block;
+  padding: 3px 0px 3px 70px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  vertical-align: baseline;
+}
+
+.certi-wrap .cont-area .step-area .list-typeB li .step-num {
+  position: absolute;
+  top: calc(50% - 13px);
+  left: 0;
+  margin-right: 10px;
+  padding: 2px 10px;
+  border: 1px solid #858585;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #858585;
+  vertical-align: baseline;
+}
+
+.certi-wrap .cont-area .step-area .list-typeB li .img-area {
+  width: 588px;
+  height: 360px;
+}
+
+.certi-wrap .cont-area .step-area .list-typeB li .img-area img {
+  width: 100%;
+  height: 100%;
+}
+
+.certi-wrap .cont-area .guide-area {
+  width: 100%;
+  height: auto;
+  padding: 20px 20px 0px;
+  background-color: #ececec;
+  border: none;
+  border-radius: 15px;
+}
+
+.certi-wrap .cont-area .guide-area .tit > button {
+  position: relative;
+  width: 100%;
+  height: 56px;
+  margin-top: -20px;
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+  text-align: left;
+  cursor: pointer;
+}
+
+.certi-wrap .cont-area .guide-area .tit > button::after {
+  position: absolute;
+  top: calc(50% - 12px);
+  right: 0px;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(../images/ico_arrowB_down.png);
+  background-size: cover;
+  content: '';
+  -webkit-transform: rotateX(0deg);
+          transform: rotateX(0deg);
+}
+
+.certi-wrap .cont-area .guide-area .guide-cont {
+  padding-bottom: 20px;
+}
+
+.certi-wrap .cont-area .guide-area .guide-cont .list-typeB > li + li {
+  margin-top: 20px;
+}
+
+.certi-wrap .cont-area .guide-area .guide-cont .list-typeB .tit {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: #000;
+}
+
+.certi-wrap .cont-area .guide-area .guide-cont .list-typeB .sub {
+  display: inline-block;
+  padding: 5px 0 0 20px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #000;
+}
+
+.certi-wrap .cont-area .list-typeC {
+  margin-left: 20px;
+  margin-top: 5px;
+}
+
+.certi-wrap .cont-area .list-typeC li {
+  position: relative;
+  padding-left: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #5c5c5c;
+  line-height: 1.8em;
+}
+
+.certi-wrap .cont-area .list-typeC li:before {
+  content: '';
+  position: absolute;
+  top: calc(50% - 1px);
+  left: 0;
+  display: inline-block;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background: #5c5c5c;
+}
+
+.certi-wrap .faq-list {
+  margin-top: -20px;
+}
+
+.certi-wrap .faq-list dl {
+  width: 100%;
+  height: auto;
+  padding: 20px 30px 0px;
+  background-color: #fff;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.certi-wrap .faq-list dl:hover {
+  background-color: #f8f8f8;
+}
+
+.certi-wrap .faq-list dl .tit {
+  position: relative;
+}
+
+.certi-wrap .faq-list dl .tit::before {
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  top: calc(50% - 20px);
+  content: 'Q.';
+}
+
+.certi-wrap .faq-list dl .tit > button {
+  position: relative;
+  width: 100%;
+  height: 56px;
+  margin-top: -20px;
+  padding-left: 25px;
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+  text-align: left;
+  cursor: pointer;
+}
+
+.certi-wrap .faq-list dl .tit > button::after {
+  position: absolute;
+  top: calc(50% - 12px);
+  right: 0px;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(../images/ico_arrowB_down.png);
+  background-size: cover;
+  content: '';
+  -webkit-transform: rotateX(0deg);
+          transform: rotateX(0deg);
+}
+
+.certi-wrap .faq-list dl .cont {
+  padding: 10px 0;
+  line-height: 1.5em;
+  margin-bottom: 20px;
+}
+
+.certi-wrap .link-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  margin-top: 80px;
+}
+
+.certi-wrap .link-area .item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 calc(50% - 10px);
+          flex: 0 1 calc(50% - 10px);
+  padding: 30px;
+  background-color: #ececec;
+  border-radius: 20px;
+}
+
+.certi-wrap .link-area .item .tit {
+  font-size: 20px;
+  color: #000;
+}
+
+.certi-wrap .link-area .item > p {
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #000;
+}
+
+.certi-wrap .link-area .item > .link-area {
+  margin: 90px 0 0;
+}
+
+.certi-wrap .link-area .item .link {
+  position: relative;
+  padding-right: 16px;
+  font-size: 14px;
+}
+
+.certi-wrap .link-area .item .link::after {
+  content: '';
+  position: absolute;
+  top: calc(50% - 7px);
+  right: 0;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-image: url(../images/ico_arrowB_forward_blue.png);
+  background-size: cover;
+}
+
+.certi-wrap .link-area .item.guide {
+  position: relative;
+}
+
+.certi-wrap .link-area .item.guide:after {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-image: url(../images/ico_issued.png);
+  background-size: cover;
+  content: '';
+}
+
+.certi-wrap .guide-area .tit.on > button::after {
+  -webkit-transform: rotateX(-180deg);
+          transform: rotateX(-180deg);
+}
+
+.certi-wrap .guide-area dd {
+  display: none;
+}
+
+.certi-wrap .guide-area dd.open {
+  display: block;
+}
+
+.certi-wrap .faq-list dl.on {
+  background-color: #f8f8f8;
+}
+
+.certi-wrap .faq-list .tit.on > button::after {
+  -webkit-transform: rotateX(-180deg);
+          transform: rotateX(-180deg);
+}
+
+.certi-wrap .faq-list dd {
+  display: none;
+}
+
+.certi-wrap .faq-list dd.open {
+  display: block;
+}
+
+.hyundaicard .header {
+  z-index: 50;
+  width: 100%;
+  min-width: 1380px;
+}
+
+.hyundaicard .header .head-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 80px;
+}
+
+.hyundaicard .header .head-area > div {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+}
+
+.hyundaicard .header .head-area .logo-area {
+  display: inline-block;
+  width: 200px;
+  height: 100%;
+}
+
+.hyundaicard .header .head-area .gnb-area {
+  width: calc(100% - 480px);
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hyundaicard .header .head-area .gnb-area .gnb-l {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  min-width: 520px;
+}
+
+.hyundaicard .header .head-area .gnb-area .gnb-l .gnb > li {
+  display: inline-block;
+  height: 100%;
+}
+
+.hyundaicard .header .head-area .gnb-area .gnb-l .gnb > li > a {
+  position: relative;
+  display: inline-block;
+  height: 100%;
+  padding: 0 20px;
+  line-height: 5em;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.hyundaicard .header .head-area .gnb-area .gnb-l .gnb > li > a:hover::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  height: 2px;
+  background: #000;
+  content: '';
+}
+
+.hyundaicard .header .head-area .gnb-area .gnb-l .gnb > li.on > a::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  height: 2px;
+  background: #000;
+  content: '';
+}
+
+.hyundaicard .header .head-area .gnb-area .gnb-r > ul {
+  display: inline-block;
+}
+
+.hyundaicard .header .head-area .gnb-area .gnb-r > ul + ul {
+  position: relative;
+  margin-left: 5px;
+  padding-left: 5px;
+}
+
+.hyundaicard .header .head-area .gnb-area .gnb-r > ul + ul::before {
+  position: absolute;
+  top: calc(50% - 6.5px);
+  left: 0;
+  display: inline-block;
+  width: 1px;
+  height: 15px;
+  background: #777;
+  content: '';
+}
+
+.hyundaicard .header .head-area .gnb-area .gnb-r > ul li {
+  display: inline-block;
+  padding: 0 5px;
+}
+
+.hyundaicard .header .head-area .gnb-area .gnb-r > ul li > a {
+  display: inline-block;
+  font-size: 14px;
+  color: #777;
+  line-height: 2.2em;
+  vertical-align: middle;
+}
+
+.hyundaicard .header .head-area .gnb-area .gnb-sub {
+  z-index: 150;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  display: none;
+  width: 100%;
+  background: #fff;
+  border-top: 1px solid #ececec;
+}
+
+.hyundaicard .header .head-area .gnb-area .gnb-sub.open {
+  display: inline-block;
+}
+
+.hyundaicard .header .head-area .gnb-area .gnb-sub .sub-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1480px;
+  margin: 0 auto;
+}
+
+.hyundaicard .header .head-area .gnb-area .sub-l {
+  position: relative;
+  display: inline-block;
+  width: calc(100% - 375px);
+  padding: 10px 50px;
+}
+
+.hyundaicard .header .head-area .gnb-area .sub-l::after {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  display: inline-block;
+  width: 1px;
+  height: calc(100% - 20px);
+  background: #999;
+  content: '';
+}
+
+.hyundaicard .header .head-area .gnb-area .sub-l .sub-list {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: calc(25% - 20px);
+  margin: 8px 8px 15px;
+}
+
+.hyundaicard .header .head-area .gnb-area .sub-l .sub-list > li a {
+  display: inline-block;
+  width: 100%;
+  padding: 0 20px 0 0;
+  font-size: 14px;
+  line-height: 1.5em;
+  text-align: left;
+  position: relative;
+}
+
+.hyundaicard .header .head-area .gnb-area .sub-l .sub-list > li a:hover::after {
+  display: none;
+}
+
+.hyundaicard .header .head-area .gnb-area .sub-l .sub-list > li.tit {
+  margin-bottom: 5px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.hyundaicard .header .head-area .gnb-area .sub-l .sub-list > li > a:after {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 15px;
+  height: 15px;
+  font-size: 18px;
+  content: '+';
+}
+
+.hyundaicard .header .head-area .gnb-area .sub-l .sub-list > li > a:hover::after {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 15x;
+  height: 15px;
+  content: '+';
+}
+
+.hyundaicard .header .head-area .gnb-area .sub-l .sub-list > li > a.open:after {
+  content: '-';
+}
+
+.hyundaicard .header .head-area .gnb-area .sub-l .sub-list > li > a.open:hover::after {
+  content: '-';
+}
+
+.hyundaicard .header .head-area .gnb-area .detail-list {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.hyundaicard .header .head-area .gnb-area .detail-list.open {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.hyundaicard .header .head-area .gnb-area .detail-list > li {
+  padding-left: 20px;
+}
+
+.hyundaicard .header .head-area .gnb-area .sub-r {
+  display: inline-block;
+  width: 375px;
+  height: 100%;
+  padding: 10px 50px;
+}
+
+.hyundaicard .header .head-area .gnb-area .sub-r strong {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.hyundaicard .header .head-area .gnb-area .sub-r .login {
+  width: 100%;
+  height: 100px;
+  margin-top: 60px;
+  text-align: center;
+}
+
+.hyundaicard .header .head-area .gnb-area .sub-r .login p {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.hyundaicard .header .head-area .gnb-area .sub-r .login .login-btn {
+  display: inline-block;
+  margin-top: 20px;
+  width: 100px;
+  border-radius: 5px;
+  background-color: #ececec;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 2.5em;
+}
+
+.hyundaicard .header .head-area .search-area {
+  width: 280px;
+  height: 100%;
+  padding: 20px;
+}
+
+.hyundaicard .header .head-area .search-area fieldset {
+  border: none;
+}
+
+.hyundaicard .header .head-area .search-area .search {
+  position: relative;
+}
+
+.hyundaicard .header .head-area .search-area .search-bar {
+  width: 240px;
+  height: 40px;
+  border: 2px solid #000;
+  border-radius: 20px;
+  padding: 0 20px 0 40px;
+}
+
+.hyundaicard .header .head-area .search-area .search-bar + label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-indent: -9999px;
+}
+
+.hyundaicard .header .head-area .search-area .search-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  margin-left: 5px;
+  border: none;
+  background-color: transparent;
+  text-indent: -9999px;
+  opacity: 0.5;
+}
+
+.hyundaicard .header .head-area .search-area .search-btn:after {
+  position: absolute;
+  top: calc(50% - 15px);
+  left: calc(50% - 15px);
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-image: url(../images/ico_searchB.png);
+  background-size: cover;
+  content: '';
+}
+
+.hyundaicard .header .head-area .search-area .search-btn:active {
+  opacity: 1;
+}
+
+.hyundaicard .header .head-area .logo {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding: 25px;
+}
+
+.hyundaicard .header .head-area .logo img {
+  width: 100%;
+  height: auto;
+}
+
+.hyundaicard .header .head-event {
+  height: 50px;
+  background: #2AC1BC;
+}
+
+.hyundaicard .header .head-event .event {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 1480px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.hyundaicard .header .head-event .banner {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  width: calc(100% - 204px);
+  height: 100%;
+}
+
+.hyundaicard .header .head-event .banner a {
+  display: inline-block;
+  width: 100%;
+  line-height: 3em;
+  vertical-align: middle;
+  font-weight: 700;
+}
+
+.hyundaicard .header .head-event .btn-area {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  width: 200px;
+  margin-top: 0;
+}
+
+.hyundaicard .header .head-event .btn-area .chk-btn {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+.hyundaicard .header .head-event .btn-area .chk-btn + label {
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.hyundaicard .header .head-event .btn-area .close {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: transparent;
+  text-indent: -9999px;
+  cursor: pointer;
+}
+
+.hyundaicard .header .head-event .btn-area .close::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-image: url(../images/ico_x_o_gry_b.png);
+  background-size: cover;
+  content: '';
+}
+
+.hyundaicard .main-cont {
+  width: 100%;
+  height: 100vh;
+  background: #ececec;
 }
 
 body.online {
