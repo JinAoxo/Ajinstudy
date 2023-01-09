@@ -85,6 +85,18 @@
 </div>
 </details>
 
+<details>
+<summary>11. 병합 재배치 공부</summary>
+
+<div  markdown="1" >
+
+> - 병합 Fast-forward
+
+</div>
+</details>
+
+<details>
+
 ---
 
 ## study log 정리
