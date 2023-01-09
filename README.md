@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # react study 시작 (최근 정렬)
 
 ### 2022-11-24 : 1. react start
@@ -82,3 +83,8 @@
 
 </div>
 </details>
+=======
+# study
+
+### 2022-06-02 : study - 스터디 방향성 + setting 과제
+>>>>>>> d4d249b (Update README.md)
